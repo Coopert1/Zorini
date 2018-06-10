@@ -1,0 +1,83 @@
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 70em) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 64em) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 50em)  { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em)  { @content ; }
+	}
+}
+
+*{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #fafafb;
+}
+.header-top{
+	font-size: 12px;
+	background: #2a2a2a;
+	color: #fff;
+	padding: 12px 0;
+}
+.location{
+	display: inline-block;
+	margin-right: 100px;
+	a{
+		text-decoration-style: dotted;
+		color: #fff;
+	}
+	span{
+		padding-left: 20px;
+	}
+}
+#pin{
+	position: absolute;
+	margin-right: 5px;
+	.cls-1{
+		fill: #fff;
+	}
+}
+.company-info{
+	display: inline-block;
+	ul{
+		list-style: none;
+	}
+	li{
+		display: inline-block;
+		margin-right: 35px;
+	}
+}
+.header-bottom{
+	padding: 10 0;
+	.logo{
+		display: inline-block;
+		font-size: 62px;
+		font-family: 'Oranienbaum', serif;
+		text-transform: uppercase;
+		margin-right: 20px;
+		span{
+			margin: 0 30px;
+			font-size: 12px;
+			font-family: 'Open Sans', sans-serif;
+			color: #898989;
+			text-transform: none;
+			max-width: 188px;
+			display: inline-block;
+			position: relative;
+			top: -8px;
+		}
+	}
+}

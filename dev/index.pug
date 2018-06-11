@@ -6,7 +6,7 @@ html
 			.content-wrapper
 				.location
 					include ./images/pin.svg
-					span Город:  
+					span Город:
 					a(href="#") Москва
 				.company-info
 					ul
@@ -22,3 +22,97 @@ html
 						|Zorini
 						span
 							|Индивидуальное производство мебели из массива
+		
+	.wrapper
+		.footer
+			.footer_flex-container
+				.footer-list.footer-list__info
+					span.footer-list__title Информация
+					ul
+						li.footer-list__item
+							a(href="#") О компании
+						li.footer-list__item
+							a(href="#") Новости
+						li.footer-list__item
+							a(href="#") Отзывы
+						li.footer-list__item
+							a(href="#") Робота у нас
+						li.footer-list__item
+							a(href="#") Оптовикам
+						li.footer-list__item
+							a(href="#") Поставщикам
+
+				.footer-list.show-tablet
+					span.footer-list__title Интернет-магазин
+					ul
+						li.footer-list__item
+							a(href="#") Помощь в покупке
+						li.footer-list__item
+							a.bold(href="#") Доставка и оплата
+						li.footer-list__item
+							a(href="#") Услуга подьёма
+						li.footer-list__item
+							a(href="#") Сборка
+						li.footer-list__item
+							a(href="#") Часто задаваемые вопросы
+						li.footer-list__item
+							a(href="#") Гарантия
+						li.footer-list__item
+							a(href="#") Обмен и возврат
+				
+				.foter_flex-column
+					.footer-list.show-tablet
+						span.footer-list__title Спецпредложения
+						ul
+							li.footer-list__item
+								a(href="#") Акции
+							li.footer-list__item
+								a(href="#") Распродажи
+					.footer-list.footer-list__advantages.show-tablet
+						span.footer-list__title Преимущестава
+						ul
+							li.footer-list__item
+								a(href="#") Дисконтрая програма
+							li.footer-list__item
+								a(href="#") Надёжная компания
+				.footer-list.footer-list__contacts
+					span.footer-list__title Контакты
+					ul
+						li.footer-list__item
+							a(href="#") 8 (490) 500-00-00  звонок бесплатный  
+						li.footer-list__item
+							a(href="#")  8 (800) 500-70-20
+						li.footer-list__item
+							a(href="#") Москва, ул. Мироновская д.20
+						li.footer-list__item
+							a(href="#") E-mail: zakaz@mebel.ru
+					ul
+						li.footer-list__social-item
+							a(href="#")
+								img(src="images/twitter.png")
+						li.footer-list__social-item
+							a(href="#")
+								img(src="images/vk.png")
+						li.footer-list__social-item
+							a(href="#")
+								img(src="images/fb.png")
+						li.footer-list__social-item
+							a(href="#")
+								img(src="images/youtube.png")
+			.footer_flex-container
+				.footer-list.footer-list__payment
+					span.footer-list__title Принимаем к оплате
+					ul
+						li
+							a(href="#")
+								img(src="images/mastercard.png")
+						li
+							a(href="#")
+								img(src="images/visa.png")
+				.footer-list.footer-list__subscribe
+					span.footer-list__title Подпишись на акции и скидки
+					form
+						input( type="email" placeholder="Введите email")
+						input(type="submit" value="Подписаться")
+						input#footer-agreed(type="checkbox" required)
+						label(for="footer-agreed") Cогласен предоставить данные

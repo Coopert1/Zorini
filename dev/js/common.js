@@ -29,13 +29,12 @@ $(function(){
 		galleryMargin: 25,
 		item: 1,
 		slideMove:1,
-		pager: false,
+		pager: true,
 		addClass: '',
 		mode: "slide",
 		useCSS: true,
 		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
 		easing: 'linear', //'for jquery animation',////
-
 		speed: 400, //ms'
 		auto: true,
 		loop: true,
@@ -61,5 +60,13 @@ $(function(){
 		slideEndAnimation: true,
 		pause: 10000,
 	});
+
+
+		///add to fav
+
+		$('.product-item__add-to-fav').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		})
 
 });

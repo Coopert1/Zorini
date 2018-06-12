@@ -95,6 +95,9 @@
     margin-top: 25px;
     padding: 0;
     text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 6%;
 }
 .lSSlideOuter .lSPager.lSpg > li {
     cursor: pointer;
@@ -102,7 +105,9 @@
     padding: 0 5px;
 }
 .lSSlideOuter .lSPager.lSpg > li a {
-    background-color: #424242;
+    background-color: #51a5b4;
+    bottom: 30px;
+    left: 6%;
     border-radius: 30px;
     display: inline-block;
     height: 10px;
@@ -114,15 +119,16 @@
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
     @include breakpoint(tablet){
-        display:none;
+        // display:none;
     }
 
 }
 
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
-    background-color: #f2762e;
+    background-color: #fff;
+    bottom: 36px;
     @include breakpoint(tablet){
-        display:none;
+        // display:none;
     }
 }
 .lSSlideOuter .media {

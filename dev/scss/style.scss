@@ -269,6 +269,55 @@ img{max-width: 100%;}
 		}
 	}
 }
+.title{
+	margin: 50px 0;
+	text-align: center;
+	font-size: 48px;
+	font-family: 'Oranienbaum', serif;
+	color: #2a2a2a;
+
+}
+.product-item{
+	position: relative;
+	margin-bottom: 20px;
+	&__image{
+		img{
+			width: 100%;
+		}
+	}
+	&__text{
+		position: absolute;
+		background:#2a2a2a;
+		padding: 20px;
+		color: #fff;
+		width: 100%;
+		bottom: 0;
+	}
+	&__name{
+		font-size: 18px;
+		font-weight: bold;
+	}
+	&__price{
+		font-size: 13px;
+		span:first-child{
+			font-weight: bold;
+		}
+		span:last-child-child{
+			font-weight: lighter;
+		}
+	}
+	&__add-to-fav{
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 10px;
+		border-radius: 100%;
+		&:hover{
+			background-color: rgba(238, 46, 34, 0.6);
+		}
+	}
+}
 .slider-arrows{
 	position: relative;
 	.icon_review_slider_prev{

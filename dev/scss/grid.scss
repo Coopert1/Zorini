@@ -35,8 +35,13 @@
 	padding: 0 10px;
 }
 .hide{
-	&-laptop{
+	&-tablet{
 		@include breakpoint(tablet){
+			display: none;
+		}
+	}
+	&-laptop{
+		@include breakpoint(laptop){
 			display: none;
 		}
 	}
@@ -52,6 +57,24 @@
 		display: none;
 		@include breakpoint(laptop){
 			display: block;
+		}
+	}
+	&tablet-inline{
+		display: none;
+		@include breakpoint(tablet){
+			display: inline-block;
+		}
+	}
+	&laptop-inline{
+		display: none;
+		@include breakpoint(laptop){
+			display: inline-block;
+		}
+	}
+	&desktop-inline{
+		display: none;
+		@include breakpoint(desktop){
+			display: inline-block;
 		}
 	}
 }
@@ -78,7 +101,7 @@
 }
 
 [class*='col-']{
-	padding: 0 15px;
+	padding: 0 10px;
 	//min-height: 1px;
 
 }

@@ -26,6 +26,7 @@
 body{
 	background: #fafafb;
 }
+img{max-width: 100%;}
 .header-top{
 	font-size: 12px;
 	background: #2a2a2a;
@@ -79,6 +80,137 @@ body{
 			position: relative;
 			top: -8px;
 		}
+	}
+}
+
+.slider-arrows{
+	position: relative;
+	.icon_review_slider_prev{
+		color: white;
+		font-size: 2.5em;
+		font-weight: 100;
+		position: absolute;
+		right: 80px;
+	}
+	.icon_review_slider_next{
+		color: white;
+		font-size: 2.5em;
+		font-weight: 100;
+		position: absolute;
+		right: 0;
+	}
+
+}
+.slider_controls{
+	position: absolute;
+	right: 40px;
+	top: 15px;
+	width: 100px;
+	text-align: center;
+	z-index: 10;
+	cursor: pointer;
+	@include breakpoint(tablet){
+		
+	}
+}
+
+.review-slider{
+	padding: 40px 10px 65px 10px;
+	background-color:#2a2a2a;
+	@include breakpoint(tablet){
+		padding-left: 108px;
+	}
+	@include breakpoint(laptop){
+		padding-right: 105px;
+		padding-left: 208px;
+	}
+	@include breakpoint(desktop){
+		padding-right: 105px;
+		padding-left: 308px;
+	}
+	
+	ul{
+		list-style: none;
+		&>li{
+			border: 9px solid white;
+			padding: 40px;
+			@include breakpoint(tablet){
+				text-align: left;
+				padding-left: 305px;
+				min-height: 380px;
+			}
+			
+		}
+		
+	}
+	&__title{
+		text-align: center;
+		font-size: 52px;
+		margin-bottom: 30px;
+		color: white;
+		font-family: 'Oranienbaum', sans-serif;
+	}
+	&__img{
+		text-align: center;
+		@include breakpoint(tablet){
+			left: 10px;
+			top: 180px;
+			max-height: 300px;
+			position: absolute;
+			z-index: 11;
+		}
+		@include breakpoint(laptop){
+			left: 110px;
+		}
+	}
+	&__text{
+		position: relative;
+		margin-top: 50px;
+		color: #d0d0d0;
+		font-size: 14px;
+		line-height: 1.7;
+		@include breakpoint(tablet){
+			margin: 0;
+			padding-top: 85px;
+		}
+		&:before{
+			content: "\201c";
+			
+			color: #555657;
+			font-size: 15em;
+			margin-top: -20px;
+			font-family: 'Oranienbaum', sans-serif;
+			position: absolute;
+			top: -135px;
+			@include breakpoint(tablet){
+				top: -50px;
+			}
+		}
+		
+		
+	}
+	&__pager{
+		color: white;
+		position: relative;
+		top: 15px;
+		display: inline-block;
+		span{
+			&:first-child{
+				font-size:14x;
+				color: #d0d0d0;
+				&:after{
+					content: "/"
+				}
+			}
+			&:last-child{
+				font-size:24px;
+			}
+		}
+	}
+	.container{
+		
+		
+		
 	}
 }
 
@@ -190,7 +322,7 @@ body{
 		}
 		&__contacts{
 			@media(min-width:500px){
-				margin-right: 65px
+				margin-right: 75px
 			}
 		}
 		&__payment{
@@ -234,26 +366,5 @@ body{
 	.bold{
 		font-weight: bold;
 		color: #1a1a1a;
-	}
-}
-.hide{
-	&-laptop{
-		@include breakpoint(tablet){
-			display: none;
-		}
-	}
-}
-.show-{
-	&tablet{
-		display: none;
-		@include breakpoint(tablet){
-			display: block;
-		}
-	}
-	&laptop{
-		display: none;
-		@include breakpoint(laptop){
-			display: block;
-		}
 	}
 }

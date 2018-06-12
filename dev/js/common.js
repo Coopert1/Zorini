@@ -23,4 +23,43 @@ $(function(){
 		review_slider.goToNextSlide();
 		review_slider_pager();
 	})
+
+	//Main Slider (promo) setting
+		var promoslider=$('#promoslider').lightSlider({
+		galleryMargin: 25,
+		item: 1,
+		slideMove:1,
+		pager: false,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+	});
+
+	//news Slider (promo) setting
+		var newsslider=$('#newsslider').lightSlider({
+		galleryMargin: 25,
+		item: 1,
+		slideMove:1,
+		pager: false,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+	});
+
 });

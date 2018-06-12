@@ -56,7 +56,7 @@ html
 					.favorite
 						include ./images/favorite.svg
 						span.fav-item-count 4
-	.wrappert
+	.wrapper
 		.main-menu
 			.content-wrapper
 				ul
@@ -138,10 +138,89 @@ html
 								include ./images/menu/show-more.svg
 							.text
 								span Показать все
-
-
-					
-
+	.wrapper
+		ul#promoslider
+			li
+				.promo
+					.promo__pic
+						img(src="images/main_banner.png" alt="promopic")
+					.promo__text
+						
+			li
+				.promo
+					.promo__pic
+						img(src="images/main_banner.png" alt="promopic")
+					.promo__text
+			li
+				.promo
+					.promo__pic
+						img(src="images/main_banner.png" alt="promopic")
+					.promo__text
+	.wrapper
+		.title
+			|Хиты продаж
+		.content-wrapper
+			.clearfix
+				.col-phablet-1-3
+					.product-item
+						a(href="#").product-item__add-to-fav
+							img(src="images/like.png" alt="like")
+						.product-item__image
+							img(src="images/product_01.png" alt="product")
+						.product-item__text
+							.product-item__name
+								|Кухня Модесто
+							.product-item__price
+								span
+									|54 900.00 
+								span
+									|р./м.пог.
+				.col-phablet-1-3
+					.product-item
+						a(href="#").product-item__add-to-fav
+							img(src="images/like.png" alt="like")
+						.product-item__image
+							img(src="images/product_02.png" alt="product")
+						.product-item__text
+							.product-item__name
+								|Кухня Модесто
+							.product-item__price
+								span
+									|54 900.00 
+								span
+									|р./м.пог.
+				.col-phablet-1-3
+					.product-item
+						a(href="#").product-item__add-to-fav
+							img(src="images/like.png" alt="like")
+						.product-item__image
+							img(src="images/product_03.png" alt="product")
+						.product-item__text
+							.product-item__name
+								|Кухня Модесто
+							.product-item__price
+								span
+									|54 900.00 
+								span
+									|р./м.пог.
+	.wrapper
+		ul#newsslider
+			li
+				a(href="#").promo
+					.promo__pic
+						img(src="images/news_banner.png" alt="promopic")
+					.promo__text
+						
+			li
+				a(href="#").promo
+					.promo__pic
+						img(src="images/news_banner.png" alt="promopic")
+					.promo__text
+			li
+				a(href="#").promo
+					.promo__pic
+						img(src="images/news_banner.png" alt="promopic")
+					.promo__text
 			
 	.wrapper
 		.review-slider

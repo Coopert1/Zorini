@@ -128,34 +128,34 @@ img{max-width: 100%;}
 	}
 }
 .telephone{
-		font-size: 24px;
+	font-size: 24px;
+	a{
+		text-decoration: none;
+		color: #2a2a2a;
+	}
+	:first-child{
+		margin-right: 5px;
+	}
+	span:nth-child(2){
+		font-weight: 300;
+		margin-right: 5px;
+	}
+	span:last-child{
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: 700;
+	}
+	&_top-line{
 		a{
-			text-decoration: none;
-			color: #2a2a2a;
-		}
-		:first-child{
-			margin-right: 5px;
-		}
-		span:nth-child(2){
-			font-weight: 300;
-			margin-right: 5px;
-		}
-		span:last-child{
-			font-family: 'Open Sans bold', sans-serif;
-			font-weight: 700;
-		}
-		&_top-line{
-			a{
-				color: #fff;
-			}
-			text-decoration: none;
 			color: #fff;
-			position: absolute;
-			top: 0px;
-			right: 10px;
-			vertical-align: top;
-			font-size: 12px;
 		}
+		text-decoration: none;
+		color: #fff;
+		position: absolute;
+		top: 0px;
+		right: 10px;
+		vertical-align: top;
+		font-size: 12px;
+	}
 }
 .online-calc{
 	display: inline-block;
@@ -355,6 +355,8 @@ img{max-width: 100%;}
 		line-height: 1.55;
 		max-height: 65px;
 		overflow: hidden;
+	}
+}
 
 .slider-arrows{
 	position: relative;
@@ -640,49 +642,5 @@ img{max-width: 100%;}
 	.bold{
 		font-weight: bold;
 		color: #1a1a1a;
-	}
-}
-.hide{
-	&-tablet{
-		@include breakpoint(tablet){
-			display: none;
-		}
-	}
-	&-laptop{
-		@include breakpoint(laptop){
-			display: none;
-		}
-	}
-}
-.show-{
-	&tablet{
-		display: none;
-		@include breakpoint(tablet){
-			display: block;
-		}
-	}
-	&laptop{
-		display: none;
-		@include breakpoint(laptop){
-			display: block;
-		}
-	}
-	&tablet-inline{
-		display: none;
-		@include breakpoint(tablet){
-			display: inline-block;
-		}
-	}
-	&laptop-inline{
-		display: none;
-		@include breakpoint(laptop){
-			display: inline-block;
-		}
-	}
-	&desktop-inline{
-		display: none;
-		@include breakpoint(desktop){
-			display: inline-block;
-		}
 	}
 }

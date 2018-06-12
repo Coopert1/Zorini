@@ -29,7 +29,7 @@ $(function(){
 		galleryMargin: 25,
 		item: 1,
 		slideMove:1,
-		pager: false,
+		pager: true,
 		addClass: '',
 		mode: "slide",
 		useCSS: true,

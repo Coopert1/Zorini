@@ -20,7 +20,6 @@
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
-	//border: 0;
 	box-sizing: border-box;
 }
 a{
@@ -28,6 +27,13 @@ a{
 }
 body{
 	background: #fafafb;
+}
+.inner-wrapper{
+	margin: 0 auto;
+	max-width: 1200px;
+	&_border-bottom{
+		border-bottom: 1px solid #dadada;
+	}
 }
 img{max-width: 100%;}
 .header-top{
@@ -232,7 +238,7 @@ img{max-width: 100%;}
 					.cls-1{
 						fill: #6363de;
 					}
-				}	
+				}
 			}
 			&_childrens{
 				svg{
@@ -240,7 +246,7 @@ img{max-width: 100%;}
 					.cls-1{
 						fill: url(#gradient);
 					}
-				}	
+				}
 			}
 			&_hallways{
 				svg{
@@ -248,7 +254,7 @@ img{max-width: 100%;}
 					.cls-1{
 						fill: url(#gradient);
 					}
-				}	
+				}
 			}
 			&_office{
 				svg{
@@ -256,7 +262,7 @@ img{max-width: 100%;}
 					.cls-1{
 						fill: url(#gradient);
 					}
-				}	
+				}
 			}
 			&_more{
 				svg{
@@ -264,7 +270,7 @@ img{max-width: 100%;}
 					.cls-1{
 						fill: none;
 					}
-				}	
+				}
 			}
 		}
 	}
@@ -272,9 +278,12 @@ img{max-width: 100%;}
 .title{
 	margin: 50px 0;
 	text-align: center;
-	font-size: 48px;
+	font-size: 52px;
 	font-family: 'Oranienbaum', serif;
 	color: #2a2a2a;
+	@include breakpoint(mobileonly){
+		font-size: 36px;
+	}
 
 }
 
@@ -320,16 +329,62 @@ img{max-width: 100%;}
 		}
 	}
 }
+.advantages{
+	margin-bottom: 30px;
+	@include breakpoint(laptop){
+		padding-left: 40px;
+	}
+	&__icon{
+		width: 60px;
+		height: 50px;
+		display: inline-block;
+		float: left;
+		svg{
+			height: 40px;
+			vertical-align: bottom;
+			.cls-1{
+				fill: #6363de;
+			}
+		}
+	}
+	&__text{
+		color: #2a2a2a;
+		font-size: 14px;
+		line-height: 1.6;
+		padding-left: 90px;
+		ul{
+			margin-left: 14px;
+		}
+		li{
+			color:  #6363de;
+			
+		}
+		a{
+			color: #2a2a2a;
+			font-size: 12px;
+		}
+	}
+	&__border-left{
+		border-left: 1px solid #dadada;
+	}
+}
 
-.our-works{
-	margin: 0 auto;
-	max-width: 1200px;
+.all-our-works{
+	font-size: 13px;
+	text-decoration: underline;
+	color: #898989;
+	padding-left: 25px;
 }
 .product{
 	margin-bottom: 40px;
 	&__img{
 		margin-bottom: 25px;
 		text-align: center;
+		position: relative;
+		.product-item__add-to-fav{
+			bottom: 15px;
+			top: auto;
+		}
 	}
 	&__title{
 		font-size: 21px;
@@ -597,6 +652,9 @@ img{max-width: 100%;}
 			flex-basis: 130px;
 		}
 		&__contacts{
+			@include breakpoint(mobileonly){
+				margin-left: 20px;
+			}
 			@media(min-width:500px){
 				margin-right: 75px
 			}
@@ -622,7 +680,7 @@ img{max-width: 100%;}
 				}
 			}
 			@media (min-width:1385px){
-				margin-left: 308px;
+				margin-left: 345px;
 				align-self: flex-end;
 				
 			}

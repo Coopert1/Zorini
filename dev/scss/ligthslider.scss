@@ -113,17 +113,11 @@
     z-index: 4;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
-    @include breakpoint(tablet){
-        display:none;
-    }
 
 }
 
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: #f2762e;
-    @include breakpoint(tablet){
-        display:none;
-    }
 }
 .lSSlideOuter .media {
     opacity: 0.8;

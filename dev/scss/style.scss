@@ -368,24 +368,3 @@ img{max-width: 100%;}
 		color: #1a1a1a;
 	}
 }
-.hide{
-	&-laptop{
-		@include breakpoint(tablet){
-			display: none;
-		}
-	}
-}
-.show-{
-	&tablet{
-		display: none;
-		@include breakpoint(tablet){
-			display: block;
-		}
-	}
-	&laptop{
-		display: none;
-		@include breakpoint(laptop){
-			display: block;
-		}
-	}
-}

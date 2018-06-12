@@ -23,6 +23,9 @@
 	border: 0;
 	box-sizing: border-box;
 }
+a{
+	text-decoration: none;
+}
 body{
 	background: #fafafb;
 }
@@ -61,14 +64,19 @@ body{
 	}
 }
 .header-bottom{
-	padding: 10 0;
+	padding: 10px 0;
+	border-bottom: 1px solid #dadada;
 	.logo{
 		display: inline-block;
-		font-size: 62px;
-		font-family: 'Oranienbaum', serif;
-		text-transform: uppercase;
-		margin-right: 20px;
-		span{
+		span:first-child{
+			color: #000;
+			display: inline-block;
+			font-size: 62px;
+			font-family: 'Oranienbaum', serif;
+			text-transform: uppercase;
+			margin-right: 20px;
+		} 
+		span:last-child{
 			margin: 0 30px;
 			font-size: 12px;
 			font-family: 'Open Sans', sans-serif;
@@ -82,6 +90,185 @@ body{
 	}
 }
 
+.btn{
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #4fa4b6;
+	border-radius: 30px;
+	color: #000;
+	&_calc{
+		vertical-align: top;
+		top: 10px;
+		margin: 10px 5px;
+		font-size: 13px;
+		position: relative;
+		padding-left: 50px;
+		.icon{
+			position: absolute;
+			left: 15px;
+			top: 7px;
+		}
+	}
+}
+.contact-info{
+	position:relative;
+	top: 10px;
+	margin: 0 30px;
+	text-align: right;
+	display: inline-block;
+	.time{
+		font-size: 12px;
+		color: #898989;
+	}
+	.callback{
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		font-size: 12px;
+		color: #898989;
+	}
+}
+.telephone{
+		font-size: 24px;
+		a{
+			text-decoration: none;
+			color: #2a2a2a;
+		}
+		:first-child{
+			margin-right: 5px;
+		}
+		span:nth-child(2){
+			font-weight: 300;
+			margin-right: 5px;
+		}
+		span:last-child{
+			font-family: 'Open Sans bold', sans-serif;
+			font-weight: 700;
+		}
+		&_top-line{
+			a{
+				color: #fff;	
+			}
+			text-decoration: none;
+			color: #fff;
+			position: absolute;
+			top: 0px;
+			right: 10px;
+			vertical-align: top;
+			font-size: 12px;
+		}
+}
+.online-calc{
+	display: inline-block;
+}
+
+.search{
+	margin-right:20px;
+	display:inline-block;
+}
+
+.favorite{
+	display:inline-block;
+	position: relative;
+}
+
+.fav-item-count{
+	position: absolute;
+	top: -5px;
+	right: -16px;
+	width: 22px;
+	height: 16px;
+	display: inline-block;
+	font-size: 13px;
+	border-radius: 40%;
+	text-align: center;
+	background: #ec0b0b;
+	color: white;
+	line-height: 16px;
+}
+.main-menu{
+	padding: 15px 0;
+	ul{
+		display: flex;
+		text-align: center;
+		list-style:none;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li{
+			// margin:0 13px;
+			margin-bottom: 30px;
+			min-width: 106px;
+			@include breakpoint(tablet){
+				min-width: 0;
+				margin-right:20px;
+				margin-bottom: 30px;
+			}
+		}
+		li:first-child{
+			margin-left:0;
+		}
+		li:last-child{
+			margin-right: 0;
+		}
+	}
+	.menu-item{
+		font-size: 14px;
+		color:#000;
+		font-weight: bold;
+		font-family: 'Open Sans bold', sans-serif;
+		.icon{
+			margin-bottom: 20px;
+			height: 41px;
+			svg{
+				height: 40px;
+				vertical-align: bottom;
+				.cls-1{
+					fill: #6363de;
+				}
+			}
+			&_bedroom{
+				svg{
+					height: 30px;
+					vertical-align: bottom;
+					.cls-1{
+						fill: #6363de;
+					}
+				}	
+			}
+			&_childrens{
+				svg{
+					vertical-align: bottom;
+					.cls-1{
+						fill: url(#gradient);
+					}
+				}	
+			}
+			&_hallways{
+				svg{
+					vertical-align: bottom;
+					.cls-1{
+						fill: url(#gradient);
+					}
+				}	
+			}
+			&_office{
+				svg{
+					vertical-align: bottom;
+					.cls-1{
+						fill: url(#gradient);
+					}
+				}	
+			}
+			&_more{
+				svg{
+					vertical-align: bottom;
+					.cls-1{
+						fill: none;
+					}
+				}	
+			}
+		}
+	}
+}
 .footer{
 	background-color: #f4f4f4;
 	padding: 35px 10px 15px 10px;
@@ -237,8 +424,13 @@ body{
 	}
 }
 .hide{
-	&-laptop{
+	&-tablet{
 		@include breakpoint(tablet){
+			display: none;
+		}
+	}
+	&-laptop{
+		@include breakpoint(laptop){
 			display: none;
 		}
 	}
@@ -254,6 +446,24 @@ body{
 		display: none;
 		@include breakpoint(laptop){
 			display: block;
+		}
+	}
+	&tablet-inline{
+		display: none;
+		@include breakpoint(tablet){
+			display: inline-block;
+		}
+	}
+	&laptop-inline{
+		display: none;
+		@include breakpoint(laptop){
+			display: inline-block;
+		}
+	}
+	&desktop-inline{
+		display: none;
+		@include breakpoint(desktop){
+			display: inline-block;
 		}
 	}
 }

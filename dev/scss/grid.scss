@@ -35,8 +35,13 @@
 	padding: 0 10px;
 }
 .hide{
-	&-laptop{
+	&-tablet{
 		@include breakpoint(tablet){
+			display: none;
+		}
+	}
+	&-laptop{
+		@include breakpoint(laptop){
 			display: none;
 		}
 	}
@@ -52,6 +57,24 @@
 		display: none;
 		@include breakpoint(laptop){
 			display: block;
+		}
+	}
+	&tablet-inline{
+		display: none;
+		@include breakpoint(tablet){
+			display: inline-block;
+		}
+	}
+	&laptop-inline{
+		display: none;
+		@include breakpoint(laptop){
+			display: inline-block;
+		}
+	}
+	&desktop-inline{
+		display: none;
+		@include breakpoint(desktop){
+			display: inline-block;
 		}
 	}
 }
@@ -159,7 +182,7 @@
 				float: left;
 			}
 			&2-3{
-				width: 40%;
+				width: 66.66%;
 				float: left;
 			}
 			&3-5{

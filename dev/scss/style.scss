@@ -20,7 +20,7 @@
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
-	border: 0;
+	//border: 0;
 	box-sizing: border-box;
 }
 a{
@@ -128,34 +128,34 @@ img{max-width: 100%;}
 	}
 }
 .telephone{
-		font-size: 24px;
+	font-size: 24px;
+	a{
+		text-decoration: none;
+		color: #2a2a2a;
+	}
+	:first-child{
+		margin-right: 5px;
+	}
+	span:nth-child(2){
+		font-weight: 300;
+		margin-right: 5px;
+	}
+	span:last-child{
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: 700;
+	}
+	&_top-line{
 		a{
-			text-decoration: none;
-			color: #2a2a2a;
-		}
-		:first-child{
-			margin-right: 5px;
-		}
-		span:nth-child(2){
-			font-weight: 300;
-			margin-right: 5px;
-		}
-		span:last-child{
-			font-family: 'Open Sans bold', sans-serif;
-			font-weight: 700;
-		}
-		&_top-line{
-			a{
-				color: #fff;	
-			}
-			text-decoration: none;
 			color: #fff;
-			position: absolute;
-			top: 0px;
-			right: 10px;
-			vertical-align: top;
-			font-size: 12px;
 		}
+		text-decoration: none;
+		color: #fff;
+		position: absolute;
+		top: 0px;
+		right: 10px;
+		vertical-align: top;
+		font-size: 12px;
+	}
 }
 .online-calc{
 	display: inline-block;
@@ -277,6 +277,8 @@ img{max-width: 100%;}
 	color: #2a2a2a;
 
 }
+
+
 .product-item{
 	position: relative;
 	margin-bottom: 20px;
@@ -318,6 +320,44 @@ img{max-width: 100%;}
 		}
 	}
 }
+
+.our-works{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.product{
+	margin-bottom: 40px;
+	&__img{
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	&__title{
+		font-size: 21px;
+		font-family: 'Oranienbaum', sans-serif;
+		color: #1c1b1b;
+		padding-bottom: 15px;
+		position: relative;
+		margin-bottom: 20px;
+		&:before{
+			content: "";
+			display: inline-block;
+			height: 2px;
+			width: 25px;
+			background-color: black;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+	&__text{
+		font-size: 14px;
+		color: 6c6c6c;
+		font-family: 'Open Sans regular', sans-serif;
+		line-height: 1.55;
+		max-height: 65px;
+		overflow: hidden;
+	}
+}
+
 .slider-arrows{
 	position: relative;
 	.icon_review_slider_prev{
@@ -352,6 +392,8 @@ img{max-width: 100%;}
 .review-slider{
 	padding: 40px 10px 65px 10px;
 	background-color:#2a2a2a;
+	border: 9px solid white;
+	.lSSlideOuter {border: 9px solid white;}
 	@include breakpoint(tablet){
 		padding-left: 108px;
 	}
@@ -367,7 +409,7 @@ img{max-width: 100%;}
 	ul{
 		list-style: none;
 		&>li{
-			border: 9px solid white;
+			//border: 9px solid white;
 			padding: 40px;
 			@include breakpoint(tablet){
 				text-align: left;
@@ -600,49 +642,5 @@ img{max-width: 100%;}
 	.bold{
 		font-weight: bold;
 		color: #1a1a1a;
-	}
-}
-.hide{
-	&-tablet{
-		@include breakpoint(tablet){
-			display: none;
-		}
-	}
-	&-laptop{
-		@include breakpoint(laptop){
-			display: none;
-		}
-	}
-}
-.show-{
-	&tablet{
-		display: none;
-		@include breakpoint(tablet){
-			display: block;
-		}
-	}
-	&laptop{
-		display: none;
-		@include breakpoint(laptop){
-			display: block;
-		}
-	}
-	&tablet-inline{
-		display: none;
-		@include breakpoint(tablet){
-			display: inline-block;
-		}
-	}
-	&laptop-inline{
-		display: none;
-		@include breakpoint(laptop){
-			display: inline-block;
-		}
-	}
-	&desktop-inline{
-		display: none;
-		@include breakpoint(desktop){
-			display: inline-block;
-		}
 	}
 }

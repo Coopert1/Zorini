@@ -1,0 +1,33 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		.wrapper
+			.news
+				.title Новости
+				.row.clearfix
+					mixin product-column
+						.col-phablet-1-2.col-tablet-1-3
+							.product
+								.product__img
+									img(src="images/product_04.png" alt="foto")
+								.product__title.product__title_off-line Кухня Модесто
+								.product__data 12.01.2016
+								.product__text Кабинет Ян в классическом стиле из массива темного оттенка со столом на заказ от студии «Зевс».
+								a.btn.btn__product(href="#") Подробнее
+
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+					+product-column
+				
+			
+				
+		include ./parts/form-line.pug
+		include ./parts/footer.pug
+	

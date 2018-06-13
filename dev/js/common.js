@@ -35,7 +35,6 @@ $(function(){
 		useCSS: true,
 		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
 		easing: 'linear', //'for jquery animation',////
-
 		speed: 400, //ms'
 		auto: true,
 		loop: true,
@@ -64,4 +63,11 @@ $(function(){
 
 	// input-mask
 	$('input[type="tel"]').inputmask('+7(999)999-99-99');
+	// end input-mask
+		///add to fav
+
+		$('.product-item__add-to-fav').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		})
 });

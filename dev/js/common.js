@@ -62,4 +62,6 @@ $(function(){
 		pause: 10000,
 	});
 
+	// input-mask
+	$('input[type="tel"]').inputmask('+7(999)999-99-99');
 });

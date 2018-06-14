@@ -2,377 +2,244 @@ html
 	head
 		include ./parts/head.pug
 	body
-		.header-top
-			.content-wrapper
-				.location
-					include ./images/pin.svg
-					span 
-						|Город:
-					a(href="#") Москва
-				.company-info.show-tablet-inline
-					ul
-						li О компании
-						li Контакты
-						li Доставка
-						li Оплата
-						li Франшиза
-				.telephone.telephone_top-line.hide-tablet
-					a(href="tel:88000000121")
-						span
-							|+8 800
-						span
-							|000 01 21
+		include ./parts/header.pug
 		.wrapper
-			.header-bottom
-				.content-wrapper
-					a(href="#").logo
-						span
-							|Zorini
-						span
-							|Индивидуальное производство мебели из массива
-					a(href="#").btn.btn_calc
-						.icon
-							include ./images/calc.svg
-						|Onine расчет
-					a(href="#").btn.btn_calc
-						.icon
-							include ./images/person.svg
-						|Вызывать замерщика
-					.contact-info.show-tablet-inline
-						span.time
-							|Время работы с 8:00 до 20:00
-						.telephone
-							a(href="tel:88000000121")
-								include ./images/phone.svg
-								span
-									|+8 800
-								span
-									|000 01 21
-						a(href="#")
-							span.callback
-								|перезвонить мне
-					.search
-						include ./images/search.svg
-					.favorite
-						include ./images/favorite.svg
-						span.fav-item-count 4
-	.wrapper
-		.main-menu
+			ul#promoslider
+				li
+					.promo
+						.promo__pic
+							img(src="images/main_banner.png" alt="promopic")
+						.promo__text
+							a(href="#").btn.btn_promo
+								|Подробнее
+							
+				li
+					.promo
+						.promo__pic
+							img(src="images/main_banner.png" alt="promopic")
+						.promo__text
+							a(href="#").btn.btn_promo
+								|Подробнее
+				li
+					.promo
+						.promo__pic
+							img(src="images/main_banner.png" alt="promopic")
+						.promo__text
+							a(href="#").btn.btn_promo
+								|Подробнее
+				li
+					.promo
+						.promo__pic
+							img(src="images/main_banner.png" alt="promopic")
+						.promo__text
+							a(href="#").btn.btn_promo
+								|Подробнее
+		.wrapper
+			.title
+				|Хиты продаж
 			.content-wrapper
-				ul
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/cupboard.svg
-							.text
-								span Шкафы
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/kitchen.svg
-							.text
-								span Кухни
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/biblioteka.svg
-							.text
-								span Библиотеки
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/commode.svg
-							.text
-								span Шкафы
-					li
-						a(href="#").menu-item
-							.icon.icon_bedroom
-								include ./images/menu/bedroom.svg
-							.text
-								span Спальни
-					li
-						a(href="#").menu-item
-							.icon.icon_childrens
-								include ./images/menu/childrens_furniture.svg
-							.text
-								span Детские
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/living_rooms.svg
-							.text
-								span Гостинные
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/doors.svg
-							.text
-								span Двери
-					li
-						a(href="#").menu-item
-							.icon
-								include ./images/menu/bathroom.svg
-							.text
-								span Ванная
-					li
-						a(href="#").menu-item
-							.icon
+				.clearfix
+					.col-phablet-1-3
+						.product-item
+							a(href="#").product-item__add-to-fav
+								img(src="images/like.png" alt="like")
+							.product-item__image
+								img(src="images/product_01.png" alt="product")
+							.product-item__mark
+								|Хит продаж
+							.product-item__text
+								.product-item__name
+									|Кухня Модесто
+								.product-item__price
+									span
+										|54 900.00 
+									span
+										|р./м.пог.
+					.col-phablet-1-3
+						.product-item
+							a(href="#").product-item__add-to-fav
+								img(src="images/like.png" alt="like")
+							.product-item__image
+								img(src="images/product_02.png" alt="product")
+							.product-item__mark
+								|Хит продаж
+							.product-item__text
+								.product-item__name
+									|Кухня Модесто
+								.product-item__price
+									span
+										|54 900.00 
+									span
+										|р./м.пог.
+					.col-phablet-1-3
+						.product-item
+							a(href="#").product-item__add-to-fav
+								img(src="images/like.png" alt="like")
+							.product-item__image
+								img(src="images/product_03.png" alt="product")
+							.product-item__mark
+								|Хит продаж
+							.product-item__text
+								.product-item__name
+									|Кухня Модесто
+								.product-item__price
+									span
+										|54 900.00 
+									span
+										|р./м.пог.
+		.wrapper
+		.wrapper
+		.wrapper
+			ul#newsslider
+				li
+					a(href="#").promo
+						.promo__pic
+							img(src="images/news_banner.png" alt="promopic")
+						.promo__text
+				li
+					a(href="#").promo
+						.promo__pic
+							img(src="images/news_banner.png" alt="promopic")
+						.promo__text
+				li
+					a(href="#").promo
+						.promo__pic
+							img(src="images/news_banner.png" alt="promopic")
+						.promo__text
+		.wrapper
+			.inner-wrapper.inner-wrapper_border-bottom
+				.row.clearfix
+					.col-phablet-1-2
+						.title Наше преимущество?
+						.advantages
+							.advantages__icon
 								include ./images/menu/dressing_rooms.svg
-							.text
-								span Гардеробные
-					li
-						a(href="#").menu-item
-							.icon.icon_office
-								include ./images/menu/biblioteka.svg
-							.text
-								span Офис
-					li
-						a(href="#").menu-item
-							.icon.icon_hallways
-								include ./images/menu/hallways.svg
-							.text
-								span Прихожая
-					li
-						a(href="#").menu-item
-							.icon.icon_more
-								include ./images/menu/show-more.svg
-							.text
-								span Показать все
-	.wrapper
-		ul#promoslider
-			li
-				.promo
-					.promo__pic
-						img(src="images/main_banner.png" alt="promopic")
-					.promo__text
-						a(href="#").btn.btn_promo
-							|Подробнее
+							.advantages__text Мы производство и следовательно цены от производителя
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Отсутвуют нестандарты
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Богатый опыт производства мебели уже более 10 лет.
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Все материалы и лаки экологичны и т.д. важно для ребенка 
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Каждый заказ проходит контроль качества
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text  Немецкие Итальянские станки.
+					.col-phablet-1-2.advantages__border-left
+						.title Как мы работаем?
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Мы делаем сложный резной декор в массиве, который изготавливается на ЧПУ и резчиком вручную.
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Наше производство  позволяет  сделать изделия любого нестандартного размера , любого дизайна .
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text  Мы можем сделать  декоративные элементов не только по предложенным образцам, или вашим эскизам но и по просто по фото.
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text Изготовление  мебели не только по предложенным вариантам цветовой гаммы, но и по индивидуальному, желаемому цвету.
+						.advantages
+							.advantages__icon
+								include ./images/menu/dressing_rooms.svg
+							.advantages__text   Использование ценных пород деревьев, как дуб, ясень, ольху, бук
+								ul
+									li
+										a(href="#") Про ДСП
+									li
+										a(href="#") Про Камень
+									li
+										a(href="#") Про Лаки и краску 
+									li
+										a(href="#") Про фурнитуру
+		.wrapper
+			.content-wrapper
+				.title 
+					span Наши работы
+					a.works(href="#") Все  наши работы
+				.our-works
+					.row.clearfix
+						.col-phablet-1-2.col-tablet-1-3
+							.product
+								.product__img
+									img(src="images/product_04.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Ян в классическом стиле из массива темного оттенка со столом на заказ от студии «Зевс».
+						.col-phablet-1-2.col-tablet-1-3.clearfix
+							.product
+								.product__img
+									img(src="images/product_05.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
+						.col-phablet-1-2.col-tablet-1-3.clearfix
+							.product
+								.product__img
+									img(src="images/product_06.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
 						
-			li
-				.promo
-					.promo__pic
-						img(src="images/main_banner.png" alt="promopic")
-					.promo__text
-						a(href="#").btn.btn_promo
-							|Подробнее
-			li
-				.promo
-					.promo__pic
-						img(src="images/main_banner.png" alt="promopic")
-					.promo__text
-						a(href="#").btn.btn_promo
-							|Подробнее
-			li
-				.promo
-					.promo__pic
-						img(src="images/main_banner.png" alt="promopic")
-					.promo__text
-						a(href="#").btn.btn_promo
-							|Подробнее
-
-	.wrapper
-		.title
-			|Хиты продаж
-		.content-wrapper
-			.clearfix
-				.col-phablet-1-3
-					.product-item
-						a(href="#").product-item__add-to-fav
-							img(src="images/like.png" alt="like")
-						.product-item__image
-							img(src="images/product_01.png" alt="product")
-						.product-item__mark
-							|Хит продаж
-						.product-item__text
-							.product-item__name
-								|Кухня Модесто
-							.product-item__price
-								span
-									|54 900.00 
-								span
-									|р./м.пог.
-				.col-phablet-1-3
-					.product-item
-						a(href="#").product-item__add-to-fav
-							img(src="images/like.png" alt="like")
-						.product-item__image
-							img(src="images/product_02.png" alt="product")
-						.product-item__mark
-							|Хит продаж
-						.product-item__text
-							.product-item__name
-								|Кухня Модесто
-							.product-item__price
-								span
-									|54 900.00 
-								span
-									|р./м.пог.
-				.col-phablet-1-3
-					.product-item
-						a(href="#").product-item__add-to-fav
-							img(src="images/like.png" alt="like")
-						.product-item__image
-							img(src="images/product_03.png" alt="product")
-						.product-item__mark
-							|Хит продаж
-						.product-item__text
-							.product-item__name
-								|Кухня Модесто
-							.product-item__price
-								span
-									|54 900.00 
-								span
-									|р./м.пог.
-	.wrapper
-		ul#newsslider
-			li
-				a(href="#").promo
-					.promo__pic
-						img(src="images/news_banner.png" alt="promopic")
-					.promo__text
-						
-			li
-				a(href="#").promo
-					.promo__pic
-						img(src="images/news_banner.png" alt="promopic")
-					.promo__text
-			li
-				a(href="#").promo
-					.promo__pic
-						img(src="images/news_banner.png" alt="promopic")
-					.promo__text
-	.inner-wrapper.inner-wrapper_border-bottom
-		row.clearfix
-			.col-phablet-1-2
-				.title Наше преимущество?
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Мы производство и следовательно цены от производителя
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Отсутвуют нестандарты
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Богатый опыт производства мебели уже более 10 лет.
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Все материалы и лаки экологичны и т.д. важно для ребенка 
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Каждый заказ проходит контроль качества
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text  Немецкие Итальянские станки.
-			.col-phablet-1-2.advantages__border-left
-				.title Как мы работаем?
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Мы делаем сложный резной декор в массиве, который изготавливается на ЧПУ и резчиком вручную.
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Наше производство  позволяет  сделать изделия любого нестандартного размера , любого дизайна .
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text  Мы можем сделать  декоративные элементов не только по предложенным образцам, или вашим эскизам но и по просто по фото.
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text Изготовление  мебели не только по предложенным вариантам цветовой гаммы, но и по индивидуальному, желаемому цвету.
-				.advantages
-					.advantages__icon
-						include ./images/menu/dressing_rooms.svg
-					.advantages__text   Использование ценных пород деревьев, как дуб, ясень, ольху, бук
-						ul
-							li
-								a(href="#") Про ДСП
-							li
-								a(href="#") Про Камень
-							li
-								a(href="#") Про Лаки и краску 
-							li
-								a(href="#") Про фурнитуру
-				
-				
-			
-	.title Наши работы
-		a.all-our-works(hreg="#") Все  наши работы
-	.inner-wrapper
-		row.clearfix
-			.col-phablet-1-2.col-tablet-1-3
-				.product
-					.product__img
-						img(src="images/product_04.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Ян в классическом стиле из массива темного оттенка со столом на заказ от студии «Зевс».
-			.col-phablet-1-2.col-tablet-1-3.clearfix
-				.product
-					.product__img
-						img(src="images/product_05.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
-			.col-phablet-1-2.col-tablet-1-3.clearfix
-				.product
-					.product__img
-						img(src="images/product_06.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
-			
-			.col-tablet-2-3.show-tablet
-				.product
-					.product__img
-						img(src="images/product_09.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
-			.col-phablet-1-2.col-tablet-1-3
-				.product
-					.product__img
-						img(src="images/product_07.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
-			.col-tablet-1-3.show-tablet
-				.product
-					.product__img
-						img(src="images/product_08.png" alt="foto")
-						a.product-item__add-to-fav(href="#")
-							img(src="images/like.png" alt="like")
-					.product__title Кухня Модесто
-					.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
-	.wrapper
-		.review-slider
-			.review-slider__title Отзывы
-			.review-slider__img
-				img(src="images/product_08.png")
-			.slider-arrows
-				.slider_controls
-					span.icon.icon_review_slider_prev.ls-prevSlide &#x2329
-					.review-slider__pager
-						span 1
-						span 3
-					span.icon.icon_review_slider_next.ls-nextSlide &#x232A
-			ul#review-slider
-				li
-					.review-slider__text Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
-				li
-					.review-slider__text  Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
-				li
-					.review-slider__text  Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
+						.col-tablet-2-3.show-tablet
+							.product
+								.product__img
+									img(src="images/product_09.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
+						.col-phablet-1-2.col-tablet-1-3
+							.product
+								.product__img
+									img(src="images/product_07.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
+						.col-tablet-1-3.show-tablet
+							.product
+								.product__img
+									img(src="images/product_08.png" alt="foto")
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+								.product__title Кухня Модесто
+								.product__text Кабинет Галактион коричневого цвета из массива на три предмета на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях.
+			.wrapper
+				.review-slider
+					.review-slider__title Отзывы
+					.review-slider__img
+						img(src="images/product_08.png")
+					.slider-arrows
+						.slider_controls
+							span.icon.icon_review_slider_prev.ls-prevSlide &#x2329
+							.review-slider__pager
+								span 1
+								span 3
+							span.icon.icon_review_slider_next.ls-nextSlide &#x232A
+					ul#review-slider
+						li
+							.review-slider__text Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
+						li
+							.review-slider__text  Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
+						li
+							.review-slider__text  Очень благодарна mebel-zevs за скорость и качество. мы делали ремонт в спальне и нам необходимо было купить тумбочку, 2 кресла и шкаф. долго искали то, что понравится и будет по качеству соответствовать цене. и наш выбор упал на мебель Зевс. как раз все вписалось под наш интерьер. и ребята, которые приезжали, собирали все - сделали аккуратно и быстро. в квартире не было неприятного запаха клея или еще чего-то, как обычно бывает когда новую мебель покупают. однозначно рекомендую студию.
+	
 	include ./parts/footer.pug

@@ -65,9 +65,38 @@ $(function(){
 	$('input[type="tel"]').inputmask('+7(999)999-99-99');
 	// end input-mask
 		///add to fav
-
 		$('.product-item__add-to-fav').click(function(e){
-		e.preventDefault();
-		$(this).toggleClass('active');
+			e.preventDefault();
+			$(this).toggleClass('active');
 		})
+	// filters carusel
+
+		// $('.filter__block__params').hide();
+		$('.filter__block__name').click(function() {
+			var $answer = $(this).siblings('.filter__block__params');
+				if ($answer.is(':hidden')) {
+					$answer.slideDown();
+					// $(this).css('margin-bottom', '20px')
+					$(this).addClass('close');
+					$(this).siblings('.filter__block__arrow').addClass('open');
+				} else {
+					$answer.slideUp();
+					$(this).removeClass('close');
+					// $(this).css('margin-bottom', '0px')
+					$(this).siblings('.filter__block__arrow').removeClass('open');
+				}
+			});
+
+	//show-hide filters
+		$('#show-filter-mobile').click(function(){
+			$(".filters").addClass('filters_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+		$('.filters__close-btn').click(function(){
+			$(".filters").removeClass('filters_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+	// end show-hide filters
 });

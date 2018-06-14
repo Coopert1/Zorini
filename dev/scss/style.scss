@@ -30,6 +30,87 @@ a{
 body{
 	background: #fafafb;
 }
+img{
+	max-width: 100%;
+}
+h1{
+	font-family: 'Oranienbaum', serif;
+	font-size: 60px;
+}
+h2{
+	font-family: 'Oranienbaum', serif;
+	font-size: 52px;
+}
+h3{
+	font-family: 'Oranienbaum', serif;
+	font-size: 36px;
+}
+h4{
+	font-family: 'Oranienbaum', serif;
+	font-size: 36px;
+}
+p.text{
+	margin-bottom: 35px;
+	font-size: 13px;
+	color: #898989;
+	line-height: 24px;
+}
+
+.backdrop {
+	position: fixed;
+	left: -100%;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.4);
+	opacity: 0;
+	z-index: 4;
+	transition: opacity 0.3s ease;
+}
+.on{
+	opacity: 1;
+	left: 0;
+}
+.no-scroll {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.breadcrumbs{
+	font-size: 13px;
+	list-style: none;
+	color: #898989;
+	margin-bottom: 20px;
+	display: inline-block;
+	li{
+		display: inline-block;
+		margin-right: 10px;
+		position: relative;
+		&:not(:last-child):after{
+			content: "/";
+			display: inline-block;
+			position: absolute;
+			right: -11px;
+			font-size: 13px;
+			top: 0px;
+		}
+		&:not(:last-child){
+			text-decoration: underline;
+		}
+	}
+	a{
+		color: #898989;
+		&:hover{
+			color: #51a5b4;
+		}
+	}
+}
+.catalog-title{
+	margin-top: 15px;
+	margin-bottom: 45px;
+}
 input {
 	
 //	-webkit-appearance: none;
@@ -59,12 +140,14 @@ input {
 	}
 }
 img{max-width: 100%;}
+
 .header-top{
 	font-size: 12px;
 	background: #2a2a2a;
 	color: #fff;
 	padding: 12px 0;
 }
+
 .location{
 	display: inline-block;
 	margin-right: 100px;
@@ -76,6 +159,7 @@ img{max-width: 100%;}
 		padding-left: 20px;
 	}
 }
+
 #pin{
 	position: absolute;
 	margin-right: 5px;
@@ -83,6 +167,7 @@ img{max-width: 100%;}
 		fill: #fff;
 	}
 }
+
 .company-info{
 	display: inline-block;
 	ul{
@@ -93,6 +178,26 @@ img{max-width: 100%;}
 		margin-right: 35px;
 	}
 }
+
+.enter{
+	float: right;
+	position: relative;
+	top: -5px;
+}
+
+.check-order{
+	display: inline-block;
+	background: #fff;
+	color: #5f5f5f;
+	font-size: 12px;
+	margin-left: 10px;
+	padding: 5px 7px 5px 13px;
+	border-radius: 2px;
+	span:first-child{
+		margin-right: 13px;
+	}
+}
+
 .header-bottom{
 	padding: 10px 0;
 	border-bottom: 1px solid #dadada;
@@ -125,6 +230,7 @@ img{max-width: 100%;}
 	border: 1px solid #4fa4b6;
 	border-radius: 30px;
 	color: #000;
+
 	&_calc{
 		vertical-align: top;
 		top: 10px;
@@ -154,6 +260,27 @@ img{max-width: 100%;}
 		color: #2a2a2a;
 		margin-bottom: 25px;
 	}
+	&_filter{
+		text-align: center;
+		width: 100%;
+		margin-top: 30px;
+		margin-bottom: 15px;
+		background-color: white;
+		span:first-child{
+			color: #2a2a2a;
+		}
+		span:last-child{
+			color: #838383;
+		}
+	}
+	&_sort{
+		font-size: 12px;
+		border: none;
+		color: #7c7c7c;
+		background: #ededf0;
+		padding: 8px 12px;
+	}
+
 }
 .contact-info{
 	position:relative;
@@ -324,14 +451,28 @@ img{max-width: 100%;}
 }
 .title{
 	margin: 50px 0;
+	position: relative;
 	text-align: center;
 	font-size: 52px;
 	font-family: 'Oranienbaum', serif;
 	color: #2a2a2a;
+	&_left{
+		text-align:left;
+	}
 	@include breakpoint(mobileonly){
 		font-size: 36px;
 	}
-
+	span{
+		font-size: 52px;
+	}
+	.works{
+			font-size: 13px;
+			position: relative;
+			top: -10px;
+			left: 20px;
+			text-decoration: underline;
+			color: #898989;
+		}
 }
 
 
@@ -440,7 +581,6 @@ img{max-width: 100%;}
 	
 	&__img{
 		margin-bottom: 25px;
-		text-align: center;
 		position: relative;
 		.product-item__add-to-fav{
 			bottom: 15px;
@@ -483,10 +623,11 @@ img{max-width: 100%;}
 	}
 	&__text{
 		font-size: 14px;
+		font-style:oblique;
 		color: 6c6c6c;
 		font-family: 'Open Sans regular', sans-serif;
 		line-height: 1.55;
-		max-height: 65px;
+		max-height: 66px;
 		overflow: hidden;
 	}
 }
@@ -616,11 +757,6 @@ img{max-width: 100%;}
 				font-size:24px;
 			}
 		}
-	}
-	.container{
-		
-		
-		
 	}
 }
 .footer{
@@ -782,7 +918,221 @@ img{max-width: 100%;}
 			margin-top: 25px;
 		}
 	}
+}
 	
+////
+.filters{
+	width: 320px;
+	text-align: center;
+	box-shadow: 0px 1px 3px 1px rgba(182,183,184,1);
+	padding: 50px;
+    height: 100%;
+    background: #fff;
+	transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    z-index: 11;
+	overflow-y: scroll;
+    visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    &_active{
+		transition: all 0.4s ease;
+		right: 0;
+		visibility: visible;
+		bottom: 0;
+		top: 0;
+		position: fixed;
+	}
+	@include breakpoint(laptop){
+		display: block;
+		width:100%;
+		height: auto;
+		overflow: visible;
+		right: 0;
+		z-index: 6;
+		visibility: visible;
+		position:relative;
+		padding: 0;
+		box-shadow: none;
+		margin-bottom: 50px;
+	}
+	&__title{
+		margin-top: 45px;
+		margin-bottom: 25px;
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: bold;
+		text-align: left;
+		font-size: 18px;
+		color: #2a2a2a;
+	}
+	button[type=reset]{
+		border: none;
+		text-decoration: underline;
+		font-size: 12px;
+		color: #898989;
+		background: white;
+	}
+	&__close-btn{
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+}
+.filter__block{
+	text-align: left;
+	border-bottom: 1px solid #dadada;
+	padding: 10px 0;
+	position: relative;
+	&_no-border{
+		border-bottom: none;
+	}
+	&:last-child{
+		border-bottom: none;
+	}
+	&__name{
+		font-family: 'Open Sans bold', sans-serif;
+		color: #2a2a2a;
+		font-size: 14px;
+		font-weight: bold;
+		&_params{
+			margin: 20px 0;
+		}
+	}
+	&__arrow{
+		position: absolute;
+		right: 0;
+		top: 13px;
+		&_params{
+			top: 31px;
+		}
+		svg{
+			transition: transform 0.5s ease;
+			.arrow-r{
+				fill: #2a2a2a;
+			}
+		}
+		&.open{
+			svg{
+				transform: rotate(90deg);
+				transition: transform 0.5s ease;
+	  		}
+		}
+	}
+}
+
+[id^=chkbox]{
+	display: none;
+	outline: none;
+}
+[id^=chkbox] + label{
+	display: inline-block;
+	margin: 10px 0;
+	height: 19px;
+	background:url('../images/checkbox_unchecked.png');
+	background-repeat: no-repeat;
+	span{
+			position: relative;
+			font-size: 12px;
+			top: -3px;
+			left: 25px;
+			color: #898989;
+		}
+}
+[id^=chkbox]:checked + label{
+	display: inline-block;
+	height: 19px;
+	background:url('../images/checkbox_checked.png');
+	background-repeat: no-repeat;
+	label{
+		span{
+			font-size: 12px;
+			position: relative;
+			top: -3px;
+			left: 25px;
+			color: #898989;
+		}
+	}
+}
+.sort-items,.show-items-on-page{
+	display: inline-block;
+	margin-bottom: 18px;
+	font-size:14px;
+	span{
+		margin-right: 6px;
+		@include breakpoint(tablet){
+			margin-right: 10px;
+		}
+	}
+	a{
+		color: #000;
+		margin-right:6px;
+		@include breakpoint(tablet){
+			margin-right: 10px;
+		}
+	}
+	a.active{
+		span{
+			background: #6363de;
+			padding: 4px 6px;
+			border-radius: 50%;
+			color: #fff;
+		}
+	}
+}
+.sort-items{
+	position: relative;
+	left: 20px;
+}
+.show-items-on-page{
+	float: right;
+}
+
+.paginator{
+	display: block;
+	margin: 30px auto;
+	&_catalog{
+		display: block;
+		@include breakpoint(laptop){
+			display: inline-block;
+		}
+	}
+	ul{
+		text-align: center;
+		display: black;
+		margin-top: 15px;
+		list-style: none;
+		li{
+			vertical-align: middle;
+			color: #181818;
+			font-size: 18px;
+			display: inline-block;
+			margin: 0px 5px;
+			line-height: 36px;
+			border: 1px solid #d3d3d3;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+		}
+		li:hover{
+			color: #6363de;
+			border: 1px solid #6363de;
+		}
+		li.active{
+			background: #6363de;
+			color: #fff;
+			border: 1px solid #6363de;
+		}
+		li.prev, li.next{
+			padding-top: 10px;
+			background: #f0f0f0;
+			&:hover{
+				background: #d9d9d9;
+				color: #181818;
+				border: 1px solid #d3d3d3;
+			}
+		}
+	}
 }
 .news{
 	padding: 10px;
@@ -811,18 +1161,6 @@ img{max-width: 100%;}
 			margin-right: 20px;
 			max-width: 290px;
 		}
-//		:-webkit-input-placeholder { /* Chrome/Opera/Safari */
-//			color: #2a2a2a;
-//		}
-//		::-moz-placeholder { /* Firefox 19+ */
-//			color: #2a2a2a;
-//		}
-//		:-ms-input-placeholder { /* IE 10+ */
-//			color: #2a2a2a;
-//		}
-//		:-moz-placeholder { /* Firefox 18- */
-//			color: #2a2a2a;
-//		}
 		&[type="submit"]{
 			border-radius:50px;
 			color: #4fa4b6;
@@ -833,6 +1171,7 @@ img{max-width: 100%;}
 		}
 	}
 	.title{
+		position: relative;
 		color: #fafafb;
 		font-size: 18px;
 		line-height: 1.8;
@@ -928,7 +1267,7 @@ img{max-width: 100%;}
 	text-align: center;
 	padding: 0 10px 40px 10px;
 	margin-bottom: 100px;
-	//margin-top: 200px;
+	margin-top: 50px;
 	border-bottom: none;
 	border-right: none;
 	position: relative;

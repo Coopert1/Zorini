@@ -16,133 +16,7 @@ html
 					|Показать фильтрацию
 				.row.clearfix
 					.col-laptop-1-5
-						.filters
-							form
-								.filters__close-btn.hide-tablet
-									img(src="images/remove_item.png", alt="Спрятать фильтр")
-								.filter__block
-									.filter__block__name Современные кухни
-									.filter__block__arrow
-										include ./images/right_arrow.svg
-								.filter__block
-									.filter__block__name Кухни классика
-									.filter__block__arrow
-										include ./images/right_arrow.svg
-								.filter__block
-									.filter__block__name Кухни неоклассика
-									.filter__block__arrow
-										include ./images/right_arrow.svg
-								.filter__block.filter__block.filter__block_no-border
-									.filter__block__name Проект KarMa
-								.filters__title
-									|Подбор параметров
-								.filter__block
-									.filter__block__name.filter__block__name_params Выберите цвет
-									.filter__block__arrow.filter__block__arrow_params.open
-										include ./images/right_arrow.svg
-									.filter__block__params
-										.filter__block__item
-											input(type="checkbox", name="s1", id="chkbox1")
-											label(for="chkbox1")
-												span Белый
-										.filter__block__item
-											input(type="checkbox" name="s2", id="chkbox2")
-											label(for="chkbox2")
-												span Желтый
-										.filter__block__item
-											input(type="checkbox" name="s3", id="chkbox3")
-											label(for="chkbox3")
-												span Зеленый
-										.filter__block__item
-											input(type="checkbox" name="s4", id="chkbox4")
-											label(for="chkbox4")
-												span Золотой
-										.filter__block__item
-											input(type="checkbox" name="s5", id="chkbox5")
-											label(for="chkbox5")
-												span Красный
-										.filter__block__item
-											input(type="checkbox" name="s6", id="chkbox6")
-											label(for="chkbox6")
-												span Натуральный/дерево
-										.filter__block__item
-											input(type="checkbox" name="s7", id="chkbox7")
-											label(for="chkbox7")
-												span Светлый
-										.filter__block__item
-											input(type="checkbox" name="s8", id="chkbox8")
-											label(for="chkbox8")
-												span Темный
-										.filter__block__item
-											input(type="checkbox" name="s9", id="chkbox9")
-											label(for="chkbox9")
-												span Синий
-								.filter__block
-									.filter__block__name.filter__block__name_params Выберите покрытие
-									.filter__block__arrow.filter__block__arrow_params.open
-										include ./images/right_arrow.svg
-									.filter__block__params
-										.filter__block__item
-											input(type="checkbox", name="s10", id="chkbox10")
-											label(for="chkbox10")
-												span Глянцевые
-										.filter__block__item
-											input(type="checkbox" name="s11", id="chkbox11")
-											label(for="chkbox11")
-												span Матовые
-										.filter__block__item
-											input(type="checkbox" name="s12", id="chkbox12")
-											label(for="chkbox12")
-												span Древесные
-										.filter__block__item
-											input(type="checkbox" name="s13", id="chkbox13")
-											label(for="chkbox13")
-												span Фантазийные
-								.filter__block.filter__block_no-border
-									.filter__block__name.filter__block__name_params Выберите декор
-									.filter__block__arrow.filter__block__arrow_params.open
-										include ./images/right_arrow.svg
-									.filter__block__params
-										.filter__block__item
-											input(type="checkbox", name="s14", id="chkbox14")
-											label(for="chkbox14")
-												span Витражи
-										.filter__block__item
-											input(type="checkbox" name="s15", id="chkbox15")
-											label(for="chkbox15")
-												span Балюстрады
-										.filter__block__item
-											input(type="checkbox" name="s16", id="chkbox16")
-											label(for="chkbox16")
-												span Фрезеровка
-										.filter__block__item
-											input(type="checkbox" name="s17", id="chkbox17")
-											label(for="chkbox17")
-												span Карнизы
-										.filter__block__item
-											input(type="checkbox" name="s18", id="chkbox18")
-											label(for="chkbox18")
-												span Колонны
-										.filter__block__item
-											input(type="checkbox" name="s19", id="chkbox19")
-											label(for="chkbox19")
-												span Ниши и открытые секции
-										.filter__block__item
-											input(type="checkbox" name="s20", id="chkbox20")
-											label(for="chkbox20")
-												span Жалюзи
-										.filter__block__item
-											input(type="checkbox" name="s21", id="chkbox21")
-											label(for="chkbox21")
-												span Цветные кромки
-										.filter__block__item
-											input(type="checkbox" name="s22", id="chkbox22")
-											label(for="chkbox22")
-												span Муратура
-								button(type="submit").btn.btn_filter 
-									span Показать  
-									span 324 товара
-								button(type="reset").dashed.dashed_black очистить фильтр
+						include ./parts/filters.pug
 					.col-laptop-4-5
 						.sort-items
 							.btn.btn_sort
@@ -332,7 +206,9 @@ html
 								a(href="#")
 									li.next
 										i.fa.fa-angle-right
-						.title.title_left Выполненные проекты
+						.title.title_left
+							span Выполненные проекты
+							a.works(href="#") Все  наши работы
 						.clearfix
 							.col-phablet-1-2
 								.product

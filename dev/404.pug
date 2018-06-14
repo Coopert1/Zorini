@@ -1,0 +1,57 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.backdrop
+		.wrapper
+			.content-wrapper
+				.clearfix
+					.col-tablet-1-2
+						.info-404
+							.gradient-text
+								|404
+								.information-text
+									|К сожалнию данной страницы не существует.
+							a(href="#").btn.btn_go-to-catalog
+								|Перейти в каталог
+					.col-tablet-1-2
+						.compensation
+							span Мы компенсируем потеренное Вами время  
+							span.red-color 5% скидкой 
+							span на следующие позиции:
+						ul#productslider
+							li
+								.product-item
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+									.product-item__image
+										img(src="images/product_02.png" alt="product")
+									.product-item__mark.product-item__mark_sale
+										|-5%
+									.product-item__text
+										.product-item__name
+											|Кухня Модесто
+										.product-item__price
+											span
+												|54 900.00 
+											span
+												|р./м.пог.
+							li
+								.product-item
+									a(href="#").product-item__add-to-fav
+										img(src="images/like.png" alt="like")
+									.product-item__image
+										img(src="images/product_03.png" alt="product")
+									.product-item__mark
+										|Хит продаж
+									.product-item__text
+										.product-item__name
+											|Кухня Модесто
+										.product-item__price
+											span
+												|54 900.00 
+											span
+												|р./м.пог.
+			include ./parts/form-line.pug
+			include ./parts/footer.pug

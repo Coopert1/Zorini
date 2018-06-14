@@ -2,7 +2,15 @@ html
 	head
 		include ./parts/head.pug
 	body
+		include ./parts/header.pug
+		
 		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Каталог
 			.news
 				.title Новости
 				mixin product-row
@@ -16,6 +24,26 @@ html
 				+product-row
 				+product-row
 				+product-row
+				.paginator
+					ul
+						a(href="#")
+							li.prev
+								i.fa.fa-angle-left
+						a(href="#")
+							li 1
+						a(href="#")
+							li.active 2
+						a(href="#")
+							li 3
+						a(href="#").show-tablet-inline
+							li 4
+						a(href="#").show-tablet-inline
+							li 5
+						a(href="#").show-tablet-inline
+							li 6
+						a(href="#")
+							li.next
+								i.fa.fa-angle-right
 			
 		include ./parts/form-line.pug
 			

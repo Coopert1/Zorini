@@ -47,6 +47,12 @@
 	}
 }
 .show-{
+	&phablet{
+		display: none;
+		@include breakpoint(phablet){
+			display: block;
+		}
+	}
 	&tablet{
 		display: none;
 		@include breakpoint(tablet){

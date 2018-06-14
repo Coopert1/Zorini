@@ -61,9 +61,10 @@ $(function(){
 		pause: 10000,
 	});
 
-
-	///add to fav
-
+	// input-mask
+	$('input[type="tel"]').inputmask('+7(999)999-99-99');
+	// end input-mask
+		///add to fav
 		$('.product-item__add-to-fav').click(function(e){
 			e.preventDefault();
 			$(this).toggleClass('active');
@@ -98,5 +99,4 @@ $(function(){
 			$('body').toggleClass('no-scroll');
 		})
 	// end show-hide filters
-
 });

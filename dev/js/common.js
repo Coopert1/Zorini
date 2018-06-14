@@ -61,6 +61,33 @@ $(function(){
 		pause: 10000,
 	});
 
+//products Slider  setting 404 page
+		var productslider=$('#productslider').lightSlider({
+		galleryMargin: 25,
+		item: 2,
+		slideMove:1,
+		pager: false,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+		responsive:[
+				{
+					breakpoint: 500,
+					settings:
+						{
+							item:1.5,
+							slideMove:1,
+						}
+				},
+			],
+	});
 	// input-mask
 	$('input[type="tel"]').inputmask('+7(999)999-99-99');
 	// end input-mask

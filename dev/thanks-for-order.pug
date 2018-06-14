@@ -1,0 +1,25 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		.wrapper.thanks-for-order_wrap
+			.thanks-for-order
+				.title Благодарим Вас за заказ:  Кухня “Лада”
+				.thanks-for-order__number Ваш номер заявки: №534943850
+				.thanks-for-order__text Мы благодарим Вас за проявленный интерес к нашей продукции компании Zorini . В ближайшее время наши менеджеры свяжутся с Вами для уточнения всех деталей Вашей заявки.
+				a.btn.btn__back(href="#") Вернуться в каталог
+				ul.social-items
+					li.social-item
+						a(href="#")
+							img(src="images/twitter.png")
+					li.social-item
+						a(href="#")
+							img(src="images/vk.png")
+					li.social-item
+						a(href="#")
+							img(src="images/fb.png")
+					li.social-item
+						a(href="#")
+							img(src="images/youtube.png")
+		include ./parts/form-line.pug
+		include ./parts/footer.pug

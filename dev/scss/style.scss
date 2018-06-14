@@ -279,6 +279,20 @@ img{max-width: 100%;}
 		color: #7c7c7c;
 		background: #ededf0;
 		padding: 8px 12px;
+		margin: 10px 0;
+		&.active{
+			background: #6363de;
+			color: #fff;
+		}
+	}
+	&_show-more{
+		margin: 25px 0 50px 0;
+		width: 100%;
+		text-align: center;
+		border: none;
+		background: #f1f1f6;
+		font-size: 13px;
+		color: #2a2a2a;
 	}
 
 }
@@ -501,6 +515,11 @@ img{max-width: 100%;}
 		font-size: 11px;
 		padding: 1px 5px;
 		background: #6363de;
+		&_catalog{
+			top: 20px;
+			left: 0;
+			bottom: auto;
+		}
 	}
 	&__name{
 		font-size: 18px;
@@ -527,6 +546,10 @@ img{max-width: 100%;}
 		}
 		&.active{
 			background-color: rgba(238, 46, 34, 0.6);
+		}
+		&_catalog{
+			top: 10px;
+			right: 10px;
 		}
 	}
 }
@@ -920,7 +943,8 @@ img{max-width: 100%;}
 	}
 }
 	
-////
+//// Catalog.pug
+
 .filters{
 	width: 320px;
 	text-align: center;
@@ -1081,11 +1105,15 @@ img{max-width: 100%;}
 	}
 }
 .sort-items{
-	position: relative;
-	left: 20px;
+	@include breakpoint(laptop){
+		position: relative;
+		left: 20px;
+	}
 }
 .show-items-on-page{
 	float: right;
+	position: relative;
+	top: 16px;
 }
 
 .paginator{
@@ -1339,7 +1367,7 @@ img{max-width: 100%;}
 		font-size: 24px;
 		color: #2a2a2a;
 		font-weight: bold;
-		font-family: 'Open Sans bod', sans-serif;
+		font-family: 'Open Sans bold', sans-serif;
 		margin: 50px 0 40px 0;
 		@include breakpoint(mobileonly){
 			font-size: 16px;
@@ -1354,6 +1382,80 @@ img{max-width: 100%;}
 		}
 		@include breakpoint(laptop){
 			padding: 0 90px;
+		}
+	}
+}
+.catalog-item{
+	position: relative;
+	padding: 7px;
+	border: 1px solid #dadada;
+	margin-bottom: -1px;
+	&__pic{
+		vertical-align: top;
+		display: inline-block;
+		max-width: 236px;
+		margin-right:45px; 
+	}
+	&__name{
+		display: block;
+		font-family: 'Open Sans bold', sans-serif;
+		font-size: 21px;
+		font-weight: bold;
+		color: #2a2a2a;
+		margin-bottom: 30px;
+	}
+	&__text{
+		vertical-align: top;
+		padding-top: 35px;
+		display: inline-block;
+	}
+	&__description{
+		table{
+			font-size: 13px;
+		}
+		td{
+
+			line-height: 1.5;
+			vertical-align: top;
+			&:first-child{
+				width: 110px;
+				position: relative;
+				overflow: hidden;
+				color: #303030;
+				span{
+					position: relative;
+					&:after{
+					content: " ";
+					position: absolute;
+					width: 350px;
+					left: 100%;
+					height: 2px;
+					border-bottom: 1px dotted #bcbcbc;
+					bottom: 5px;
+					}
+				}
+			}
+			&:last-child{
+				//min-width: 120px;
+				color: #5e5e5e;
+				vertical-align: bottom;
+
+
+			}
+		}
+	}
+	&__price{
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		display: inline-block;
+		span:first-child{
+			font-family: 'Open Sans bold', sans-serif;
+			font-weight: bold;
+		}
+		@include breakpoint(laptop){
+			bottom: auto;
+			top: 100px;
 		}
 	}
 }

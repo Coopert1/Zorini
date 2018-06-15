@@ -1,0 +1,227 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.backdrop
+		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Каталог
+				h2.catalog-title Современные кухни
+				a.btn.btn_filter.hide-laptop(id="show-filter-mobile")
+					|Показать фильтрацию
+				.row.clearfix
+					.col-laptop-1-5
+						include ./parts/filters.pug
+					.col-laptop-4-5
+						.sort-items
+							.btn.btn_sort
+								|эко
+							.btn.btn_sort
+								|ретро
+							.btn.btn_sort.active
+								|стильные
+							.btn.btn_sort
+								|функциональные
+							.btn.btn_sort
+								|винтаж
+						.show-items-on-page.show-tablet-inline
+							span
+								|Показывать по:
+							a(href="#")
+								span
+									|15
+							a(href="#").active
+								span
+									|25
+							a(href="#")
+								span
+									|35
+						.catalog-item
+							.product-item__mark.product-item__mark_catalog
+								|Хит продаж
+							a(href="#").product-item__add-to-fav.product-item__add-to-fav_catalog
+								img(src="images/like.png" alt="like")
+							a(href="#").catalog-item__pic
+								img(src="images/product_01.png" alt="product")
+							.catalog-item__text
+								a(href="#").catalog-item__name
+									|Кухня Модесто
+								.catalog-item__description
+									table
+										tbody
+											tr
+												td
+													span Стиль
+												td неокласика
+											tr
+												td 
+													span Материалы
+												td Камень, МДФ, Массив дуба
+
+											tr
+												td 
+													span Фурнитура
+												td Hetich
+											tr
+												td 
+													span Фасад
+												td Бергонци
+											tr
+												td 
+													span Rall 
+												td 9999999
+							.catalog-item__price
+								span 54 900.00 
+								span р./м.пог.
+						.catalog-item
+							a(href="#").product-item__add-to-fav.product-item__add-to-fav_catalog
+								img(src="images/like.png" alt="like")
+							.product-item__mark.product-item__mark_catalog
+								|Хит продаж
+							a(href="#").catalog-item__pic
+								img(src="images/product_01.png" alt="product")
+							.catalog-item__text
+								a(href="#").catalog-item__name
+									|Кухня Модесто
+								.catalog-item__description
+									table
+										tbody
+											tr
+												td
+													span Стиль
+												td неокласика
+											tr
+												td 
+													span Материалы
+												td Камень, МДФ, Массив дуба
+
+											tr
+												td 
+													span Фурнитура
+												td Hetich
+											tr
+												td 
+													span Фасад
+												td Бергонци
+											tr
+												td 
+													span Rall 
+												td 9999999
+							.catalog-item__price
+								span 54 900.00 
+								span р./м.пог.
+						.catalog-item
+							a(href="#").product-item__add-to-fav.product-item__add-to-fav_catalog
+								img(src="images/like.png" alt="like")
+							a(href="#").catalog-item__pic
+								img(src="images/product_01.png" alt="product")
+							.catalog-item__text
+								a(href="#").catalog-item__name
+									|Кухня Модесто
+								.catalog-item__description
+									table
+										tbody
+											tr
+												td
+													span Стиль
+												td неокласика
+											tr
+												td 
+													span Материалы
+												td Камень, МДФ, Массив дуба
+
+											tr
+												td 
+													span Фурнитура
+												td Hetich
+											tr
+												td 
+													span Фасад
+												td Бергонци
+											tr
+												td 
+													span Rall 
+												td 9999999
+							.catalog-item__price
+								span 54 900.00 
+								span р./м.пог.
+						.catalog-item
+							a(href="#").product-item__add-to-fav.product-item__add-to-fav_catalog
+								img(src="images/like.png" alt="like")
+							a(href="#").catalog-item__pic
+								img(src="images/product_01.png" alt="product")
+							.catalog-item__text
+								a(href="#").catalog-item__name
+									|Кухня Модесто
+								.catalog-item__description
+									table
+										tbody
+											tr
+												td
+													span Стиль
+												td неокласика
+											tr
+												td 
+													span Материалы
+												td Камень, МДФ, Массив дуба
+
+											tr
+												td 
+													span Фурнитура
+												td Hetich
+											tr
+												td 
+													span Фасад
+												td Бергонци
+											tr
+												td 
+													span Rall 
+												td 9999999
+							.catalog-item__price
+								span 54 900.00 
+								span р./м.пог.
+						.catalog-item
+							a(href="#").product-item__add-to-fav.product-item__add-to-fav_catalog
+								img(src="images/like.png" alt="like")
+							a(href="#").catalog-item__pic
+								img(src="images/product_01.png" alt="product")
+							.catalog-item__text
+								a(href="#").catalog-item__name
+									|Кухня Модесто
+								.catalog-item__description
+									table
+										tbody
+											tr
+												td
+													span Стиль
+												td неокласика
+											tr
+												td 
+													span Материалы
+												td Камень, МДФ, Массив дуба
+
+											tr
+												td 
+													span Фурнитура
+												td Hetich
+											tr
+												td 
+													span Фасад
+												td Бергонци
+											tr
+												td 
+													span Rall 
+												td 9999999
+							.catalog-item__price
+								span 54 900.00 
+								span р./м.пог.
+						a(href="#").btn.btn_show-more
+							|Показать еще
+						p.text В каталоге кухонь представлена подробная информация о каждом из образцов от Мебельной фабрики. Вы обязательно подберете желаемый вариант, ведь наши модели удивительно разноплановы. В процессе принятия решения вы можете опираться на цены базовых компоновок, которые содержит каталог кухонной мебели. Окончательную стоимость можно узнать, заказав бесплатный дизайн-проект.
+						p.text  каталоге кухонь представлена подробная информация о каждом из образцов от Мебельной фабрики. Вы обязательно подберете желаемый вариант, ведь наши модели удивительно разноплановы. В процессе принятия решения вы можете опираться на цены базовых компоновок, которые содержит каталог кухонной мебели. Окончательную стоимость можно узнать, заказав бесплатный дизайн-проект. В каталоге кухонь представлена подробная информация о каждом из образцов от Мебельной фабрики. Вы обязательно подберете желаемый вариант, ведь наши модели удивительно разноплановы. В процессе принятия решения вы можете опираться на цены базовых компоновок, которые содержит каталог кухонной мебели. Окончательную стоимость можно узнать, заказав бесплатный дизайн-проект.
+		include ./parts/footer.pug

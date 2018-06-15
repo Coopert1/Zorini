@@ -126,4 +126,28 @@ $(function(){
 			$('body').toggleClass('no-scroll');
 		})
 	// end show-hide filters
+	//center:  {lat:55.640684, lng:37.8232893},
+	
 });
+function initMap() {
+
+	var uluru = {lat:55.640684, lng:37.8277893};
+	
+	var mark_in_map = new google.maps.LatLng({lat:55.640684, lng:37.8277893});
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom:16,
+		center: uluru,
+		mapTypeControl: false,
+		fullscreenControl:false,
+		streetViewControl: false
+	});
+	var marker = new google.maps.Marker({
+		position: mark_in_map,
+		map: map,
+		animation: google.maps.Animation.DROP,
+		icon:{
+			url: "http://circle.dvatest.in.ua/taras/building-company/app/images/pin.png",
+			
+		}
+	});
+}

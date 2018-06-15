@@ -1,0 +1,24 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.wrapper.wrap-map
+			#map
+			.contacts
+				.title Контакты
+				.contacts__phone Телефон
+				.contacts__number-phone
+					span 8 800 
+					span 000 01 21
+				.contacts__number-phone
+					span 8 800 
+					span 511 8977
+				.contacts__work-time время работы с 8:00 до 20:00
+				.contacts__email E-mail
+				a.email(href="info@zorini.ru") info@zorini.ru
+				a.btn(href="#") Оставить сообщение
+			
+		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADrv0-muNQA1dnWYgsA2mZ7c-qf0zN89g&callback=initMap" )
+		include ./parts/form-line.pug
+		include ./parts/footer.pug

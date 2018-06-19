@@ -1,0 +1,156 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		
+		.wrapper
+			.configuration
+				.flex
+					.column-flex-laptop-3-4
+		
+						ul.breadcrumbs.show-laptop
+							li
+								a(href="index.html") Главная
+							li
+								a(href="#") Каталог
+						.title Конфигурации
+						form
+							.row.clearfix
+								.col-phablet-1-3.col-tablet-1-3
+									.package-config
+										.package-config__img
+											img(src="images/product_04.png" alt="foto")
+										.package-config__name
+											input#base-config(type="radio" name="package-config" checked)
+											label(for="base-config") Базовый
+								.col-phablet-1-3.col-tablet-1-3
+									.package-config
+										.package-config__img
+											img(src="images/product_05.png" alt="foto")
+										.package-config__name
+											input#standart-config(type="radio" name="package-config")
+											label(for="standart-config") Стандарт
+								.col-phablet-1-3.col-tablet-1-3
+									.package-config
+										.package-config__img
+											img(src="images/product_06.png" alt="foto")
+										.package-config__name
+											input#premium-config(type="radio" name="package-config")
+											label(for="premium-config") Премиум
+							.wrap-shape
+								.config-shape
+									.config-shape__item
+										input#shape_1(type="radio" name="shape" value="line-form")
+										label(for="shape_1") Прямая
+										img(src="images/conf-type_01.png")
+									.config-shape__item
+										input#shape_2(type="radio" name="shape" value="l-revers-form")
+										label(for="shape_2") Г-образная
+										img(src="images/conf-type_02.png")
+									.config-shape__item
+										input#shape_3(type="radio" name="shape" value="l-form")
+										label(for="shape_3") Г-образная
+										img(src="images/conf-type_03.png")
+									.config-shape__item
+										input#shape_4(type="radio" name="shape" value="p-form")
+										label(for="shape_4") П-образная
+										img(src="images/conf-type_04.png")
+								.chosen-shape
+									.chosen-shape__p-form.active
+										.chosen-shape__img
+											img(src="images/conf-type-big_04.png")
+											label.top
+												input(type="number" min="1")
+												|  См.
+											label.right
+												input(type="number" min="1")
+												|  См.
+											label.bottom
+												input(type="number" min="1")
+												|  См.
+									.chosen-shape__line-form
+										.chosen-shape__img
+											img(src="images/conf-type-big_01.png")
+											label.top
+												input(type="number" min="1")
+												|  См.
+									.chosen-shape__l-revers-form
+										.chosen-shape__img
+											img(src="images/conf-type-big_02.png")
+											label.top
+												input(type="number" min="1")
+												|  См.
+											label.left
+												input(type="number" min="1")
+												|  См.
+									.chosen-shape__l-form
+										.chosen-shape__img
+											img(src="images/conf-type-big_03.png")
+											label.top
+												input(type="number" min="1")
+												|  См.
+											label.right
+												input(type="number" min="1")
+												|  См.
+							.option-config
+								mixin option-config(title, name, ...items)
+									.option-config__item
+										.option-config__list-title= title
+										ul.option-config__list
+											- var i=1;
+											each item in items
+												li
+													input(type="radio" name=name id=name + i)
+													label(for=name + i id=name + i)= item
+												- i++
+								+option-config('Фасад','facade', 'МДФ', 'Массив')
+								+option-config('Фурнитура','furniture', 'Hettich стандарт', 'Hettich TopLine', 'Aventus HF','Волшебный уголок' )
+								+option-config('Столешница','tabletop', 'Пластик', 'Массив', 'Каменные')
+							.option-config
+								.option-config__item.option-config__item_stretch
+									.option-config__list-title.option-config__list-title_block Декор
+									ul.option-config__list
+										li
+											input#decor1(type="radio" name="decor")
+											label(for="decor1") Карниз
+										li
+											input#decor2(type="radio" name="decor")
+											label(for="decor2")  Цоколь изPHL
+										li
+											input#decor3(type="radio" name="decor")
+											label(for="decor3") Цоколь из Массива
+										li
+											input#decor4(type="radio" name="decor")
+											label(for="decor4") Баллюстрада
+									ul.option-config__list
+										li
+											input#decor5(type="radio" name="decor")
+											label(for="decor5") Пилястра
+										li
+											input#decor6(type="radio" name="decor")
+											label(for="decor6") Колонна
+										li
+											input#decor7(type="radio" name="decor")
+											label(for="decor7") Резные ноги
+									ul.option-config__list
+										li
+											input#decor8(type="radio" name="decor")
+											label(for="decor8") Портал
+										li
+											input#decor9(type="radio" name="decor")
+											label(for="decor9") Коромысло
+					.column-flex-laptop-1-4.no-padding-right.show-laptop.column-label
+						.label
+							.label__text Примерная стоимость
+							.label__price
+								span 54 900.00
+								span р.
+							form
+								a.btn.btn__call-us(href="#") Заказать звонок
+								a.btn.btn__write-us(href="#") Написать нам
+							
+				
+			
+		include ./parts/form-line.pug
+		include ./parts/footer.pug

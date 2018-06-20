@@ -3,12 +3,10 @@ html
 		include ./parts/head.pug
 	body
 		include ./parts/header.pug
-		
 		.wrapper
 			.configuration
 				.flex
 					.column-flex-laptop-3-4
-		
 						ul.breadcrumbs.show-laptop
 							li
 								a(href="index.html") Главная
@@ -147,8 +145,14 @@ html
 								span 54 900.00
 								span р.
 							form
-								a.btn.btn__call-us(href="#") Заказать звонок
-								a.btn.btn__write-us(href="#") Написать нам
+								a.btn.btn__call-us(href="#")
+									span
+										include images/phone.svg
+									|Заказать звонок
+								a.btn.btn__write-us(href="#")
+									span
+										include images/write-tag.svg
+									|Написать нам
 							
 				
 			

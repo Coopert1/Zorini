@@ -328,6 +328,12 @@ img{max-width: 100%;}
 		font-size: 13px;
 		margin-bottom: 10px;
 		max-width: 180px;
+		position: relative;
+		span{
+			position: absolute;
+			left: 20px;
+			top: 7.5px;
+		}
 	}
 	&__write-us{
 		padding-left: 50px;
@@ -335,9 +341,15 @@ img{max-width: 100%;}
 		font-size: 13px;
 		margin-bottom: 10px;
 		max-width: 180px;
+		span{
+			position: absolute;
+			left: 20px;
+			top: 7.5px;
+		}
 	}
 	
 }
+
 .contact-info{
 	position:relative;
 	top: 10px;
@@ -1220,7 +1232,7 @@ img{max-width: 100%;}
 	}
 }
 .news{
-	padding: 10px;
+	
 	.title{
 		margin: 0 0 40px 0;
 		text-align: left;

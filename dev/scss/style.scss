@@ -529,6 +529,10 @@ img{max-width: 100%;}
 	}
 	@include breakpoint(mobileonly){
 		font-size: 36px;
+		span{
+			display: block;
+			margin-bottom: 20px;
+		}
 	}
 	span{
 		font-family: 'Oranienbaum', serif;
@@ -756,9 +760,8 @@ img{max-width: 100%;}
 }
 
 .review-slider{
-	padding: 40px 10px 65px 10px;
+	padding: 40px 0 65px 0;
 	background-color:#2a2a2a;
-	border: 9px solid white;
 	.lSSlideOuter {border: 9px solid white;}
 	@include breakpoint(tablet){
 		padding-left: 108px;

@@ -126,7 +126,26 @@ $(function(){
 			$('body').toggleClass('no-scroll');
 		})
 	// end show-hide filters
-	//center:  {lat:55.640684, lng:37.8232893},
+	
+	
+	//for congiguration page
+	$(".package-config input").click(function(){
+		$(".package-config .package-config__img").removeClass("active");
+		if ($(this).is(':checked')){
+			$($(this).parent().parent().children('.package-config__img')).addClass("active")
+			console.log(true)
+		}
+	});
+	$(".config-shape input").click(function(){
+		var cls = ".chosen-shape__";
+		var enter;
+		$(".chosen-shape").children().removeClass("active");
+		if ($(this).is(':checked')){
+			enter = cls + $(this).val();
+			$(enter).addClass("active")
+			console.dir(enter);
+		}
+	});
 	
 });
 function initMap() {

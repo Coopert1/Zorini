@@ -3,6 +3,7 @@ html
 		include ./parts/head.pug
 	body
 		include ./parts/header.pug
+		include ./parts/modal-windows.pug
 		.wrapper
 			.configuration
 				.flex
@@ -145,16 +146,15 @@ html
 								span 54 900.00
 								span р.
 							form
-								a.btn.btn__call-us(href="#")
+								a.btn.btn_call-us(href="#")
 									span
 										include images/phone.svg
 									|Заказать звонок
-								a.btn.btn__write-us(href="#")
+								a.btn.btn_write-us(href="#")
 									span
 										include images/write-tag.svg
 									|Написать нам
 							
-				
-			
+						
 		include ./parts/form-line.pug
 		include ./parts/footer.pug

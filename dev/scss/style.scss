@@ -874,10 +874,10 @@ img{max-width: 100%;}
 		width: 100%;
 		justify-content: space-between;
 		align-items: baseline;
-		&:last-child{
+		&.min{
 			margin-top: 20px;
 			display: none;
-			@media (min-width:500px){
+			@media (min-width:520px){
 				display: flex;
 			}
 			@media (min-width:1385px){
@@ -906,24 +906,76 @@ img{max-width: 100%;}
 			font-weight: bold;
 			
 		}
+		
 		&__subscribe{
 			display: inline-block;
-			
+			&.mobile{
+				display: block;
+				@media (min-width:520px){
+					display: none;
+				}
+				label{
+					display: flex;
+					font-size: 13px;
+					color: #6a6a6a;
+					align-items: center;
+					margin-top: 13px;
+					padding: 0 24px;
+					position: relative;
+					&:before{
+						position: absolute;
+						content: "";
+						display: inline-block;
+						height: 14px;
+						width: 14px;
+						background-color: white;
+						border: 1px solid #b2b2b2;
+						left: 0;
+					}
+				}
+				input{
+					width: 100%;
+					margin-bottom: 10px;
+					display: inline-block;
+					margin-left: 0;
+					border-radius: 5px;
+					&[type="submit"]{
+						margin-left: 0;
+					}
+					&[type="checkbox"]{
+						display: none;
+						&:checked + label{
+							&:after{
+								content: "\2713";
+								position: absolute;
+								left: 3px;
+								font-weight: bold;
+								color: #6a6a6a;
+							}
+						}
+					}
+				}
+			}
 			input{
 				height: 40px;
 				outline: none;
 				border: 1px solid #b2b2b2;
 				padding: 0 13px;
-				&:first-child{
-					border-top-left-radius: 5px;
-					border-bottom-left-radius: 5px;
-					border-right: none;
+				
+				@media (min-width:520px){
+					&:first-child{
+						border-top-left-radius: 5px;
+						border-bottom-left-radius: 5px;
+						border-right: none;
+					}
 				}
+				
 				&[type="submit"]{
 					border-top-right-radius: 5px;
 					border-bottom-right-radius: 5px;
 					margin-left: -4px;
 					background-color: #020202;
+				
 					color: white;
 					font-size: 15px;
 					font-weight: 600;
@@ -1007,6 +1059,10 @@ img{max-width: 100%;}
 	.bold{
 		font-weight: bold;
 		color: #1a1a1a;
+	}
+	&_wrap{
+		text-align: center;
+		margin-top: 20px;
 	}
 }
 .social-items{

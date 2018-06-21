@@ -129,12 +129,10 @@ $(function(){
 	
 	
 	//for congiguration page
-	$(".package-config input").click(function(){
+	$(".package-config").click(function(){
 		$(".package-config .package-config__img").removeClass("active");
-		if ($(this).is(':checked')){
-			$($(this).parent().parent().children('.package-config__img')).addClass("active")
-			console.log(true)
-		}
+		$(this).children('.package-config__img').addClass("active");
+		$(this).children('.package-config__name').children("input").prop( "checked", true );
 	});
 	$(".config-shape input").click(function(){
 		var cls = ".chosen-shape__";
@@ -143,9 +141,33 @@ $(function(){
 		if ($(this).is(':checked')){
 			enter = cls + $(this).val();
 			$(enter).addClass("active")
-			console.dir(enter);
 		}
 	});
+	
+	//close modal window
+	$(".fixed-overlay__modal .icon_remove-item").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	$(".fixed-overlay__modal input[type='submit']").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	//open modal window
+	$("a.btn_write-us").click(function(){
+		$(".fixed-overlay.write-us").addClass('active');
+	});
+	$("a.btn_call-us").click(function(){
+		$(".fixed-overlay.callback").addClass('active');
+	});
+	$("a.btn_calc").click(function(){
+		$(".fixed-overlay.call-measure").addClass('active');
+	});
+	
+	// hide modal window when click another place
+	$(".fixed-overlay").click(function(e){
+		var elem = $(".modal");
+			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
+	});
+
 	
 });
 function initMap() {

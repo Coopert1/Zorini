@@ -35,18 +35,22 @@ img{
 }
 h1{
 	font-family: 'Oranienbaum', serif;
+	font-weight: lighter;
 	font-size: 60px;
 }
 h2{
 	font-family: 'Oranienbaum', serif;
+	font-weight: lighter;
 	font-size: 52px;
 }
 h3{
 	font-family: 'Oranienbaum', serif;
+	font-weight: lighter;
 	font-size: 36px;
 }
 h4{
 	font-family: 'Oranienbaum', serif;
+	font-weight: lighter;
 	font-size: 24px;
 }
 p.text{
@@ -108,7 +112,7 @@ p.text{
 	}
 }
 .catalog-title{
-	margin-top: 15px;
+	padding-top: 15px;
 	margin-bottom: 45px;
 }
 input {
@@ -305,6 +309,20 @@ img{max-width: 100%;}
 			margin: 0;
 			margin-top: 10px;
 			margin-bottom: 110px;
+		}
+	}
+	&_manager{
+		font-size: 13px;
+	}
+	&_delivery{
+		border-radius: 40px;
+		padding: 25px 40px;
+		font-size: 17px;
+		background: #429cc2;
+		color: #fff;
+		margin-bottom: 35px;
+		@include breakpoint(laptop){
+			font-size: 20px;
 		}
 	}
 }
@@ -1529,6 +1547,9 @@ img{max-width: 100%;}
 		font-weight: bold;
 		color: #2a2a2a;
 		margin-bottom: 30px;
+		&_lk{
+			margin-bottom: 5px;
+		}
 	}
 	&__text{
 		vertical-align: top;
@@ -1569,6 +1590,9 @@ img{max-width: 100%;}
 
 			}
 		}
+		&_lk{
+			margin-bottom: 35px;
+		}
 	}
 	&__price{
 		position: absolute;
@@ -1582,6 +1606,11 @@ img{max-width: 100%;}
 		@include breakpoint(laptop){
 			bottom: auto;
 			top: 100px;
+		}
+		&_lk{
+			position: static;
+			font-size: 30px;
+			margin-bottom: 35px;
 		}
 	}
 }
@@ -1637,3 +1666,95 @@ ul#productslider{
 	}
 }
 
+.your-manager{
+	text-align: center;
+	width: 100%;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 50px;
+	background: #f0f0f4;
+	padding: 30px;
+	@include breakpoint(phablet){
+		width: 40%;
+	}
+	.title{
+		letter-spacing: 2px;
+		color: #898989;
+		font-size: 13px;
+		margin: 0 0 20px 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+	img{
+		margin-bottom: 20px;
+	}
+	.manager-name{
+		font-size: 24px;
+		font-family: 'Oranienbaum', serif;
+		color: #1c1b1b;
+	}
+	.manager-phone{
+		font-size: 18px;
+		color: #2a2a2a;
+		margin-bottom: 10px;
+		:last-child{
+			font-family: 'Open Sans bold', sans-serif;
+			font-weight: bold;
+		}
+	}
+	.manager-mail{
+		a{
+			color: #6363de;
+			text-decoration: underline;
+		}
+		margin-bottom: 25px;
+	}
+}
+.your-order{
+	width: 100%;
+	.title{
+		text-align: left;
+		margin: 0 0 25px 0;
+		font-size: 30px;
+		@include breakpoint(laptop){
+			margin: 0 0 45px 0;
+		}
+		&_progress{
+			@include breakpoint(laptop){
+				margin-left: 60px;
+			}
+		}
+	}
+}
+.personal-cabinet{
+	border-right: 1px solid #dadada;
+	padding-bottom: 90px;
+	@include breakpoint(laptop){
+		margin-bottom:90px;
+	}
+}
+.progress-bars{
+	text-align: center;
+}
+.order-title{
+	margin-bottom: 35px;
+	// display: inline-block;
+	@include breakpoint(laptop){
+		margin-top: 175px;
+	}
+}
+[class^=progressbar_]{
+	position: relative;
+	@include breakpoint(laptop){
+		margin-left: 60px;
+	}
+}
+[class^=progressbar-label_]{
+	color: #2a2a2a;
+	font-size: 12px;
+	position: absolute;
+	top: 20%;
+	left: 47%;
+}
+.progress-text{
+	margin-bottom: 43px;
+}

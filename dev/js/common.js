@@ -127,7 +127,71 @@ $(function(){
 		})
 	// end show-hide filters
 	//center:  {lat:55.640684, lng:37.8232893},
-	
+
+//
+	progressbar01=$( ".progressbar_01" ).progressbar({
+      value: 100,
+      complete: function( event, ui ) {
+      	 $('.progressbar-label_01').text('Готово')
+      	 $('.progressbar-label_01').css("margin-left", "-10px")
+      	 $('.progressbar-label_01').css("color", "#fff")
+
+      }
+    });
+    var val01 = $( ".progressbar_01" ).progressbar( "value" );
+    if(val01<100){
+    	$('.progressbar-label_01').text(val01+'%')
+    }
+  
+
+    progressbar02=$( ".progressbar_02" ).progressbar({
+      value: 75,
+      complete: function( event, ui ) {
+      	 $('.progressbar-label_02').text('Готово')
+      }
+    });
+    var val02 = $( ".progressbar_02" ).progressbar( "value" );
+    if(val02<100){
+    	$('.progressbar-label_02').text(val02+'%')
+    }
+
+
+    progressbar03=$( ".progressbar_03" ).progressbar({
+      value: 50
+    });
+    $('.progressbar-label_03').text(progressbar03.progressbar('value')+'%')
+
+
+    progressbar04=$( ".progressbar_04" ).progressbar({
+      value: 25
+    });
+    $('.progressbar-label_04').text(progressbar04.progressbar('value')+'%')
+
+
+    progressbar05=$( ".progressbar_05" ).progressbar({
+      value: 0
+    });
+    $('.progressbar-label_05').text(progressbar05.progressbar('value')+'%')
+
+
+    progressbar06=$( ".progressbar_06" ).progressbar({
+      value: 0
+    });
+    $('.progressbar-label_06').text(progressbar06.progressbar('value')+'%')
+
+
+    progressbar07=$( ".progressbar_07" ).progressbar({
+      value: 0
+    });
+    $('.progressbar-label_07').text(progressbar07.progressbar('value')+'%')
+
+
+    progressbar08=$( ".progressbar_08" ).progressbar({
+      value: 0
+    });
+    $('.progressbar-label_08').text(progressbar08.progressbar('value')+'%')
+
+//	
 });
 function initMap() {
 

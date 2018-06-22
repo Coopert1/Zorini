@@ -54,7 +54,7 @@
 				span.footer-list__title Контакты
 				ul
 					li.footer-list__item
-						a(href="#") 8 (490) 500-00-00  звонок бесплатный  
+						a(href="#") 8 (490) 500-00-00  звонок бесплатный
 					li.footer-list__item
 						a(href="#")  8 (800) 500-70-20
 					li.footer-list__item
@@ -74,7 +74,7 @@
 					li.social-item
 						a(href="#")
 							include ../images/youtube.svg
-		.footer_flex-container
+		.footer_flex-container.min
 			.footer-list.footer-list__payment
 				span.footer-list__title Принимаем к оплате
 				ul
@@ -91,3 +91,11 @@
 					input(type="submit" value="Подписаться")
 					input#footer-agreed(type="checkbox" required)
 					label(for="footer-agreed") Cогласен предоставить данные
+		.footer_wrap
+			.footer-list.footer-list__subscribe.mobile
+				span.footer-list__title Подпишись на акции и скидки
+				form
+					input( type="email" placeholder="Введите email")
+					input(type="submit" value="Подписаться")
+					input#footer-agreed1(type="checkbox" required)
+					label(for="footer-agreed1") Cогласен предоставить данные

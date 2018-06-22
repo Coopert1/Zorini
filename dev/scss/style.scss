@@ -891,10 +891,10 @@ img{max-width: 100%;}
 		width: 100%;
 		justify-content: space-between;
 		align-items: baseline;
-		&:last-child{
+		&.min{
 			margin-top: 20px;
 			display: none;
-			@media (min-width:500px){
+			@media (min-width:520px){
 				display: flex;
 			}
 			@media (min-width:1385px){
@@ -923,24 +923,76 @@ img{max-width: 100%;}
 			font-weight: bold;
 			
 		}
+		
 		&__subscribe{
 			display: inline-block;
-			
+			&.mobile{
+				display: block;
+				@media (min-width:520px){
+					display: none;
+				}
+				label{
+					display: flex;
+					font-size: 13px;
+					color: #6a6a6a;
+					align-items: center;
+					margin-top: 13px;
+					padding: 0 24px;
+					position: relative;
+					&:before{
+						position: absolute;
+						content: "";
+						display: inline-block;
+						height: 14px;
+						width: 14px;
+						background-color: white;
+						border: 1px solid #b2b2b2;
+						left: 0;
+					}
+				}
+				input{
+					width: 100%;
+					margin-bottom: 10px;
+					display: inline-block;
+					margin-left: 0;
+					border-radius: 5px;
+					&[type="submit"]{
+						margin-left: 0;
+					}
+					&[type="checkbox"]{
+						display: none;
+						&:checked + label{
+							&:after{
+								content: "\2713";
+								position: absolute;
+								left: 3px;
+								font-weight: bold;
+								color: #6a6a6a;
+							}
+						}
+					}
+				}
+			}
 			input{
 				height: 40px;
 				outline: none;
 				border: 1px solid #b2b2b2;
 				padding: 0 13px;
-				&:first-child{
-					border-top-left-radius: 5px;
-					border-bottom-left-radius: 5px;
-					border-right: none;
+				
+				@media (min-width:520px){
+					&:first-child{
+						border-top-left-radius: 5px;
+						border-bottom-left-radius: 5px;
+						border-right: none;
+					}
 				}
+				
 				&[type="submit"]{
 					border-top-right-radius: 5px;
 					border-bottom-right-radius: 5px;
 					margin-left: -4px;
 					background-color: #020202;
+				
 					color: white;
 					font-size: 15px;
 					font-weight: 600;
@@ -1024,6 +1076,10 @@ img{max-width: 100%;}
 	.bold{
 		font-weight: bold;
 		color: #1a1a1a;
+	}
+	&_wrap{
+		text-align: center;
+		margin-top: 20px;
 	}
 }
 .social-items{
@@ -1788,12 +1844,14 @@ ul.text-info{
 .column-flex-laptop{
 	@include breakpoint(laptop){
 		&-3-4{
-			flex-basis: 75%;
+			flex-basis: 73%;
 			
 		}
 		&-1-4{
 			flex-basis: 25%;
 			position: relative;
+			align-items: flex-start;
+			
 			@media (min-width:1400px){
 				flex-basis: 22.5%;
 				&:after{
@@ -1834,6 +1892,7 @@ ul.text-info{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 10px;
+	padding-bottom: 0;
 	.clg-1, .cls-2, .cls-3 {
 		fill:  #4fa4b6;
 	}
@@ -1933,9 +1992,10 @@ ul.text-info{
 				&:after{
 					content: "\25CF";
 					position: absolute;
-					left: 3.5px;
-					bottom: 2.1px;
+					left: 3px;
+					bottom: 1.1px;
 					color: black;
+					font-size: 1.1em;
 				}
 				&:before{
 					border: 1px solid #6565df;
@@ -1977,7 +2037,11 @@ ul.text-info{
 }
 .column-label{
 	background-color: #f4f4f4;
-	padding: 150px 0 0 30px;
+	padding: 150px 0 20px 30px;
+	display: none;
+	@include breakpoint(laptop){
+		display: flex;
+	}
 }
 .label{
 	padding: 25px;
@@ -1988,7 +2052,7 @@ ul.text-info{
 	@include breakpoint(desktop){
 		padding-left: 25px;
 	}
-
+	//top: calc(50% - 230px);
 	position: relative;
 	&__text{
 		font-family: 'Open Sans bold', sans-serif;
@@ -2129,7 +2193,7 @@ ul.text-info{
 			}
 			&.bottom{
 				bottom: -40px;
-				left: 0;
+				left: calc(50% - 75px);
 				@include breakpoint(tablet){
 					bottom:0;
 					left: 110px;

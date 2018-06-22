@@ -143,7 +143,46 @@ $(function(){
 			$(enter).addClass("active")
 		}
 	});
-	
+	$(".wrap-shape").click(function(){
+		var position = $(this)[0].getBoundingClientRect().top;
+		console.log(position)
+	});
+	$(window).scroll(function(){
+		var delta_top = 150;
+		var delta_bottom = 750;
+		var scrollTop = $('body').scrollTop();
+		var pos_top = $('.configuration').offset().top + delta_top;
+		var height_elem = $('.configuration').height();
+		
+		var pos_bottom = pos_top + height_elem - delta_bottom;
+		
+		
+		if( scrollTop< pos_top){
+			$(".column-label .label").css({
+				'position' : 'relative',
+				'top' : '',
+				'align-self' : 'flex-start'
+			})
+		}
+		else if( scrollTop >= pos_top && scrollTop<= pos_bottom){
+			$(".column-label .label").css({
+				'position' : 'fixed',
+				'top' : '35%'
+				
+			})
+		} else {
+			$(".column-label .label").css({
+				'position' : 'relative',
+				'top' : '',
+				'align-self' : 'flex-end'
+			})
+		}
+		console.log(scrollTop)
+		console.log(pos_top)
+		console.log("bot " + pos_bottom)
+		console.log(height_elem);
+	});
+	//end configuration page
 	//close modal window
 	$(".fixed-overlay__modal .icon_remove-item").click(function(){
 		$(".fixed-overlay").removeClass('active');

@@ -1816,12 +1816,14 @@ ul.text-info{
 .column-flex-laptop{
 	@include breakpoint(laptop){
 		&-3-4{
-			flex-basis: 75%;
+			flex-basis: 73%;
 			
 		}
 		&-1-4{
 			flex-basis: 25%;
 			position: relative;
+			align-items: flex-start;
+			
 			@media (min-width:1400px){
 				flex-basis: 22.5%;
 				&:after{
@@ -1862,6 +1864,7 @@ ul.text-info{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 10px;
+	padding-bottom: 0;
 	.clg-1, .cls-2, .cls-3 {
 		fill:  #4fa4b6;
 	}
@@ -1961,9 +1964,10 @@ ul.text-info{
 				&:after{
 					content: "\25CF";
 					position: absolute;
-					left: 3.5px;
-					bottom: 2.1px;
+					left: 3px;
+					bottom: 1.1px;
 					color: black;
+					font-size: 1.1em;
 				}
 				&:before{
 					border: 1px solid #6565df;
@@ -2005,7 +2009,11 @@ ul.text-info{
 }
 .column-label{
 	background-color: #f4f4f4;
-	padding: 150px 0 0 30px;
+	padding: 150px 0 20px 30px;
+	display: none;
+	@include breakpoint(laptop){
+		display: flex;
+	}
 }
 .label{
 	padding: 25px;
@@ -2016,7 +2024,7 @@ ul.text-info{
 	@include breakpoint(desktop){
 		padding-left: 25px;
 	}
-
+	//top: calc(50% - 230px);
 	position: relative;
 	&__text{
 		font-family: 'Open Sans bold', sans-serif;
@@ -2157,7 +2165,7 @@ ul.text-info{
 			}
 			&.bottom{
 				bottom: -40px;
-				left: 0;
+				left: calc(50% - 75px);
 				@include breakpoint(tablet){
 					bottom:0;
 					left: 110px;

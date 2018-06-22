@@ -88,6 +88,27 @@ $(function(){
 				},
 			],
 	});
+
+
+	//fasad Slider (promo) setting
+		var fasadslider=$('#fasadslider').lightSlider({
+		galleryMargin: 25,
+		item: 1,
+		slideMove:1,
+		pager: false,
+		addClass: '',
+		mode: "slide",
+		useCSS: true,
+		cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+		easing: 'linear', //'for jquery animation',////
+
+		speed: 400, //ms'
+		auto: true,
+		loop: true,
+		slideEndAnimation: true,
+		pause: 10000,
+	});
+
 	// input-mask
 	$('input[type="tel"]').inputmask('+7(999)999-99-99');
 	// end input-mask
@@ -126,16 +147,16 @@ $(function(){
 			$('body').toggleClass('no-scroll');
 		})
 	// end show-hide filters
-	//center:  {lat:55.640684, lng:37.8232893},
 
-//
-	progressbar01=$( ".progressbar_01" ).progressbar({
+
+// progressbars config
+
+	$( ".progressbar_01" ).progressbar({
       value: 100,
       complete: function( event, ui ) {
       	 $('.progressbar-label_01').text('Готово')
       	 $('.progressbar-label_01').css("margin-left", "-10px")
       	 $('.progressbar-label_01').css("color", "#fff")
-
       }
     });
     var val01 = $( ".progressbar_01" ).progressbar( "value" );
@@ -144,7 +165,7 @@ $(function(){
     }
   
 
-    progressbar02=$( ".progressbar_02" ).progressbar({
+   $( ".progressbar_02" ).progressbar({
       value: 75,
       complete: function( event, ui ) {
       	 $('.progressbar-label_02').text('Готово')
@@ -192,6 +213,49 @@ $(function(){
     $('.progressbar-label_08').text(progressbar08.progressbar('value')+'%')
 
 //	
+
+	
+	
+	//for congiguration page
+	$(".package-config").click(function(){
+		$(".package-config .package-config__img").removeClass("active");
+		$(this).children('.package-config__img').addClass("active");
+		$(this).children('.package-config__name').children("input").prop( "checked", true );
+	});
+	$(".config-shape input").click(function(){
+		var cls = ".chosen-shape__";
+		var enter;
+		$(".chosen-shape").children().removeClass("active");
+		if ($(this).is(':checked')){
+			enter = cls + $(this).val();
+			$(enter).addClass("active")
+		}
+	});
+	
+	//close modal window
+	$(".fixed-overlay__modal .icon_remove-item").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	$(".fixed-overlay__modal input[type='submit']").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	//open modal window
+	$("a.btn_write-us").click(function(){
+		$(".fixed-overlay.write-us").addClass('active');
+	});
+	$("a.btn_call-us").click(function(){
+		$(".fixed-overlay.callback").addClass('active');
+	});
+	$("a.btn_calc").click(function(){
+		$(".fixed-overlay.call-measure").addClass('active');
+	});
+	
+	// hide modal window when click another place
+	$(".fixed-overlay").click(function(e){
+		var elem = $(".modal");
+			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
+	});
+
 });
 function initMap() {
 

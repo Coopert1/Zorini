@@ -43,6 +43,10 @@ gulp.task('scss', function() {
 	.pipe(watch('./dev/scss/*.scss'))
   .pipe(plumber())
 	.pipe(scss())
+	.pipe(autoprefixer({
+		browsers: ['last 20 versions']
+		
+	}))
 	.pipe(gulp.dest('./app/css/'))
 });
 

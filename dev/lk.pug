@@ -1,0 +1,68 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.backdrop
+		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Каталог
+				h2.catalog-title Личный кабинет
+				.row.clearfix
+					.col-laptop-1-2.personal-cabinet
+						.your-manager
+							.title
+								|Ваш менеджер
+							img(src='images/manager.png')
+							.manager-name Светлана Дорона
+							.manager-phone
+								span 8 495  
+								span 433 12 21
+							.manager-mail
+								a(href="#") s.dorona@zorini.ru
+							a(href="#").btn.btn_manager
+								|Написать сообщение
+						.your-order
+							.title
+								|Ваш заказ
+							a(href="#").catalog-item__name.catalog-item__name_lk
+									|Кухня Модесто
+							.catalog-item__price.catalog-item__price_lk
+								span 54 900.00 
+								span р.
+							.catalog-item__description.catalog-item__description_lk
+								table
+									tbody
+										tr
+											td
+												span Стиль
+											td неокласика
+										tr
+											td 
+												span Материалы
+											td Камень, МДФ, Массив дуба
+
+										tr
+											td 
+												span Фурнитура
+											td Hetich
+										tr
+											td 
+												span Фасад
+											td Бергонци
+										tr
+											td 
+												span Rall 
+											td 9999999
+							.btn.btn__product
+								|Подробнее
+					.col-laptop-1-2.progress-bars
+						.row.clearfix
+						h2.order-title Заказ выполнен!
+						.btn.btn_delivery
+							|Договориться о доставке
+		include ./parts/footer.pug

@@ -1,0 +1,124 @@
+html
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		.backdrop
+		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Каталог
+				h2.catalog-title Личный кабинет
+				.row.clearfix
+					.col-laptop-1-2.personal-cabinet.clearfix
+						.your-manager
+							.title
+								|Ваш менеджер
+							img(src='images/manager.png')
+							.manager-name Светлана Дорона
+							.manager-phone
+								span 8 495  
+								span 433 12 21
+							.manager-mail
+								a(href="#") s.dorona@zorini.ru
+							a(href="#").btn.btn_manager
+								|Написать сообщение
+						.your-order
+							.title
+								|Ваш заказ
+							a(href="#").catalog-item__name.catalog-item__name_lk
+									|Кухня Модесто
+							.catalog-item__price.catalog-item__price_lk
+								span 54 900.00 
+								span р.
+							.catalog-item__description.catalog-item__description_lk
+								table
+									tbody
+										tr
+											td
+												span Стиль
+											td неокласика
+										tr
+											td 
+												span Материалы
+											td Камень, МДФ, Массив дуба
+
+										tr
+											td 
+												span Фурнитура
+											td Hetich
+										tr
+											td 
+												span Фасад
+											td Бергонци
+										tr
+											td 
+												span Rall 
+											td 9999999
+							.btn.btn__product
+								|Подробнее 
+					.col-laptop-1-2
+						.your-order
+							.title.title_progress
+								|Готовность Вашего заказа
+						.row
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_01
+										.progressbar-label_01
+								.col-phablet-1-2
+									.progress-text
+										|Разрабатывается технологом
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_02
+										span.progressbar-label_02
+								.col-phablet-1-2
+									.progress-text
+										|Заготовки фасадов 
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_03
+										span.progressbar-label_03
+								.col-phablet-1-2
+									.progress-text
+										|Покраска фасадов
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_04
+										span.progressbar-label_04
+								.col-phablet-1-2
+									.progress-text
+										|Распил корпусной части 
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_05
+										span.progressbar-label_05
+								.col-phablet-1-2
+									.progress-text
+										|Сбор комплекта фурнитуры
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_06
+										span.progressbar-label_06
+								.col-phablet-1-2
+									.progress-text
+										|Присадка деталей
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_07
+										span.progressbar-label_07
+								.col-phablet-1-2
+									.progress-text
+										|Контрольная сборка
+							.clearfix
+								.col-phablet-1-2
+									.progressbar_08
+										span.progressbar-label_08
+								.col-phablet-1-2
+									.progress-text
+										|Заказ упаковывается
+		include ./parts/footer.pug

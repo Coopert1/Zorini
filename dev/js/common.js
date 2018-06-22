@@ -212,7 +212,7 @@ $(function(){
     });
     $('.progressbar-label_08').text(progressbar08.progressbar('value')+'%')
 
-//	
+//
 
 	
 	
@@ -235,40 +235,56 @@ $(function(){
 		var position = $(this)[0].getBoundingClientRect().top;
 		console.log(position)
 	});
+	$(".configuration form").submit(function(){
+		console.log(2)
+	})
+	$('.remember__submit input').click(function(e){
+		e.preventDefault();
+		$(this).parent().parent().removeClass('active');
+		console.log(1)
+		
+	})
+	$(".option-config__list label").click(function(e){
+		
+		$(".remember").removeClass("active");
+		$(this).next().addClass('active');
+			
+		
+		
+	})
+	var host_pathname = '/taras/zorini/app/configuration.html';
 	$(window).scroll(function(){
-		var delta_top = 150;
-		var delta_bottom = 750;
-		var scrollTop = $('body').scrollTop();
-		var pos_top = $('.configuration').offset().top + delta_top;
-		var height_elem = $('.configuration').height();
-		
-		var pos_bottom = pos_top + height_elem - delta_bottom;
-		
-		
-		if( scrollTop< pos_top){
-			$(".column-label .label").css({
-				'position' : 'relative',
-				'top' : '',
-				'align-self' : 'flex-start'
-			})
-		}
-		else if( scrollTop >= pos_top && scrollTop<= pos_bottom){
-			$(".column-label .label").css({
-				'position' : 'fixed',
-				'top' : '35%'
-				
-			})
-		} else {
-			$(".column-label .label").css({
-				'position' : 'relative',
-				'top' : '',
-				'align-self' : 'flex-end'
-			})
-		}
-		console.log(scrollTop)
-		console.log(pos_top)
-		console.log("bot " + pos_bottom)
-		console.log(height_elem);
+		if (window.location.pathname== host_pathname || window.location.pathname== '/congiguration.html' ||  window.location.pathname== '/product_card.html'){
+			var delta_top = 150;
+			var delta_bottom = 750;
+			var scrollTop = $('body').scrollTop();
+			var pos_top = $('.configuration').offset().top + delta_top;
+			var height_elem = $('.configuration').height();
+
+			var pos_bottom = pos_top + height_elem - delta_bottom;
+
+
+			if( scrollTop< pos_top){
+				$(".column-label .label").css({
+					'position' : 'relative',
+					'top' : '',
+					'align-self' : 'flex-start'
+				})
+			}
+			else if( scrollTop >= pos_top && scrollTop<= pos_bottom){
+				$(".column-label .label").css({
+					'position' : 'fixed',
+					'top' : '35%'
+
+				})
+			} else {
+				$(".column-label .label").css({
+					'position' : 'relative',
+					'top' : '',
+					'align-self' : 'flex-end'
+				})
+			}
+		} else return;
 	});
 	//end configuration page
 	//close modal window

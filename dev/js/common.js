@@ -235,20 +235,27 @@ $(function(){
 		var position = $(this)[0].getBoundingClientRect().top;
 		console.log(position)
 	});
-	$(".configuration form").submit(function(){
-		console.log(2)
-	})
-	$('.remember__submit input').click(function(e){
+	
+	$('.remember a.btn').click(function(e){
+		
+		var val_1 = $(this).parent().siblings('.remember__param').children('input').val();
+		var val_2 = $(this).parent().siblings('.remember__param').children('input')[1].value;
+		$(this).parent().parent().parent().removeClass('active');
+		console.dir(val_1);
+		console.dir(val_2);
 		e.preventDefault();
-		$(this).parent().parent().removeClass('active');
-		console.log(1)
 		
 	})
 	$(".option-config__list label").click(function(e){
-		
-		$(".remember").removeClass("active");
+		var elem = $(this)[0].getBoundingClientRect();
+		var obj = $(this).next();
+		$(".remember").removeClass("active remember_left remember_right");
+		if(elem.left < 150){
+			obj.addClass("remember_left");
+		} else if( elem.rigth < 150){
+			obj.addClass("remember_right");
+		} else{ }	
 		$(this).next().addClass('active');
-			
 		
 		
 	})

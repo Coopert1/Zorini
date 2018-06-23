@@ -1,3 +1,17 @@
+mixin remember
+	.remember
+		.remember__container
+			.remember__param
+				.remember__title Количество
+				input.remember__input(type="number")
+				.remember__name Шт.
+			.remember__param
+				.remember__title Высота
+				input.remember__input(type="number")
+				.remember__name мм.
+			.clearfix
+			.remember__save
+				a.btn(href="#") Запомнить
 .wrapper
 	.configuration
 		.flex
@@ -99,6 +113,22 @@
 										li
 											input(type="radio" name=name id=name + i)
 											label(for=name + i id=name + i)= item
+											- var value = 'Фасад'
+											case value 
+												when title
+													.remember
+														.remember__container
+															.remember__param
+																.remember__title Количество
+																input.remember__input(type="number")
+																.remember__name Шт.
+															.remember__param
+																.remember__title Высота
+																input.remember__input(type="number")
+																.remember__name мм.
+															.clearfix
+															.remember__save
+																a.btn(href="#") Запомнить
 										- i++
 						+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 						+option-config('Фурнитура','furniture',' Боярд', 'Блюм ', 'Хетим' )
@@ -109,6 +139,7 @@
 								li
 									input#decor1(type="radio" name="decor")
 									label(for="decor1") Карниз
+									+remember
 								li
 									input#decor2(type="radio" name="decor")
 									label(for="decor2") Цоколь массив
@@ -118,36 +149,14 @@
 								li
 									input#decor4(type="radio" name="decor")
 									label(for="decor4") Колонна
-									.remember
-										.remember__param
-											.remember__title Количество
-											input.remember__input(type="number")
-											.remember__name Шт.
-										.remember__param
-											.remember__title Высота
-											input.remember__input(type="number")
-											.remember__name мм.
-										.clearfix
-										.remember__submit
-											input.btn(type="submit" value='Запомнить')
+									+remember
 								li
 									input#decor5(type="radio" name="decor")
 									label(for="decor5") Резные ноги
 								li
 									input#decor6(type="radio" name="decor")
 									label(for="decor6") Витраж
-									.remember
-										.remember__param
-											.remember__title Количество
-											input.remember__input(type="number")
-											.remember__name Шт.
-										.remember__param
-											.remember__title Высота
-											input.remember__input(type="number")
-											.remember__name мм.
-										.clearfix
-										.remember__submit
-											input.btn(type="submit" value='Запомнить')
+									+remember
 			.column-flex-laptop-1-4.column-label.product_card
 				.label.product_card
 					.label__text Примерная стоимость изделия составит:

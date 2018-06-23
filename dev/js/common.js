@@ -261,7 +261,7 @@ $(function(){
 	})
 	var host_pathname = '/taras/zorini/app/configuration.html';
 	$(window).scroll(function(){
-		if (window.location.pathname== host_pathname || window.location.pathname== '/congiguration.html' ||  window.location.pathname== '/product_card.html'){
+		if (window.location.pathname== host_pathname || window.location.pathname== '/configuration.html' ||  window.location.pathname== '/product_card.html'){
 			var delta_top = 150;
 			var delta_bottom = 750;
 			var scrollTop = $('body').scrollTop();

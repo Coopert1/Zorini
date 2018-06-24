@@ -130,27 +130,7 @@ p.text{
 	padding-top: 15px;
 	margin-bottom: 45px;
 }
-input {
-	
-//	-webkit-appearance: none;
-//	outline: none;
-//	&:focus::-webkit-input-placeholder { color:transparent; }
-//	&:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-//	&:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-//	&:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
-//	&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-//		color: #2a2a2a;
-//		opacity: 1; /* Firefox */
-//	}
-//
-//	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-//		color: #2a2a2a;
-//	}
-//
-//	&::-ms-input-placeholder { /* Microsoft Edge */
-//		color: #2a2a2a;
-//	}
-}
+
 .inner-wrapper{
 	margin: 0 auto;
 	max-width: 1200px;
@@ -1845,6 +1825,10 @@ ul.text-info{
 	@include breakpoint(laptop){
 		&-3-4{
 			flex-basis: 73%;
+			@media (min-width:1400px){
+				flex-basis: 75%;
+					
+			}
 			
 		}
 		&-1-4{
@@ -1864,6 +1848,10 @@ ul.text-info{
 					width: 92px;
 					right: -92px;
 				}
+				&.product_card:after{
+					display: none;
+				}
+				
 			}
 			
 			
@@ -1982,6 +1970,9 @@ ul.text-info{
 		@include breakpoint(mobileonly){
 			flex-basis: 100%;
 		}
+		&.product_card{
+			flex-basis: auto;
+		}
 		
 		input{
 			display: none;
@@ -1992,10 +1983,10 @@ ul.text-info{
 				&:after{
 					content: "\25CF";
 					position: absolute;
-					left: 3px;
-					bottom: 1.1px;
+					left: 4px;
+					bottom: 3.1px;
 					color: black;
-					font-size: 1.1em;
+					font-size: 0.9em;
 				}
 				&:before{
 					border: 1px solid #6565df;
@@ -2030,6 +2021,7 @@ ul.text-info{
 		display: inline-block;
 		flex-grow: 1;
 		min-width: 175px;
+		li{position: relative;}
 		
 		
 	}
@@ -2037,6 +2029,9 @@ ul.text-info{
 }
 .column-label{
 	background-color: #f4f4f4;
+	&.product_card{
+		background-color: transparent;
+	}
 	padding: 150px 0 20px 30px;
 	display: none;
 	@include breakpoint(laptop){
@@ -2049,10 +2044,10 @@ ul.text-info{
 	padding-left: 20px;
 	border: 2px solid #459ebf;
 	max-width: 255px;
+	z-index: 1;
 	@include breakpoint(desktop){
 		padding-left: 25px;
 	}
-	//top: calc(50% - 230px);
 	position: relative;
 	&__text{
 		font-family: 'Open Sans bold', sans-serif;
@@ -2068,6 +2063,19 @@ ul.text-info{
 			padding-right: 10px;
 		}
 				
+	}
+	&.product_card:before{
+		content: "";
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-top: 2px solid #459ebf;
+		border-left: 2px solid #459ebf;
+		position: absolute;
+		transform: rotate(-45deg);
+		top: 50px;
+		left: -15px;
+		background-color: white;
 	}
 	&:before{
 		content: "";
@@ -2115,9 +2123,10 @@ ul.text-info{
 				&:after{
 					content: "\25CF";
 					position: absolute;
-					left: 3.5px;
-					bottom: 2.1px;
+					left: 4px;
+					bottom: 3.1px;
 					color: black;
+					font-size: 0.9em;
 				}
 				&:before{
 					border: 1px solid #6565df;
@@ -2215,6 +2224,84 @@ ul.text-info{
 		}
 	}
 	
+	
+}
+
+.remember{
+	display: none;
+	position: absolute;
+	padding: 20px 30px 30px 30px;
+	z-index: 10;
+	background: white;
+	width: 270px;
+	left: -125px;
+	top: 50px;
+	box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.2);
+	&.active{
+		display: inline-block;
+	}
+	&_left{
+		left: 0;
+		.remember__container:before{
+			left: 0;
+		}
+	}
+	&_right{
+		right: 0;
+	}
+	&__name{
+		font-size: 13px;
+		color: #2a2a2a;
+		display: inline-block;
+		margin-left: 5px;
+	}
+	&__title{
+		font-size: 14px;
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	&__param{
+		float: left;
+		width: 50%;
+		display: block;
+		.remember__input{
+			display: inline-block;
+			border: 1px solid #bababa;
+			width: 45px;
+			height: 35px;
+		}
+		
+	}
+	&__container{
+		display: inline-block;
+		position: relative;
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 25px;
+			height: 23px;
+			background-color: white;
+			position: absolute;
+			top: -32px;
+			left: 93px;
+			box-shadow: -1px -1px 0px 0px rgba(0,0,0,0.1);
+			transform: rotate(45deg);
+		}
+	}
+	
+	.btn{
+		padding-left: 60px;
+		padding-right: 60px;
+		
+		background: transparent;
+	
+	}
+	.remember__save{
+		text-align: center;
+		margin-top: 20px;
+		
+	}
 	
 }
 //end configuration page
@@ -2484,4 +2571,29 @@ ul.text-info{
 }
 .fasad-types{
 	padding: 0 70px;
+}
+
+.card-navivation{
+	display: flex;
+	justify-content: space-around;
+	padding: 50px 10px 25px 10px;
+	border-bottom: 1px solid #dadada;
+	border-top: 1px solid #dadada;
+	&__item{
+		
+	}
+	&__text{
+		font-size: 14px;
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 30px;
+		text-align: center;
+	}
+	&__icon{
+		text-align: center;
+	}
+	svg{
+		width: 65px;
+	}
 }

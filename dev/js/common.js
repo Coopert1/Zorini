@@ -254,7 +254,7 @@ $(function(){
 			obj.addClass("remember_left");
 		} else if( elem.rigth < 150){
 			obj.addClass("remember_right");
-		} else{ }	
+		} else{ }
 		$(this).next().addClass('active');
 		
 		

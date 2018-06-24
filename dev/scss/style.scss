@@ -1825,6 +1825,10 @@ ul.text-info{
 	@include breakpoint(laptop){
 		&-3-4{
 			flex-basis: 73%;
+			@media (min-width:1400px){
+				flex-basis: 75%;
+					
+			}
 			
 		}
 		&-1-4{
@@ -2040,10 +2044,10 @@ ul.text-info{
 	padding-left: 20px;
 	border: 2px solid #459ebf;
 	max-width: 255px;
+	z-index: 1;
 	@include breakpoint(desktop){
 		padding-left: 25px;
 	}
-	//top: calc(50% - 230px);
 	position: relative;
 	&__text{
 		font-family: 'Open Sans bold', sans-serif;
@@ -2072,6 +2076,19 @@ ul.text-info{
 		top: 50px;
 		left: -15px;
 		background-color: white;
+	}
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-top: 2px solid #459ebf;
+		border-left: 2px solid #459ebf;
+		position: absolute;
+		transform: rotate(-45deg);
+		top: 50px;
+		left: -15px;
+		background-color: #f4f4f4;
 	}
 }
 .wrap-shape{
@@ -2554,4 +2571,29 @@ ul.text-info{
 }
 .fasad-types{
 	padding: 0 70px;
+}
+
+.card-navivation{
+	display: flex;
+	justify-content: space-around;
+	padding: 50px 10px 25px 10px;
+	border-bottom: 1px solid #dadada;
+	border-top: 1px solid #dadada;
+	&__item{
+		
+	}
+	&__text{
+		font-size: 14px;
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 30px;
+		text-align: center;
+	}
+	&__icon{
+		text-align: center;
+	}
+	svg{
+		width: 65px;
+	}
 }

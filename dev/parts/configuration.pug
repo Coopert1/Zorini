@@ -113,22 +113,6 @@ mixin remember
 										li
 											input(type="radio" name=name id=name + i)
 											label(for=name + i id=name + i)= item
-											- var value = 'Фасад'
-											case value 
-												when title
-													.remember
-														.remember__container
-															.remember__param
-																.remember__title Количество
-																input.remember__input(type="number")
-																.remember__name Шт.
-															.remember__param
-																.remember__title Высота
-																input.remember__input(type="number")
-																.remember__name мм.
-															.clearfix
-															.remember__save
-																a.btn(href="#") Запомнить
 										- i++
 						+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 						+option-config('Фурнитура','furniture',' Боярд', 'Блюм ', 'Хетим' )
@@ -139,7 +123,6 @@ mixin remember
 								li
 									input#decor1(type="radio" name="decor")
 									label(for="decor1") Карниз
-									+remember
 								li
 									input#decor2(type="radio" name="decor")
 									label(for="decor2") Цоколь массив
@@ -149,7 +132,6 @@ mixin remember
 								li
 									input#decor4(type="radio" name="decor")
 									label(for="decor4") Колонна
-									+remember
 								li
 									input#decor5(type="radio" name="decor")
 									label(for="decor5") Резные ноги

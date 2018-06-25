@@ -149,7 +149,19 @@ $(function(){
 					$(this).siblings('.filter__block__arrow').removeClass('open');
 				}
 			});
-
+	//show-hide menu
+		$('.bars').click(function(){
+			$(".main-menu-mobile").addClass('main-menu-mobile_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+		$('.close-btn').click(function(){
+			$(".main-menu-mobile").removeClass('main-menu-mobile_active');
+			$('.backdrop').toggleClass('on');
+			$('body').toggleClass('no-scroll');
+		})
+	// end show-hide menu
+	
 	//show-hide filters
 		$('#show-filter-mobile').click(function(){
 			$(".filters").addClass('filters_active');

@@ -35,6 +35,11 @@
 	padding: 0 10px;
 }
 .hide{
+	&-phablet{
+		@include breakpoint(phablet){
+			display: none;
+		}
+	}
 	&-tablet{
 		@include breakpoint(tablet){
 			display: none;
@@ -63,6 +68,12 @@
 		display: none;
 		@include breakpoint(laptop){
 			display: block;
+		}
+	}
+	&phablet-inline{
+		display: none;
+		@include breakpoint(phablet){
+			display: inline-block;
 		}
 	}
 	&tablet-inline{

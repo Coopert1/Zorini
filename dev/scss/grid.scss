@@ -119,7 +119,7 @@
 
 [class*='col-']{
 	padding: 0 10px;
-	//min-height: 1px;
+	min-height: 1px;
 
 }
 .col-{
@@ -200,6 +200,10 @@
 			}
 			&2-3{
 				width: 66.66%;
+				float: left;
+			}
+			&2-5{
+				width: 40%;
 				float: left;
 			}
 			&3-5{

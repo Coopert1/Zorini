@@ -4,7 +4,22 @@ $(function(){
 		controls: false,
 		pager: false
 	});
-	//var icon_review_slider_prev = $("icon_review_slider_prev");
+	$('#lightSlider_product_card').lightSlider({
+			controls: false,
+			gallery: true,
+			item: 1,
+			loop:true,
+			slideMargin:0,
+			galleryMargin: 25,
+			thumbItem: 3,
+			thumbMargin: 30,
+			responsive:[
+			{breakpoint: 1024,
+				settings:{
+				}
+			},
+		]
+		});
 	
 	function review_slider_pager(){
 		var allNumber = $('#review-slider>li').length;

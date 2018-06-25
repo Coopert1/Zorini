@@ -2572,7 +2572,52 @@ ul.text-info{
 .fasad-types{
 	padding: 0 70px;
 }
-
+.product-describe{
+	padding-left: 20px;
+	&__name{
+		margin-bottom: 20px;
+		span{
+			&:first-child{
+				font-weight: bold;
+				display: inline-block;
+				margin-right: 30px;
+			}
+			&:last-child{
+				color: #74b6d2;
+			}
+		}
+	}
+	&__text{
+		margin-bottom: 30px;
+		
+	}
+	&__price{
+		font-size: 30px;
+		margin-bottom: 30px;
+		margin-top: 50px;
+		
+		span:first-child{
+			font-family: 'Open Sans bold', sans-serif;
+			font-weight: bold;
+			padding-right: 10px;
+		}
+	}
+	.btn_call-us {
+		margin-right: 13px;
+	}
+	.clg-1, .cls-2, .cls-3 {
+		fill:  #4fa4b6;
+	}
+	.btn_sort{
+		padding: 15px 30px;
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	&__more-info{
+		margin-bottom: 30px;
+		font-size: 13px;
+	}
+}
 .card-navivation{
 	display: flex;
 	justify-content: space-around;

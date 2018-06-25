@@ -16,12 +16,7 @@ mixin remember
 	.configuration
 		.flex
 			.column-flex-laptop-3-4
-				ul.breadcrumbs.show-laptop
-					li
-						a(href="index.html") Главная
-					li
-						a(href="#") Каталог
-				.title Выберите конфигурацию
+				.title.title_left Выберите конфигурацию
 				form
 					.row.clearfix
 						.col-phablet-1-3.col-tablet-1-3
@@ -145,12 +140,11 @@ mixin remember
 					.label__price
 						span 54 900.00
 						span р.
-					form
-						a.btn.btn_call-us(href="#")
-							span
-								include ../images/phone.svg
-							|Заказать звонок
-						a.btn.btn_write-us(href="#")
-							span
-								include ../images/write-tag.svg
-							|Написать нам
+					a.btn.btn_call-us(href="#")
+						span
+							include ../images/phone.svg
+						|Заказать звонок
+					a.btn.btn_write-us(href="#")
+						span
+							include ../images/write-tag.svg
+						|Написать нам

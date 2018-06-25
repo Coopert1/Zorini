@@ -4,6 +4,68 @@ html
 	body
 		include ./parts/header.pug
 		include ./parts/modal-windows.pug
+		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+						li
+							a(href="index.html") Главная
+						li
+							a(href="#") Каталог
+				.row.clearfix
+					.title.title_left Кухня Albano
+					.col-tablet-3-5
+						ul#lightSlider_product_card
+								li(data-thumb="images/catalog_level_pic_02.png")
+									img(src="images/catalog_level_pic_02.png")
+								li(data-thumb="images/catalog_level_pic_01.png")
+									img(src="images/catalog_level_pic_01.png")
+								li(data-thumb="images/product_01.png")
+									img(src="images/product_01.png")
+					.col-tablet-2-5
+						.product-describe
+							.product-describe__name
+								span Описание модели Albano
+								span Характеристика
+							.product-describe__text Кухня Albano коричневого цвета в стиле современной классики на две секции на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях. Предлагаем индивидуальный подход, высокое качество исходных материалов и готовых изделий, предоставляем гарантию на продукцию. Сотрудничаем с заказчиками из Москвы и Московской области.
+							.catalog-item__description
+								table
+									tbody
+										tr
+											td
+												span Стиль
+											td неокласика
+										tr
+											td
+												span Материалы
+											td Камень, МДФ, Массив дуба
+
+										tr
+											td
+												span Фурнитура
+											td Hetich
+										tr
+											td
+												span Фасад
+											td Бергонци
+										tr
+											td
+												span Rall
+											td 9999999
+							
+							.product-describe__price
+								span 54 900.00
+								span р./м.пог.
+							
+							a.btn.btn_sort.active(href="#") Возможные конфыгураце
+							.product-describe__more-info Сотрудничаем с заказчиками из Москвы и Московской области.
+							a.btn.btn_call-us(href="#")
+								span
+									include images/phone.svg
+								|Заказать звонок
+							a.btn.btn_write-us(href="#")
+								span
+									include images/write-tag.svg
+								|Написать нам
 		include ./parts/configuration.pug
 		.wrapper
 			.card-navivation

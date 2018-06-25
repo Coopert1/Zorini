@@ -29,20 +29,29 @@
 .wrapper
 	.header-bottom
 		.content-wrapper
+			.bars
+				.bar
+				.bar
+				.bar
 			a(href="#").logo
 				span
 					|Zorini
 				span
 					|Индивидуальное производство мебели из массива
-			a(href="#").btn.btn_calc
+			.search
+				include ../images/search.svg
+			.favorite
+				include ../images/favorite.svg
+				span.fav-item-count 4
+			a(href="#").btn.btn_calc.show-laptop-inline
 				.icon
 					include ../images/calc.svg
 				|Onine расчет
-			a(href="#").btn.btn_calc
+			a(href="#").btn.btn_calc.show-laptop-inline
 				.icon
 					include ../images/person.svg
 				|Вызывать замерщика
-			.contact-info.show-tablet-inline
+			.contact-info.show-laptop-inline
 				span.time
 					|Время работы с 8:00 до 20:00
 				.telephone
@@ -55,9 +64,9 @@
 				a(href="#")
 					span.callback
 						|перезвонить мне
-			.search
+			.search.show-laptop-inline
 				include ../images/search.svg
-			.favorite
+			.favorite.show-laptop-inline
 				include ../images/favorite.svg
 				span.fav-item-count 4
 .wrapper

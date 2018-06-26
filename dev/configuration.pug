@@ -5,14 +5,17 @@ html
 		include ./parts/header.pug
 		include ./parts/modal-windows.pug
 		.wrapper
-			.configuration
-				.flex
-					.column-flex-laptop-3-4
-						ul.breadcrumbs.show-laptop
+			.content-wrapper
+				ul.breadcrumbs.show-laptop.breadcrumbs_no-margin
 							li
 								a(href="index.html") Главная
 							li
 								a(href="#") Каталог
+		.wrapper
+			.configuration
+				.flex
+					.column-flex-laptop-3-4
+						
 						.title Конфигурации
 						form
 							.row.clearfix

@@ -344,6 +344,23 @@ $(function(){
 		var elem = $(".modal");
 			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
 	});
+	
+	//for dotdotdot plagin
+	$(".readmore").click(function(){
+		var self = this;
+		$(this).toggleClass("on")
+		if( $("#dot").hasClass("more")){
+			$("#dot").removeClass("more");
+		}else {
+			$("#dot").addClass("more");
+		}
+		setTimeout(function(){
+				if($(self).hasClass("on")) {$(self).children("span:first-child").text("Скрыть")
+				} else{ $(self).children("span:first-child").text("Показать все")}
+			}, 300);
+		})
+		
+
 
 });
 function initMap() {

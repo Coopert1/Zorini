@@ -75,7 +75,9 @@ p.text{
 	color: #898989;
 	line-height: 24px;
 }
-
+.wrapper.wrapper_section-bg{
+	background-color: #f2f2f5;
+}
 .backdrop {
 	position: fixed;
 	left: -100%;
@@ -125,6 +127,9 @@ p.text{
 		&:hover{
 			color: #51a5b4;
 		}
+	}
+	&_no-margin{
+		margin: 0;
 	}
 }
 .catalog-title{
@@ -179,7 +184,7 @@ img{max-width: 100%;}
 	}
 	&_mobile{
 		font-size: 14px;
-		display: block;	
+		display: block;
 		li{
 			display: block;
 			margin-right: 35px;
@@ -572,6 +577,14 @@ img{max-width: 100%;}
 	color: white;
 	line-height: 16px;
 }
+#dot{
+	max-height: 350px;
+	overflow: hidden;
+	transition: max-height 0.5s;
+	&.more{
+		 max-height:999px;
+	}
+}
 .main-menu-mobile{
 	padding: 10px;
 	width: 285px;
@@ -594,6 +607,7 @@ img{max-width: 100%;}
 		top: 0;
 		position: fixed;
 	}
+	
 	ul{
 		li{
 			position: relative;
@@ -613,7 +627,7 @@ img{max-width: 100%;}
 			position: absolute;
 			right: 0;
 			top: 12px;
-		}		
+		}
 		.icon{
 			display: inline-block;
 			text-align: center;
@@ -629,11 +643,6 @@ img{max-width: 100%;}
 				.cls-1{
 					fill: #6363de;
 				}
-				// &:nth-child(odd){
-				// 	.cls-1{
-				// 		fill: url(#gradient);
-				// 	}
-				// }
 			}
 			&_bedroom{
 				svg{
@@ -650,6 +659,35 @@ img{max-width: 100%;}
 			display: inline-block;
 		}
 	}
+	.readmore{
+		cursor: pointer;
+		text-align: center;
+		margin-bottom: 30px;
+		&.on{
+			
+			span{
+				transform: rotate(90deg);
+			}
+		}
+		span{
+			display: inline-block;
+			
+			transform: rotate(-90deg);
+			color: #908a83;
+			font-size: 2em;
+			
+			&:first-child{
+				font-size: 14px;
+				color: #000;
+				font-weight: bold;
+				transform: rotate(0deg);
+				margin-right: 25px;
+				position: relative;
+				top: -8px;
+			}
+		}
+		
+	}
 }
 .main-menu{
 	padding: 15px 0;
@@ -660,7 +698,6 @@ img{max-width: 100%;}
 		flex-wrap: wrap;
 		justify-content: space-around;
 		li{
-			// margin:0 13px;
 			margin-bottom: 30px;
 			min-width: 106px;
 			@include breakpoint(tablet){
@@ -2111,7 +2148,7 @@ ul.text-info{
 	}
 }
 .write-tag{
-	fill:  #4fa4b6;	
+	fill:  #4fa4b6;
 }
 .package-config{
 	text-align: center;
@@ -2203,17 +2240,8 @@ ul.text-info{
 			
 			&:checked + label{
 				color: #2a2a2a;
-				
-				&:after{
-					content: "\25CF";
-					position: absolute;
-					left: 4px;
-					bottom: 3.1px;
-					color: black;
-					font-size: 0.9em;
-				}
 				&:before{
-					border: 1px solid #6565df;
+					background-image: url(../images/conf-checkbox_checked.png);
 				}
 			}
 		}
@@ -2229,13 +2257,12 @@ ul.text-info{
 			&:before{
 				position: absolute;
 				content: "";
-				border: 1px solid #bababa;
-				border-radius: 50%;
 				display: inline-block;
-				height: 15px;
-				width: 15px;
-				background-color: white;
+				width: 16px;
+				height: 16px;
 				left: 0;
+				background-image: url(../images/conf-checkbox_unchecked.png);
+				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -2256,7 +2283,7 @@ ul.text-info{
 	&.product_card{
 		background-color: transparent;
 	}
-	padding: 150px 0 20px 30px;
+	padding: 127px 0 20px 30px;
 	display: none;
 	@include breakpoint(laptop){
 		display: flex;
@@ -2343,17 +2370,8 @@ ul.text-info{
 			}
 			&:checked + label{
 				color: #2a2a2a;
-				
-				&:after{
-					content: "\25CF";
-					position: absolute;
-					left: 4px;
-					bottom: 3.1px;
-					color: black;
-					font-size: 0.9em;
-				}
 				&:before{
-					border: 1px solid #6565df;
+					background-image: url(../images/conf-checkbox_checked.png);
 				}
 			}
 		}
@@ -2368,13 +2386,12 @@ ul.text-info{
 			&:before{
 				position: absolute;
 				content: "";
-				border: 1px solid #bababa;
-				border-radius: 50%;
 				display: inline-block;
-				height: 15px;
-				width: 15px;
-				background-color: white;
+				width: 16px;
+				height: 16px;
 				left: 0;
+				background-image: url(../images/conf-checkbox_unchecked.png);
+				background-repeat: no-repeat;
 			}
 		}
 		img{
@@ -2929,6 +2946,7 @@ ul.text-info{
 	padding: 50px 10px 25px 10px;
 	border-bottom: 1px solid #dadada;
 	border-top: 1px solid #dadada;
+	margin-bottom: 80px;
 	&__item{
 		
 	}
@@ -2945,5 +2963,42 @@ ul.text-info{
 	}
 	svg{
 		width: 65px;
+	}
+}
+.reviews-box{
+	padding: 70px 0 80px 0;
+	.padding-left{
+		@include breakpoint(tablet){
+			padding-left: 20px;
+		}
+		@include breakpoint(laptop){
+			padding-right: 40px;
+		}
+		
+	}
+	.padding-right{
+		@include breakpoint(tablet){
+			padding-right: 20px;
+		}
+		@include breakpoint(laptop){
+			padding-right: 40px;
+		}
+		
+	}
+	.title{
+		@include breakpoint(phablet){
+			font-size: 36px;
+			height: 2em;
+		}
+		@include breakpoint(tablet){
+			font-size: 52px;
+			height: 2em;
+		}
+	}
+	&__img{
+		position: relative;
+		&_margin-top{
+			margin-top: 20px;
+		}
 	}
 }

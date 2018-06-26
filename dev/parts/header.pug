@@ -3,16 +3,16 @@
 		.location
 			include ../images/pin.svg
 			span 
-				|Город:  
+				|Город:
 			a(href="#") Москва
-		.company-info.show-tablet-inline
+		.company-info.show-laptop-inline
 			ul
 				li О компании
 				li Контакты
 				li Доставка
 				li Оплата
 				li Франшиза
-		.telephone.telephone_top-line.hide-tablet
+		.telephone.telephone_top-line.hide-laptop
 			a(href="tel:88000000121")
 				span
 					|+8 800
@@ -29,7 +29,7 @@
 .wrapper
 	.header-bottom
 		.content-wrapper
-			.bars
+			.bars.hide-laptop
 				.bar
 				.bar
 				.bar
@@ -38,16 +38,17 @@
 					|Zorini
 				span
 					|Индивидуальное производство мебели из массива
-			.search
-				include ../images/search.svg
-			.favorite
-				include ../images/favorite.svg
-				span.fav-item-count 4
-			a(href="#").btn.btn_calc.show-laptop-inline
+			.header-icons
+				.search.hide-laptop
+					include ../images/search.svg
+				.favorite.hide-laptop
+					include ../images/favorite.svg
+					span.fav-item-count 4
+			a(href="#").btn.btn_calc.show-phablet-inline
 				.icon
 					include ../images/calc.svg
 				|Onine расчет
-			a(href="#").btn.btn_calc.show-laptop-inline
+			a(href="#").btn.btn_calc.show-phablet-inline
 				.icon
 					include ../images/person.svg
 				|Вызывать замерщика
@@ -69,6 +70,12 @@
 			.favorite.show-laptop-inline
 				include ../images/favorite.svg
 				span.fav-item-count 4
+	.header-bottom.hide-phablet.header-buttons
+		.content-wrapper
+			a(href="#").btn.btn_calc
+				|Onine расчет
+			a(href="#").btn.btn_calc
+				|Вызывать замерщика
 .wrapper
 	.main-menu
 		.content-wrapper
@@ -151,3 +158,129 @@
 							include ../images/menu/show-more.svg
 						.text
 							span Показать все
+	.main-menu-mobile
+		.close-btn
+			img(src="images/remove_item.png", alt="Спрятать фильтр")
+		.enter.enter_mobile
+			span
+				|Войти
+			.check-order.check-order_mobile
+				span
+					|Проверить состояние заказа
+				include ../images/right_arrow.svg
+		.contact-info.contact-info_mobile
+				span.time
+					|Время работы с 8:00 до 20:00
+				.telephone
+					a(href="tel:88000000121")
+						span
+							|+8 800
+						span
+							|000 01 21
+				a(href="#")
+					span.callback
+						|перезвонить мне
+		.company-info.company-info_mobile
+			ul#dot
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/cupboard.svg
+						.text
+							span Шкафы
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/kitchen.svg
+						.text
+							span Кухни
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/biblioteka.svg
+						.text
+							span Библиотеки
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/commode.svg
+						.text
+							span Шкафы
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon.icon_bedroom
+							include ../images/menu/bedroom.svg
+						.text
+							span Спальни
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon.icon_childrens
+							include ../images/menu/childrens_furniture.svg
+						.text
+							span Детские
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/living_rooms.svg
+						.text
+							span Гостинные
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/doors.svg
+						.text
+							span Двери
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/bathroom.svg
+						.text
+							span Ванная
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon
+							include ../images/menu/dressing_rooms.svg
+						.text
+							span Гардеробные
+						.arrow
+							include ../images/right_arrow.svg
+				li
+					a(href="#").mobile-menu-item
+						.icon.icon_office
+							include ../images/menu/biblioteka.svg
+						.text
+							span Офис
+						.arrow
+							include ../images/right_arrow.svg
+				
+		.readmore
+			span Показать все
+			span &#x2329
+		.company-info.company-info_mobile
+			ul
+				li О компании
+				li Контакты
+				li Доставка
+				li Оплата
+				li Франшиза
+				li
+					a.readmore(href="#")
+				

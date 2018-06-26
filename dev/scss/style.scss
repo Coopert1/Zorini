@@ -2986,6 +2986,14 @@ ul.text-info{
 		
 	}
 	.title{
+		margin: 0;
+		margin-bottom: 30px;
+		&_margin-top{
+			@include breakpoint(mobileonly){
+				margin-top: 40px;
+			}
+			
+		}
 		@include breakpoint(phablet){
 			font-size: 36px;
 			height: 2em;

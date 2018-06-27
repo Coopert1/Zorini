@@ -96,8 +96,17 @@
     padding: 0;
     text-align: center;
     position: absolute;
-    bottom: 10px;
-    left: 6%;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -40px;
+    @include breakpoint(tablet){
+        position: absolute;
+        bottom: 10px;
+        left: 10%;
+    }
+    @include breakpoint(laptop){
+        bottom: 20px;
+    }
 }
 .lSSlideOuter .lSPager.lSpg > li {
     cursor: pointer;
@@ -106,21 +115,23 @@
 }
 .lSSlideOuter .lSPager.lSpg > li a {
     background-color: #51a5b4;
-    bottom: 30px;
-    left: 6%;
     border-radius: 30px;
     display: inline-block;
     height: 10px;
     overflow: hidden;
     text-indent: -999em;
-    width: 10px;
-    position: relative;
+    width: 10px;  
     z-index: 4;
+    bottom: 2px;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
-
     @include breakpoint(tablet){
-        // display:none;
+        bottom: 6px;
+        left: 10%;
+        position: relative;
+    }
+    @include breakpoint(laptop){
+        bottom: 6px;
     }
 
 }
@@ -128,7 +139,15 @@
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: #f2762e;
     background-color: #fff;
-    bottom: 36px;
+    position: relative;
+    // laptopdesktoptop: -6px;
+
+    @include breakpoint(tablet){
+         // bottom: 7px;
+    }
+    @include breakpoint(laptop){
+         // bottom: 27px;
+    }
 
 }
 .lSSlideOuter .media {
@@ -197,7 +216,7 @@
     transition: opacity 0.35s linear 0s;
     transform:scale(0.6);
     transition: all 1s ease;
-    @include breakpoint(phablet){
+    @include breakpoint(desktop){
         transform:scale(1);
         transition: all 1s ease;
     }
@@ -208,7 +227,11 @@
 .lSAction > .lSPrev {
     background-position: -39px 0;
     left: -7px;
-    @include breakpoint(phablet){
+    display: none;
+    @include breakpoint(tablet){
+        display: block;
+    }
+    @include breakpoint(desktop){
         left:-1px;
         transition: all 1s ease;
     }
@@ -216,7 +239,11 @@
 .lSAction > .lSNext {
     background-position: 0 0;
     right: -7px;
-    @include breakpoint(phablet){
+    display: none;
+    @include breakpoint(tablet){
+        display: block;
+    }
+    @include breakpoint(desktop){
         right: -1px;
         transition: all 1s ease;
     }

@@ -380,6 +380,15 @@ $(function(){
 	});
 	//
 
+	//Search-form on mobile device
+	$('#search-icon').click(function(event){
+		event.preventDefault();
+		$(".search-form").animate(
+			{height: 'toggle'},
+			{duration:300},
+		);
+	})
+
 });
 function initMap() {
 

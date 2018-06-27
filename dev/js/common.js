@@ -345,7 +345,7 @@ $(function(){
 			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
 	});
 	
-	//for dotdotdot plagin
+	//for dotdotdot plugin
 	$(".readmore").click(function(){
 		var self = this;
 		$(this).toggleClass("on")
@@ -359,8 +359,26 @@ $(function(){
 				} else{ $(self).children("span:first-child").text("Показать все")}
 			}, 300);
 		})
+	//Set menu position:fixed
+	function fixMenuBar(){
+		var scrolTop = $(window).scrollTop();
+		var width = $(window).width();
+			if (width<1000){
+				if(scrolTop>=41){
+					$(".header-bottom").addClass("fixed");
+					$('body').addClass("scroll_padding-top")
+				} else {
+					$(".header-bottom").removeClass("fixed");
+					$('body').removeClass("scroll_padding-top")
+					
+				}
+			}
+		}
+	$(window).scroll(function(){
+		fixMenuBar();
 		
-
+	});
+	//
 
 });
 function initMap() {

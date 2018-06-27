@@ -99,6 +99,11 @@ p.text{
 	width: 100%;
 	overflow: hidden;
 }
+.scroll{
+	&_padding-top{
+		padding-top: 76px;
+	}
+}
 
 .breadcrumbs{
 	font-size: 13px;
@@ -265,6 +270,14 @@ img{max-width: 100%;}
 .header-bottom{
 	padding: 10px 0;
 	border-bottom: 1px solid #dadada;
+	background:#fff;
+	z-index: 11;
+		&.fixed{
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
 	.logo{
 		display: inline-block;
 		span:first-child{

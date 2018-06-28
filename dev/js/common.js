@@ -45,6 +45,7 @@ $(function(){
 		item: 1,
 		slideMove:1,
 		pager: true,
+		controls: false,
 		addClass: '',
 		mode: "slide",
 		useCSS: true,

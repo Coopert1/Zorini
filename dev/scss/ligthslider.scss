@@ -227,10 +227,6 @@
 .lSAction > .lSPrev {
     background-position: -39px 0;
     left: -7px;
-    display: none;
-    @include breakpoint(tablet){
-        display: block;
-    }
     @include breakpoint(desktop){
         left:-1px;
         transition: all 1s ease;
@@ -239,10 +235,7 @@
 .lSAction > .lSNext {
     background-position: 0 0;
     right: -7px;
-    display: none;
-    @include breakpoint(tablet){
-        display: block;
-    }
+    
     @include breakpoint(desktop){
         right: -1px;
         transition: all 1s ease;
@@ -463,4 +456,30 @@
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing;
+}
+#promoslider{
+    .lSAction > .lSNext {
+        background-position: 0 0;
+        right: -7px;
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+        }
+        @include breakpoint(desktop){
+            right: -1px;
+            transition: all 1s ease;
+        }
+    }
+    .lSAction > .lSPrev {
+        background-position: -39px 0;
+        left: -7px;
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+        }
+        @include breakpoint(desktop){
+            left:-1px;
+            transition: all 1s ease;
+        }
+    }
 }

@@ -99,6 +99,14 @@ p.text{
 	width: 100%;
 	overflow: hidden;
 }
+.scroll{
+	&_padding-top{
+		padding-top: 127px;
+		@include breakpoint(phablet){
+			padding-top: 76px;
+		}
+	}
+}
 
 .breadcrumbs{
 	font-size: 13px;
@@ -265,6 +273,15 @@ img{max-width: 100%;}
 .header-bottom{
 	padding: 10px 0;
 	border-bottom: 1px solid #dadada;
+	background:#fff;
+	z-index: 11;
+	index: 11;
+	&.fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
 	.logo{
 		display: inline-block;
 		span:first-child{
@@ -322,7 +339,9 @@ img{max-width: 100%;}
 }
 
 .header-buttons{
+	padding-top: 10px;
 	text-align: center;
+	border-top: 1px solid #dadada;
 }
 .btn{
 	display: inline-block;
@@ -580,9 +599,10 @@ img{max-width: 100%;}
 #dot{
 	max-height: 350px;
 	overflow: hidden;
-	transition: max-height 0.5s;
+	transition: all 1s ease;
 	&.more{
-		 max-height:999px;
+		max-height:999px;
+
 	}
 }
 .main-menu-mobile{
@@ -838,7 +858,12 @@ img{max-width: 100%;}
 
 .product-item{
 	position: relative;
+	margin: 0 -20px;
 	margin-bottom: 20px;
+	@include breakpoint(phablet){
+		margin: 0;
+		margin-bottom: 20px;
+	}
 	&__image{
 		img{
 			width: 100%;

@@ -33,7 +33,7 @@
 				.bar
 				.bar
 				.bar
-			a(href="#").logo
+			a(href="index.html").logo
 				span
 					|Zorini
 				span
@@ -70,13 +70,13 @@
 			.favorite.show-laptop-inline
 				include ../images/favorite.svg
 				span.fav-item-count 4
-	.header-bottom.hide-phablet.header-buttons
-		.content-wrapper
-			a(href="#").btn.btn_calc
-				|Onine расчет
-			a(href="#").btn.btn_calc
-				|Вызывать замерщика
-.wrapper
+		.hide-phablet.header-buttons
+			.content-wrapper
+				a(href="#").btn.btn_calc
+					|Onine расчет
+				a(href="#").btn.btn_calc
+					|Вызывать замерщика
+.wrapper.show-laptop
 	.main-menu
 		.content-wrapper
 			ul
@@ -158,6 +158,7 @@
 							include ../images/menu/show-more.svg
 						.text
 							span Показать все
+.wrapper
 	.main-menu-mobile
 		.close-btn
 			img(src="images/remove_item.png", alt="Спрятать фильтр")

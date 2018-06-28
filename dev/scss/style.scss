@@ -34,7 +34,7 @@ img{
 	max-width: 100%;
 }
 h1,h2,h3,h4{
-	text-align: center;
+	// text-align: center;
 	color: #2a2a2a;
 	margin-bottom: 25px;
 }
@@ -43,26 +43,26 @@ h1{
 	font-weight: lighter;
 	font-size: 60px;
 	text-align: center;
-	@include breakpoint(mobileonly){
-		font-size: 30px;
-	}
+	// @include breakpoint(mobileonly){
+	// 	font-size: 30px;
+	// }
 }
 h2{
 	font-family: 'Oranienbaum', serif;
 	font-weight: lighter;
 	font-size: 52px;
 	margin-bottom: 40px;
-	@include breakpoint(mobileonly){
-		font-size: 26px;
-	}
+	// @include breakpoint(mobileonly){
+	// 	font-size: 26px;
+	// }
 }
 h3{
 	font-family: 'Oranienbaum', serif;
 	font-weight: lighter;
 	font-size: 36px;
-	@include breakpoint(mobileonly){
-		font-size: 24px;
-	}
+	// @include breakpoint(mobileonly){
+	// 	font-size: 24px;
+	// }
 }
 h4{
 	font-family: 'Oranienbaum', serif;
@@ -107,12 +107,49 @@ p.text{
 		}
 	}
 }
+.search-form{
+	display:none;
+	z-index: 10;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100vw;
+	padding: 10px;
+	background: #fff;
+	border-bottom: 1px solid #dadada;
+	border-top: 1px solid #dadada;
+	form{
+		input{
+			border-radius: 30px;
+			border: 1px solid #4fa4b6;
+			-webkit-appearance: textfield;
+			outline: none;
+			font-size: 14px;
+			width: 100%;
+			padding: 10px;
+			padding-right: 90px;
+		}
+		button{
+			outline: none;
+			position: absolute;
+			top: 12px;
+			height: 37px;
+			right: 30px;
+			background: #fff;
+			border: none;
+			border-radius: 30px;
+			padding: 0;
+			color: #898989;
+			font-size: 18px;
+		}
+	}
+}
 
 .breadcrumbs{
 	font-size: 13px;
 	list-style: none;
 	color: #898989;
-	margin-bottom: 20px;
+	padding: 20px 0;
 	display: inline-block;
 	li{
 		display: inline-block;
@@ -182,6 +219,9 @@ img{max-width: 100%;}
 }
 
 .company-info{
+	a{
+		color: #fff;
+	}
 	display: inline-block;
 	ul{
 		list-style: none;
@@ -201,11 +241,13 @@ img{max-width: 100%;}
 }
 
 .enter{
+	color: #fff;
 	font-size: 12px;
 	float: right;
 	position: relative;
 	top: -5px;
 	&_mobile{
+		color:#878787;
 		float: none;
 		position: static;
 	}
@@ -398,7 +440,6 @@ img{max-width: 100%;}
 	&_filter{
 		text-align: center;
 		width: 100%;
-		margin-top: 30px;
 		margin-bottom: 15px;
 		background-color: white;
 		span:first-child{
@@ -497,7 +538,7 @@ img{max-width: 100%;}
 .contact-info{
 	position:relative;
 	top: 10px;
-	margin: 0 10px;
+	// margin: 0 10px;
 	text-align: right;
 	display: inline-block;
 	@include breakpoint(desktop){
@@ -631,7 +672,9 @@ img{max-width: 100%;}
 	ul{
 		li{
 			position: relative;
+			margin: 0;
 			margin-bottom: 20px;
+
 		}
 	}
 	.close-btn{
@@ -711,29 +754,27 @@ img{max-width: 100%;}
 }
 .main-menu{
 	padding: 15px 0;
+	border-bottom: 1px solid #dadada;
 	ul{
 		display: flex;
+		flex-grow: 1;
 		text-align: center;
 		list-style:none;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		overflow: hidden;
-		max-height: 105px;
-		
+		@include breakpoint (laptop){
+			max-height: 105px;
+			overflow: hidden;
+			flex-direction: row-reverse;
+		}
 		li{
-			margin-bottom: 30px;
+			// margin-bottom: 30px;
 			min-width: 106px;
 			@include breakpoint(tablet){
 				min-width: 0;
 				margin-right:20px;
-				margin-bottom: 30px;
+				// margin-bottom: 30px;
 			}
-		}
-		li:first-child{
-			margin-left:0;
-		}
-		li:last-child{
-			margin-right: 0;
 		}
 	}
 	.menu-item{
@@ -797,10 +838,90 @@ img{max-width: 100%;}
 }
 .promo{
 	position: relative;
+	// padding-bottom: 50px;
+	&__pic{
+		display: block;
+		@include breakpoint(tablet){
+				padding-left: 30%;
+				padding-bottom: 0px;
+		}
+	}
 	&__text{
-		position: absolute;
-		top: 62%;
-		left: 6%;
+		background: #2a2a2a;
+		color: #fff;
+		text-align: center;
+		padding: 20px;
+		padding-bottom: 50px;
+		h1{
+			color: #fff;
+			margin-bottom: 50px;
+			position: relative;
+			font-size: 60px;
+			@include breakpoint(tablet){
+				font-size: 48px;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+			@include breakpoint(laptop){
+				text-align: left;
+				margin-bottom: 50px;
+			}
+			&:before {
+			    content: "";
+			    display: inline-block;
+			    height: 2px;
+			    width: 45px;
+			    background-color: #fff;
+			    bottom: -25px;
+			    left: 50%;
+			    margin-left: -27px;
+			    position: absolute;
+			    @include breakpoint(tablet){
+					bottom: -10px;
+				
+			}
+			@include breakpoint(laptop){
+				bottom: -25px;
+			}
+			}
+		}
+		h4{
+			color: #fff;
+			margin: 0;
+			font-size: 24px;
+			@include breakpoint(tablet){
+				font-size: 18px;
+				text-align: left;
+			}
+			@include breakpoint(laptop){
+				text-align: left;
+			}
+		}
+		span{
+			max-width: 186px;
+			margin: 0 auto;
+			font-size: 12px;
+			color: #898989;
+			display: block;
+			margin-bottom: 20px;
+			@include breakpoint(tablet){
+				margin: 0;
+				margin-bottom: 20px;
+			}
+		}
+		@include breakpoint(tablet){
+			text-align: left;
+			width: 30%;
+			position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    padding-top: 3%;
+		    padding-left: 6%;
+		    padding-bottom: 0px;
+		}
+		@include breakpoint(laptop){
+			padding-top: 4%;
+		}
 	}
 }
 .title{
@@ -828,17 +949,24 @@ img{max-width: 100%;}
 		background: #b8b8b8;
 		top: 50%;
 		transform: translateY(-50%);
-		right: 120%;
+		right: 104%;
+		@include breakpoint(phablet){
+			right: 120%;
+		}
 	}
 	span:after{
 			right: auto;
-			left: 120%;
+			left: 104%;
+		@include breakpoint(phablet){
+			right: 120%;
+		}
 	}
 	
 	@include breakpoint(mobileonly){
+		padding: 20px 0;
 		font-size: 36px;
 		span{
-			display: block;
+			// display: block;
 			margin-bottom: 20px;
 		}
 	}
@@ -847,12 +975,16 @@ img{max-width: 100%;}
 		font-size: 52px;
 	}
 	.works{
-			font-size: 13px;
-			position: relative;
-			top: -10px;
-			left: 20px;
-			text-decoration: underline;
-			color: #898989;
+		font-size: 13px;
+		position: relative;
+		top: -10px;
+		left: 20px;
+		text-decoration: underline;
+		color: #898989;
+		@include breakpoint(mobileonly){
+			display: block;
+			position: static;
+		}
 	}
 }
 
@@ -860,6 +992,9 @@ img{max-width: 100%;}
 	position: relative;
 	margin: 0 -20px;
 	margin-bottom: 20px;
+	&_slider{
+		margin: 0;
+	}
 	@include breakpoint(phablet){
 		margin: 0;
 		margin-bottom: 20px;
@@ -877,6 +1012,9 @@ img{max-width: 100%;}
 		width: 100%;
 		bottom: 0;
 		&_catalog{
+			@include breakpoint(mobileonly){
+				padding: 10px 0;
+			}
 			padding: 30px 0;
 		}
 	}
@@ -903,6 +1041,9 @@ img{max-width: 100%;}
 		font-size: 18px;
 		font-weight: bold;
 		&_catalog{
+			@include breakpoint(mobileonly){
+				font-size: 24px;
+			}
 			font-family: 'Oranienbaum', serif;
 			font-size: 36px;
 			text-align: center;
@@ -1607,7 +1748,7 @@ img{max-width: 100%;}
 
 .paginator{
 	display: block;
-	margin: 30px auto;
+	margin: 20px auto auto 0;
 	&_catalog{
 		display: block;
 		@include breakpoint(laptop){
@@ -1617,7 +1758,6 @@ img{max-width: 100%;}
 	ul{
 		text-align: center;
 		display: black;
-		margin-top: 15px;
 		list-style: none;
 		li{
 			vertical-align: middle;
@@ -2061,7 +2201,13 @@ img{max-width: 100%;}
 	}
 }
 .catalog-level-01{
-	margin-bottom: 80px;
+	@include breakpoint(phablet){
+		margin: 0 -10px;
+		margin-bottom: 80px;
+	}
+}
+.info-404-wrapper{
+	padding-top: 90px;
 }
 .info-404{
 	text-align: center;
@@ -2982,7 +3128,7 @@ ul.text-info{
 		img{
 			@include breakpoint(tablet){
 				width: 50%;
-				float: right;	
+				float: right;
 			}
 		}
 		p{

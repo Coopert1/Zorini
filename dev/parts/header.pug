@@ -7,18 +7,23 @@
 			a(href="#") Москва
 		.company-info.show-laptop-inline
 			ul
-				li О компании
-				li Контакты
-				li Доставка
-				li Оплата
-				li Франшиза
+				li
+					a(href="#") О компании
+				li 
+					a(href="#") Контакты
+				li 
+					a(href="#") Доставка
+				li 
+					a(href="#") Оплата
+				li 
+					a(href="#") Франшиза
 		.telephone.telephone_top-line.hide-laptop
 			a(href="tel:88000000121")
 				span
 					|+8 800
 				span
 					|000 01 21
-		.enter.show-laptop-inline
+		a(href="#").enter.show-laptop-inline
 			span
 				|Войти
 			.check-order
@@ -70,6 +75,11 @@
 			.favorite.show-laptop-inline
 				include ../images/favorite.svg
 				span.fav-item-count 4
+			.search-form
+				form
+					input(type="text", placeholder="", name="search")
+					button(type="submit")
+						i.fa.fa-search
 		.hide-phablet.header-buttons
 			.content-wrapper
 				a(href="#").btn.btn_calc
@@ -82,52 +92,28 @@
 			ul
 				li
 					a(href="#").menu-item
-						.icon
-							include ../images/menu/cupboard.svg
+						.icon.icon_more
+							include ../images/menu/show-more.svg
 						.text
-							span Шкафы
+							span Показать все
 				li
 					a(href="#").menu-item
-						.icon
-							include ../images/menu/kitchen.svg
+						.icon.icon_hallways
+							include ../images/menu/hallways.svg
 						.text
-							span Кухни
+							span Прихожая
 				li
 					a(href="#").menu-item
-						.icon
+						.icon.icon_office
 							include ../images/menu/biblioteka.svg
 						.text
-							span Библиотеки
+							span Офис
 				li
 					a(href="#").menu-item
 						.icon
-							include ../images/menu/commode.svg
+							include ../images/menu/dressing_rooms.svg
 						.text
-							span Шкафы
-				li
-					a(href="#").menu-item
-						.icon.icon_bedroom
-							include ../images/menu/bedroom.svg
-						.text
-							span Спальни
-				li
-					a(href="#").menu-item
-						.icon.icon_childrens
-							include ../images/menu/childrens_furniture.svg
-						.text
-							span Детские
-				li
-					a(href="#").menu-item
-						.icon
-							include ../images/menu/living_rooms.svg
-						.text
-							span Гостинные
-				li
-					a(href="#").menu-item
-						.icon
-							include ../images/menu/doors.svg
-						.text
-							span Двери
+							span Гардеробные
 				li
 					a(href="#").menu-item
 						.icon
@@ -137,27 +123,61 @@
 				li
 					a(href="#").menu-item
 						.icon
-							include ../images/menu/dressing_rooms.svg
+							include ../images/menu/doors.svg
 						.text
-							span Гардеробные
+							span Двери
 				li
 					a(href="#").menu-item
-						.icon.icon_office
+						.icon
+							include ../images/menu/living_rooms.svg
+						.text
+							span Гостинные
+				li
+					a(href="#").menu-item
+						.icon.icon_childrens
+							include ../images/menu/childrens_furniture.svg
+						.text
+							span Детские
+				li
+					a(href="#").menu-item
+						.icon.icon_bedroom
+							include ../images/menu/bedroom.svg
+						.text
+							span Спальни
+				li
+					a(href="#").menu-item
+						.icon
+							include ../images/menu/commode.svg
+						.text
+							span Комоды
+				li
+					a(href="#").menu-item
+						.icon
 							include ../images/menu/biblioteka.svg
 						.text
-							span Офис
+							span Библиотеки
 				li
 					a(href="#").menu-item
-						.icon.icon_hallways
-							include ../images/menu/hallways.svg
+						.icon
+							include ../images/menu/kitchen.svg
 						.text
-							span Прихожая
+							span Кухни
 				li
 					a(href="#").menu-item
-						.icon.icon_more
-							include ../images/menu/show-more.svg
+						.icon
+							include ../images/menu/cupboard.svg
 						.text
-							span Показать все
+							span Шкафы
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 .wrapper
 	.main-menu-mobile
 		.close-btn

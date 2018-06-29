@@ -127,7 +127,7 @@ p.text{
 			font-size: 14px;
 			width: 100%;
 			padding: 10px;
-			padding-right: 90px;
+			padding-right: 35px;
 		}
 		button{
 			outline: none;
@@ -149,7 +149,7 @@ p.text{
 	font-size: 13px;
 	list-style: none;
 	color: #898989;
-	padding: 20px 0;
+	padding: 35px 0 20px  0;
 	display: inline-block;
 	li{
 		display: inline-block;
@@ -219,10 +219,10 @@ img{max-width: 100%;}
 }
 
 .company-info{
-	a{
-		color: #fff;
-	}
 	display: inline-block;
+	a{
+			color: #fff;
+		}	
 	ul{
 		list-style: none;
 	}
@@ -237,6 +237,10 @@ img{max-width: 100%;}
 			display: block;
 			margin-right: 35px;
 		}
+		a{
+			color: #000;
+		}	
+
 	}
 }
 
@@ -435,7 +439,16 @@ img{max-width: 100%;}
 	&__back{
 		font-size: 18px;
 		color: #2a2a2a;
+		padding: 20px 64px 20px 77px;
 		margin-bottom: 25px;
+		position: relative;
+		svg{
+			transform: rotate(180deg);
+			position: absolute;
+			left: 35px;
+			top: 50%;
+			margin-top: -8px;
+		}
 	}
 	&_filter{
 		text-align: center;
@@ -640,9 +653,10 @@ img{max-width: 100%;}
 #dot{
 	max-height: 350px;
 	overflow: hidden;
-	transition: all 1s ease;
+	transition: all 0.7s ease;
 	&.more{
 		max-height:999px;
+		transition: all 0.7s ease;
 
 	}
 }
@@ -726,10 +740,15 @@ img{max-width: 100%;}
 		cursor: pointer;
 		text-align: center;
 		margin-bottom: 30px;
+		img{
+			vertical-align: top;
+			transition: all 0.7s ease;
+		}
 		&.on{
 			
-			span{
-				transform: rotate(90deg);
+			img{
+				transition: all 0.7s ease;
+				transform: rotate(180deg);
 			}
 		}
 		span{
@@ -763,7 +782,7 @@ img{max-width: 100%;}
 		flex-wrap: wrap;
 		justify-content: space-around;
 		@include breakpoint (laptop){
-			max-height: 105px;
+			max-height: 75px;
 			overflow: hidden;
 			flex-direction: row-reverse;
 		}
@@ -878,7 +897,9 @@ img{max-width: 100%;}
 			    position: absolute;
 			    @include breakpoint(tablet){
 					bottom: -10px;
-				
+					left: 0;
+					margin-left: 0;
+
 			}
 			@include breakpoint(laptop){
 				bottom: -25px;
@@ -925,7 +946,7 @@ img{max-width: 100%;}
 	}
 }
 .title{
-	padding: 50px 0;
+	margin: 50px 0;
 	position: relative;
 	text-align: center;
 	font-size: 52px;
@@ -958,7 +979,7 @@ img{max-width: 100%;}
 			right: auto;
 			left: 104%;
 		@include breakpoint(phablet){
-			right: 120%;
+			left: 120%;
 		}
 	}
 	
@@ -1000,8 +1021,16 @@ img{max-width: 100%;}
 		margin-bottom: 20px;
 	}
 	&__image{
+		overflow: hidden;
 		img{
 			width: 100%;
+			transition: all 1s ease;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+				transition: all 1s ease;
+			}
 		}
 	}
 	&__text{
@@ -1022,7 +1051,7 @@ img{max-width: 100%;}
 		position: absolute;
 		bottom: 73px;
     	left: 20px;
-    	z-index: 2;
+    	z-index: 3;
 		color: #fff;
 		font-size: 11px;
 		padding: 1px 5px;
@@ -1065,6 +1094,7 @@ img{max-width: 100%;}
 		right: 15px;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 10px;
+		z-index: 3;
 		border-radius: 100%;
 		&:hover{
 			background-color: rgba(238, 46, 34, 0.4);
@@ -1748,9 +1778,13 @@ img{max-width: 100%;}
 
 .paginator{
 	display: block;
-	margin: 20px auto auto 0;
+	&_news{
+		padding: 20px 0 53px 0;
+	}
 	&_catalog{
 		display: block;
+		margin-top: 20px;
+		margin-bottom: 0;
 		@include breakpoint(laptop){
 			display: inline-block;
 		}
@@ -1794,6 +1828,7 @@ img{max-width: 100%;}
 .news{
 	
 	.title{
+		padding:0;
 		margin: 0 0 40px 0;
 		text-align: left;
 	}
@@ -1852,12 +1887,13 @@ img{max-width: 100%;}
 		}
 	}
 }
-.registr-form{
+.register-form{
 	border: 5px solid #2a2a2a;
 	max-width: 880px;
 	margin: 0 auto;
 	text-align: center;
 	padding: 0 10px 40px 10px;
+	margin-top: 90px;
 	margin-bottom: 100px;
 	
 	.title{
@@ -1890,17 +1926,32 @@ img{max-width: 100%;}
 		&[type="submit"]{
 			border-radius:50px;
 			font-size: 18px;
-			border: 1px solid #81bdd6;
+			margin-top: 10px;
+			border: 1px solid #48a0bc;
 			background-color: white;
 			height: 60px;
+			&:hover{
+				background: #48a0bc;
+				color: #fff;
+			}
 		}
-		
 	}
 	.input-wrap{
 		max-width: 315px;
 		margin: 0 auto 23px auto;
 		text-align: left;
 		position: relative;
+		&_submit{
+			&:hover{
+				span{
+					svg{
+						.right-arrow-btn{
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
 		span{
 			display: inline-block;
 			font-weight: bold;
@@ -1915,16 +1966,17 @@ img{max-width: 100%;}
 				color: #f52424;
 				font-size: 12px;
 				margin-top: 5px;
+				font-weight: normal;
 				display: none;
 				
 			}
 			&.arrow{
 				position: absolute;
-				right: 10px;
+				right: 30px;
 				font-size: 20px;
 				display: inline-block;
 				color: #81bdd6;
-				top: 25%;
+				top: 26%;
 			}
 		}
 		

@@ -4,33 +4,40 @@ html
 	body
 		include ./parts/header.pug
 		.wrapper
-			form.registr-form
-				.title Регистрация
-				.input-wrap
-					span Представьтесь
-					br
-					input(required)
-				.input-wrap
-					span Номер телефона
-					br
-					input(required type="tel" placeholder="+7 (____)  ____ - ___ - ___")
-				.input-wrap
-					span Электронная почта
-					br
-					input(required type="email")
-				.input-wrap
-					span Пароль
-					br
-					input(required type="password" minlength="6")
-					br
-					span Пароль должен содержать как минисум 6 символов
-				.input-wrap
-					span Повторите пароль
-					br
-					input(required type="password")
-				.input-wrap
-					input(type="submit" value="Зарегистрироваться")
-					span.arrow &#x2192
-		include ./parts/form-line.pug
-		include ./parts/footer.pug
+			.content-wrapper
+				ul.breadcrumbs.show-laptop
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Регистрация
+				form.register-form
+					.title Регистрация
+					.input-wrap
+						span Представьтесь
+						br
+						input(required)
+					.input-wrap
+						span Номер телефона
+						br
+						input(required type="tel" placeholder="+7 (____)  ____ - ___ - ___")
+					.input-wrap
+						span Электронная почта
+						br
+						input(required type="email")
+					.input-wrap
+						span Пароль
+						br
+						input(required type="password" minlength="6")
+						br
+						span Пароль должен содержать как минисум 6 символов
+					.input-wrap
+						span Повторите пароль
+						br
+						input(required type="password")
+					.input-wrap.input-wrap_submit
+						input(type="submit" value="Зарегистрироваться")
+						span.arrow
+							include ./images/right-arrow-btn.svg
+			include ./parts/form-line.pug
+			include ./parts/footer.pug
 	

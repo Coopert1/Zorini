@@ -346,7 +346,7 @@ $(function(){
 			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
 	});
 	
-	//for dotdotdot plugin
+	//for show-more menu items on mobile
 	$(".readmore").click(function(){
 		var self = this;
 		$(this).toggleClass("on")
@@ -358,7 +358,7 @@ $(function(){
 		setTimeout(function(){
 				if($(self).hasClass("on")) {$(self).children("span:first-child").text("Скрыть")
 				} else{ $(self).children("span:first-child").text("Показать все")}
-			}, 300);
+			}, 200);
 		})
 	//Set menu position:fixed
 	function fixMenuBar(){

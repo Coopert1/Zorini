@@ -149,7 +149,7 @@ p.text{
 	font-size: 13px;
 	list-style: none;
 	color: #898989;
-	padding: 20px 0;
+	padding: 35px 0 20px  0;
 	display: inline-block;
 	li{
 		display: inline-block;
@@ -439,7 +439,16 @@ img{max-width: 100%;}
 	&__back{
 		font-size: 18px;
 		color: #2a2a2a;
+		padding: 20px 64px 20px 77px;
 		margin-bottom: 25px;
+		position: relative;
+		svg{
+			transform: rotate(180deg);
+			position: absolute;
+			left: 35px;
+			top: 50%;
+			margin-top: -8px;
+		}
 	}
 	&_filter{
 		text-align: center;
@@ -937,7 +946,7 @@ img{max-width: 100%;}
 	}
 }
 .title{
-	padding: 50px 0;
+	margin: 50px 0;
 	position: relative;
 	text-align: center;
 	font-size: 52px;
@@ -1012,8 +1021,16 @@ img{max-width: 100%;}
 		margin-bottom: 20px;
 	}
 	&__image{
+		overflow: hidden;
 		img{
 			width: 100%;
+			transition: all 1s ease;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+				transition: all 1s ease;
+			}
 		}
 	}
 	&__text{
@@ -1034,7 +1051,7 @@ img{max-width: 100%;}
 		position: absolute;
 		bottom: 73px;
     	left: 20px;
-    	z-index: 2;
+    	z-index: 3;
 		color: #fff;
 		font-size: 11px;
 		padding: 1px 5px;
@@ -1077,6 +1094,7 @@ img{max-width: 100%;}
 		right: 15px;
 		background-color: rgba(0, 0, 0, 0.4);
 		padding: 10px;
+		z-index: 3;
 		border-radius: 100%;
 		&:hover{
 			background-color: rgba(238, 46, 34, 0.4);
@@ -1760,9 +1778,13 @@ img{max-width: 100%;}
 
 .paginator{
 	display: block;
-	margin: 20px auto auto 0;
+	&_news{
+		padding: 20px 0 53px 0;
+	}
 	&_catalog{
 		display: block;
+		margin-top: 20px;
+		margin-bottom: 0;
 		@include breakpoint(laptop){
 			display: inline-block;
 		}
@@ -1806,6 +1828,7 @@ img{max-width: 100%;}
 .news{
 	
 	.title{
+		padding:0;
 		margin: 0 0 40px 0;
 		text-align: left;
 	}
@@ -1903,6 +1926,7 @@ img{max-width: 100%;}
 		&[type="submit"]{
 			border-radius:50px;
 			font-size: 18px;
+			margin-top: 10px;
 			border: 1px solid #48a0bc;
 			background-color: white;
 			height: 60px;
@@ -1942,6 +1966,7 @@ img{max-width: 100%;}
 				color: #f52424;
 				font-size: 12px;
 				margin-top: 5px;
+				font-weight: normal;
 				display: none;
 				
 			}

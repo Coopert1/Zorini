@@ -188,10 +188,10 @@
 	.main-menu-mobile
 		.close-btn
 			img(src="images/remove_item.png", alt="Спрятать фильтр")
-		.enter.enter_mobile
+		a(href="#").enter.enter_mobile
 			span
 				|Войти
-			.check-order.check-order_mobile
+			a(href="#").check-order.check-order_mobile
 				span
 					|Проверить состояние заказа
 				include ../images/right_arrow.svg
@@ -300,14 +300,19 @@
 				
 		.readmore
 			span Показать все
-			span &#x2329
+			img(src="images/show-more.png", alt="icon")
 		.company-info.company-info_mobile
 			ul
-				li О компании
-				li Контакты
-				li Доставка
-				li Оплата
-				li Франшиза
+				li
+					a(href="#") О компании
+				li 
+					a(href="#") Контакты
+				li 
+					a(href="#") Доставка
+				li
+					a(href="#") Оплата
+				li 
+					a(href="#") Франшиза
 				li
 					a.readmore(href="#")
 				

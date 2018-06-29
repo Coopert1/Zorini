@@ -2,8 +2,8 @@ html
 	head
 		include ./parts/head.pug
 	body
-		include ./parts/header.pug
 		.wrapper
+			include ./parts/header.pug
 			.content-wrapper
 				ul.breadcrumbs.show-laptop
 					li
@@ -36,7 +36,7 @@ html
 						input(required type="password")
 					.input-wrap.input-wrap_submit
 						input(type="submit" value="Зарегистрироваться")
-						span.arrow
+						.arrow
 							include ./images/right-arrow-btn.svg
 			include ./parts/form-line.pug
 			include ./parts/footer.pug

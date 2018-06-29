@@ -178,8 +178,7 @@ p.text{
 	}
 }
 .catalog-title{
-	padding-top: 15px;
-	margin-bottom: 45px;
+	margin-bottom: 40px;
 }
 
 .inner-wrapper{
@@ -395,12 +394,20 @@ img{max-width: 100%;}
 	border: 1px solid #4fa4b6;
 	border-radius: 30px;
 	color: #000;
-
+	&:hover{
+		background: #4fa4b6;
+		color: #fff;
+	}
 	&_calc{
 		vertical-align: top;
 		margin: 0px 5px;
 		font-size: 13px;
 		position: relative;
+		&:hover{
+			svg{
+				fill: #fff;
+			}
+		}
 		@include breakpoint(phablet){
 			margin-top: 5px;
 		}
@@ -484,9 +491,17 @@ img{max-width: 100%;}
 		color: #2a2a2a;
 	}
 	&_go-to-catalog{
-		padding:20px 75px;
+		padding:20px 65px;
 		margin: 50px 0;
+		position: relative;
+		svg{
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			margin-top: -8px;
+		}
 		@include breakpoint(tablet){
+			padding:20px 75px;
 			margin-top: 30px;
 			margin-bottom: 110px;
 		}
@@ -1160,9 +1175,19 @@ img{max-width: 100%;}
 	margin-bottom: 40px;
 	
 	&__img{
+		overflow: hidden;
 		margin-bottom: 25px;
 		display: inline-block;
-		position: relative;
+		position: relative;	
+		img{
+			transition: all 1s ease;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+				transition: all 1s ease;
+			}
+		}
 		.product-item__add-to-fav{
 			bottom: 15px;
 			top: auto;
@@ -3324,4 +3349,8 @@ ul.text-info{
 			margin-top: 20px;
 		}
 	}
+}
+.product-card-title{
+	padding-top: 40px;
+	margin-bottom: 30px;
 }

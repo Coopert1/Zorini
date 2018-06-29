@@ -398,7 +398,7 @@ img{max-width: 100%;}
 		background: #4fa4b6;
 		color: #fff;
 		svg{
-			.right-arrow-btn, .calc-1, .person-1{
+			.right-arrow-btn, .calc-1, .person-1, .clg-1, .cls-2, .cls-3, .write-tag{
 				fill: #fff;
 			}
 		}
@@ -2889,8 +2889,6 @@ ul.text-info{
 	.btn{
 		padding-left: 60px;
 		padding-right: 60px;
-		
-		background: transparent;
 	
 	}
 	.remember__save{
@@ -3006,9 +3004,12 @@ ul.text-info{
 		width: 100%;
 		outline: none;
 		&[type="submit"]{
-			background: transparent;
+			background: white;
 			width: auto;
 			padding: 0 40px;
+			&:hover{
+				background: #4fa4b6;
+			}
 
 		}
 	}
@@ -3399,4 +3400,13 @@ ul.text-info{
 .product-card-title{
 	padding-top: 40px;
 	margin-bottom: 30px;
+}
+.lSSlideOuter .lSPager.lSGallery img{
+	opacity: 0.5;
+}
+.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
+	border-radius: 0 !important;
+}
+.lSSlideOuter .lSPager.lSGallery li.active img, .lSSlideOuter .lSPager.lSGallery li:hover img{
+	opacity: 1;
 }

@@ -178,8 +178,7 @@ p.text{
 	}
 }
 .catalog-title{
-	padding-top: 15px;
-	margin-bottom: 45px;
+	margin-bottom: 40px;
 }
 
 .inner-wrapper{
@@ -395,12 +394,27 @@ img{max-width: 100%;}
 	border: 1px solid #4fa4b6;
 	border-radius: 30px;
 	color: #000;
-
+	&:hover{
+		background: #4fa4b6;
+		color: #fff;
+		svg{
+			.right-arrow-btn, .calc-1, .person-1{
+				fill: #fff;
+			}
+		}
+	}
 	&_calc{
 		vertical-align: top;
 		margin: 0px 5px;
 		font-size: 13px;
 		position: relative;
+		&:hover{
+			svg{
+				#person-icon{
+					fill: #fff !important;
+				}	
+			}
+		}
 		@include breakpoint(phablet){
 			margin-top: 5px;
 		}
@@ -487,9 +501,17 @@ img{max-width: 100%;}
 		color: #2a2a2a;
 	}
 	&_go-to-catalog{
-		padding:20px 75px;
+		padding:20px 65px;
 		margin: 50px 0;
+		position: relative;
+		svg{
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			margin-top: -8px;
+		}
 		@include breakpoint(tablet){
+			padding:20px 75px;
 			margin-top: 30px;
 			margin-bottom: 110px;
 		}
@@ -1031,6 +1053,9 @@ img{max-width: 100%;}
 }
 
 .product-item{
+	a{
+		color: #fff;
+	}
 	position: relative;
 	margin: 0 -20px;
 	margin-bottom: 20px;
@@ -1179,11 +1204,23 @@ img{max-width: 100%;}
 
 .product{
 	margin-bottom: 40px;
-	
+	a{
+		display: block;
+	}
 	&__img{
+		overflow: hidden;
 		margin-bottom: 25px;
 		display: inline-block;
-		position: relative;
+		position: relative;	
+		img{
+			transition: all 1s ease;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+				transition: all 1s ease;
+			}
+		}
 		.product-item__add-to-fav{
 			bottom: 15px;
 			top: auto;
@@ -1997,7 +2034,7 @@ img{max-width: 100%;}
 				font-size: 20px;
 				display: inline-block;
 				color: #81bdd6;
-				top: 26%;
+				top: 38%;
 			}
 		}
 		
@@ -3258,6 +3295,8 @@ ul.text-info{
 	}
 	&__text{
 		margin-bottom: 30px;
+		line-height: 1.5;
+		max-width: 418px;
 		
 	}
 	&__price{
@@ -3356,4 +3395,8 @@ ul.text-info{
 			margin-top: 20px;
 		}
 	}
+}
+.product-card-title{
+	padding-top: 40px;
+	margin-bottom: 30px;
 }

@@ -3118,16 +3118,26 @@ ul.text-info{
 	}
 }
 .fasad-types{
+	h2{
+		text-align: center;
+	}
+	background: #f2f2f5;
 	padding: 50px 0px;
 	p{
-		font-size: 17px;
+		font-size: 13px;
 		line-height: 1.5;
 		color: #2a2a2a;
 		margin-bottom: 35px;
+		@include breakpoint(tablet){
+			font-size: 17px;
+		}
 	}
 	ul{
-		font-size: 17px;
+		font-size: 13px;
 		padding-left: 20px;
+		@include breakpoint(tablet){
+			font-size: 17px;
+		}
 		li{
 			margin-bottom: 40px;
 		}
@@ -3166,18 +3176,22 @@ ul.text-info{
 		font-style:oblique;
 		margin-bottom: 40px;
 		@include breakpoint(tablet){
-			font-size: 17px;
 			position: absolute;
 			left: 55%;
-			bottom: 13%;
+			bottom: 30%;
 			max-width: 350px;
 			margin: 0;
+		}
+		@include breakpoint(laptop){
+			font-size: 17px;
+			bottom: 13%;
 		}
 		@include breakpoint(laptop){
 			max-width: 405px;
 		}
 	}
 	&_rigth{
+		margin-bottom: 70px;
 		img{
 			@include breakpoint(tablet){
 				width: 50%;
@@ -3185,10 +3199,12 @@ ul.text-info{
 			}
 		}
 		p{
+			@include breakpoint(tablet){
+				top: 30%;
+			}
 			left: 5%;
 			top: 13%;
 		}
-		padding: 0 70px;
 	}
 }
 .product-describe{

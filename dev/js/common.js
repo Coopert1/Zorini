@@ -289,7 +289,8 @@ $(function(){
 	})
 	var host_pathname = '/taras/zorini/app/configuration.html';
 	$(window).scroll(function(){
-		if (window.location.pathname== host_pathname || window.location.pathname== '/configuration.html' ||  window.location.pathname== '/product_card.html'){
+		console.log(1);
+		if (window.location.pathname== host_pathname || window.location.pathname== '/configuration.html' ||  window.location.pathname== '/product_card.html' ||  window.location.pathname== '/product_card1.html'){
 			var delta_top = 150;
 			var delta_bottom = 750;
 			var scrollTop = $('body').scrollTop();
@@ -329,6 +330,10 @@ $(function(){
 	$(".fixed-overlay__modal input[type='submit']").click(function(){
 		$(".fixed-overlay").removeClass('active');
 	});
+	$(".fixed-overlay__modal .icon-remove-item").click(function(){
+		$(".fixed-overlay").removeClass('active');
+	});
+	
 	//open modal window
 	$("a.btn_write-us").click(function(){
 		$(".fixed-overlay.write-us").addClass('active');
@@ -364,23 +369,26 @@ $(function(){
 	function fixMenuBar(){
 		var scrolTop = $(window).scrollTop();
 		var width = $(window).width();
-			if (width<1000){
-				if(scrolTop>=41){
-					$(".header-bottom").addClass("fixed");
-					$('body').addClass("scroll_padding-top")
-				} else {
-					$(".header-bottom").removeClass("fixed");
-					$('body').removeClass("scroll_padding-top")
-					
-				}
+
+			if(scrolTop>=41){
+				$(".header-bottom").addClass("fixed");
+				$('body').addClass("scroll_padding-top")
+			} else {
+				$(".header-bottom").removeClass("fixed");
+				$('body').removeClass("scroll_padding-top")
+
 			}
+			
 		}
 	$(window).scroll(function(){
 		fixMenuBar();
 		
 	});
 	//
-
+	// show all main menu 
+	$("ul.show-all").click(function(){
+		$(".main-menu").toggleClass("more");
+	});
 	//Search-form on mobile device
 	$('#search-icon').click(function(event){
 		event.preventDefault();
@@ -393,7 +401,7 @@ $(function(){
 });
 function initMap() {
 
-	var uluru = {lat:55.640684, lng:37.8277893};
+	var uluru = {lat:55.640684, lng:37.8287893};
 	
 	var mark_in_map = new google.maps.LatLng({lat:55.640584, lng:37.8289993});
 	var map = new google.maps.Map(document.getElementById('map'), {

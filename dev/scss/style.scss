@@ -1204,9 +1204,6 @@ img{max-width: 100%;}
 
 .product{
 	margin-bottom: 40px;
-	a{
-		display: block;
-	}
 	&__img{
 		overflow: hidden;
 		margin-bottom: 25px;
@@ -1227,6 +1224,7 @@ img{max-width: 100%;}
 		}
 	}
 	&__title{
+		display: block;
 		font-size: 21px;
 		font-family: 'Oranienbaum', sans-serif;
 		color: #1c1b1b;
@@ -1375,7 +1373,7 @@ img{max-width: 100%;}
 			max-width: 400px;
 			transform: none;
 			left: 0;
-			z-index: 11;
+			z-index: 9;
 		}
 		@include breakpoint(laptop){
 			left: 110px;

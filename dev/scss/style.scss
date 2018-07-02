@@ -149,7 +149,7 @@ p.text{
 	font-size: 13px;
 	list-style: none;
 	color: #898989;
-	padding: 35px 0 20px  0;
+	padding: 35px 0 10px  0;
 	display: inline-block;
 	li{
 		display: inline-block;
@@ -478,6 +478,11 @@ img{max-width: 100%;}
 		span:last-child{
 			color: #838383;
 		}
+		&:hover{
+			span{
+				color: #fff;
+			}
+		}
 	}
 	&_sort{
 		font-size: 12px;
@@ -798,7 +803,7 @@ img{max-width: 100%;}
 }
 .main-menu{
 	padding: 15px 0;
-	border-bottom: 1px solid #dadada;
+	// border-bottom: 1px solid #dadada;
 	display: flex;
 	flex-grow: 1;
 	text-align: center;
@@ -990,7 +995,7 @@ img{max-width: 100%;}
 	}
 }
 .title{
-	margin: 50px 0;
+	margin: 50px 0 40px 0;
 	position: relative;
 	text-align: center;
 	font-size: 52px;
@@ -1837,6 +1842,10 @@ img{max-width: 100%;}
 	&_news{
 		padding: 20px 0 53px 0;
 	}
+	&_news1{
+		margin-top: -15px;
+		padding: 0px 0 35px 0;
+	}
 	&_catalog{
 		display: block;
 		margin-top: 20px;
@@ -1937,7 +1946,7 @@ img{max-width: 100%;}
 		color: #fafafb;
 		font-size: 18px;
 		line-height: 1.8;
-		
+		margin: 0 0 45px 0;
 		@include breakpoint(tablet){
 			font-size:30px;
 		}
@@ -2008,6 +2017,14 @@ img{max-width: 100%;}
 				}
 			}
 		}
+		.arrow{
+				position: absolute;
+				right: 30px;
+				font-size: 20px;
+				display: inline-block;
+				color: #81bdd6;
+				top: 47%;
+		}
 		span{
 			display: inline-block;
 			font-weight: bold;
@@ -2026,16 +2043,7 @@ img{max-width: 100%;}
 				display: none;
 				
 			}
-			&.arrow{
-				position: absolute;
-				right: 30px;
-				font-size: 20px;
-				display: inline-block;
-				color: #81bdd6;
-				top: 38%;
-			}
 		}
-		
 	}
 }
 
@@ -2450,6 +2458,18 @@ ul.text-info{
 			position: relative;
 			align-items: flex-start;
 			
+			@include breakpoint(laptop){
+				&:before{
+					content: '';
+					display: inline-block;
+					position: absolute;
+					bottom:100%;
+					background-color: #f4f4f4;
+					height: 63px;
+					width: 100%;
+					left: 0;
+				}
+			}
 			@media (min-width:1400px){
 				flex-basis: 22.5%;
 				&:after{
@@ -2461,6 +2481,9 @@ ul.text-info{
 					background-color: #f4f4f4;
 					width: 92px;
 					right: -92px;
+				}
+				&:before{
+					width: 362px;
 				}
 				&.product_card:after{
 					display: none;
@@ -2515,7 +2538,7 @@ ul.text-info{
 	}
 	&__name{
 		text-align: center;
-		margin-top: 24px;
+		margin-top: 15px;
 		input{
 			display: none;
 			&:checked + label{
@@ -3109,6 +3132,10 @@ ul.text-info{
 .color-types{
 	padding-top: 60px;
 	padding-bottom: 80px;
+	h2{
+		text-align: center;
+		margin-bottom: 35px;
+	}
 }
 .color-type{
 	position:relative;
@@ -3190,6 +3217,7 @@ ul.text-info{
 .fasad-types{
 	h2{
 		text-align: center;
+		margin-bottom: 60px;
 	}
 	background: #f2f2f5;
 	padding: 50px 0px;
@@ -3223,7 +3251,7 @@ ul.text-info{
 	.lSSlideOuter{
 		max-width: 430px;
 		margin: 0 auto;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 }
 .about-kitchen{
@@ -3395,6 +3423,10 @@ ul.text-info{
 		}
 	}
 }
+.main-menu-border{
+	border-bottom: 1px solid #dadada;
+}
+
 .product-card-title{
 	padding-top: 40px;
 	margin-bottom: 30px;

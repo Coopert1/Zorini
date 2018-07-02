@@ -55,7 +55,7 @@ mixin remember
 								label(for="shape_3") Г-образная
 								img(src="images/conf-type_03.png")
 							.config-shape__item
-								input#shape_4(type="radio" name="shape" value="p-form")
+								input#shape_4(type="radio" name="shape" value="p-form" checked)
 								label(for="shape_4") П-образная
 								img(src="images/conf-type_04.png")
 						.chosen-shape
@@ -102,7 +102,7 @@ mixin remember
 						mixin option-config(title, name, ...items)
 							.option-config__item.product_card
 								.option-config__list-title= title
-								ul.option-config__list
+								ul.option-config__list.option-config__list_kitchen
 									- var i=1;
 									each item in items
 										li
@@ -115,7 +115,7 @@ mixin remember
 						+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
 						.option-config__item.product_card
 							.option-config__list-title Декор
-							ul.option-config__list
+							ul.option-config__list.option-config__list_kitchen
 								li
 									input#decor1(type="radio" name="decor")
 									label(for="decor1") Карниз

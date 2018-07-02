@@ -182,9 +182,9 @@ $(function(){
 	$( ".progressbar_01" ).progressbar({
       value: 100,
       complete: function( event, ui ) {
-      	 $('.progressbar-label_01').text('Готово')
-      	 $('.progressbar-label_01').css("margin-left", "-10px")
-      	 $('.progressbar-label_01').css("color", "#fff")
+      	 $('.progressbar-label_01').text(String.fromCharCode(10003)+' Готово');
+      	 $('.progressbar-label_01').css("margin-left", "-10px");
+      	 $('.progressbar-label_01').css("color", "#fff");
       }
     });
     var val01 = $( ".progressbar_01" ).progressbar( "value" );

@@ -2645,6 +2645,9 @@ ul.text-info{
 		flex-grow: 1;
 		min-width: 175px;
 		li{position: relative;}
+		&_kitchen{
+			min-width: auto;
+		}
 		
 		
 	}

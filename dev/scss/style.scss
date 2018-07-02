@@ -2158,7 +2158,6 @@ img{max-width: 100%;}
 	background: white;
 	left: 0px;
 	top: 65px;
-	
 	@include breakpoint(mobileonly){
 		position: static;
 	}
@@ -2178,18 +2177,19 @@ img{max-width: 100%;}
 	.title {
 		text-align: left;
 		margin-top: 0;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 		padding: 0;
+		line-height: 0.9;
 	}
 	&__phone{
 		font-size: 14px;
 		color: #2a2a2a;
 		font-weight: bold;
 		font-family: 'Open Sans bold', sans-serif;
-		margin-bottom: 20px;
+		margin-bottom: 18px;
 	}
 	&__number-phone{
-		margin-bottom: 10px;
+		line-height: 1.1;
 		span{
 			font-size: 24px;
 			color:#2a2a2a;
@@ -2209,13 +2209,13 @@ img{max-width: 100%;}
 	&__work-time{
 		color: #898989;
 		font-size: 12px;
-		margin-bottom: 10px;
+		margin-bottom: 12px;
+		margin-top: 6px;
 		
 	}
 	&__email{
 		color: #898989;
 		font-size: 12px;
-		margin-bottom: 20px;
 	}
 	a.email{
 		display: block;
@@ -2226,7 +2226,7 @@ img{max-width: 100%;}
 	}
 	.btn{
 		border: 1px solid #66afbf;
-		padding: 15px 30px;
+		padding: 10px 30px;
 		font-size: 13px;
 	}
 }
@@ -2459,13 +2459,13 @@ ul.text-info{
 			align-items: flex-start;
 			
 			@include breakpoint(laptop){
-				&:before{
+				&.configuration_page:before{
 					content: '';
 					display: inline-block;
 					position: absolute;
 					bottom:100%;
 					background-color: #f4f4f4;
-					height: 63px;
+					height: 73px;
 					width: 100%;
 					left: 0;
 				}
@@ -2488,10 +2488,7 @@ ul.text-info{
 				&.product_card:after{
 					display: none;
 				}
-				
 			}
-			
-			
 		}
 	}
 	
@@ -2543,7 +2540,6 @@ ul.text-info{
 			display: none;
 			&:checked + label{
 				color: #419cc4;
-				
 				&:after{
 					content: "\2713";
 					position: absolute;
@@ -2660,6 +2656,9 @@ ul.text-info{
 		background-color: transparent;
 	}
 	padding: 127px 0 20px 30px;
+	&.configuration_page{
+		padding-top: 107px;
+	}
 	display: none;
 	@include breakpoint(laptop){
 		display: flex;

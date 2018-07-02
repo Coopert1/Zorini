@@ -289,10 +289,9 @@ $(function(){
 	})
 	
 	$(window).scroll(function(){
-		
 		if ($(".configuration").length){
 			var delta_top = 150;
-			var delta_bottom = 750;
+			var delta_bottom = 850;
 			var scrollTop = $('body').scrollTop();
 			var pos_top = $('.configuration').offset().top + delta_top;
 			var height_elem = $('.configuration').height();

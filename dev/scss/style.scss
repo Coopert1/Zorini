@@ -3190,6 +3190,9 @@ ul.text-info{
 	@include breakpoint(tablet){
 		padding: 30px;
 	}
+	@include breakpoint(desktop){
+		padding-top: 65px;
+	}
 	&__title{
 		font-family: 'Oranienbaum', serif;
 		font-size: 30px;
@@ -3301,14 +3304,14 @@ ul.text-info{
 		margin-bottom: 40px;
 		@include breakpoint(tablet){
 			position: absolute;
-			left: 55%;
+			left: 59%;
 			bottom: 30%;
 			max-width: 350px;
 			margin: 0;
 		}
 		@include breakpoint(laptop){
 			font-size: 17px;
-			bottom: 13%;
+			bottom: 23%;
 		}
 		@include breakpoint(laptop){
 			max-width: 405px;
@@ -3324,7 +3327,7 @@ ul.text-info{
 		}
 		p{
 			@include breakpoint(tablet){
-				top: 30%;
+				top: 28%;
 			}
 			left: 5%;
 			top: 13%;
@@ -3398,10 +3401,14 @@ ul.text-info{
 		text-align: center;
 	}
 	&__icon{
+		height: 80px;
 		text-align: center;
 	}
 	svg{
-		width: 65px;
+		// width: 65px;
+		.write-tag{
+			fill: url(#gradient1);
+		}
 	}
 }
 .reviews-box{

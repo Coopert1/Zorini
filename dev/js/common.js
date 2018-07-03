@@ -384,6 +384,14 @@ $(function(){
 		
 	});
 	//
+	$(".card-navivation").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+
+
 	// show all main menu 
 	$("ul.show-all").click(function(){
 		$(".main-menu").toggleClass("more");
@@ -400,7 +408,7 @@ $(function(){
 });
 function initMap() {
 
-	var uluru = {lat:55.640684, lng:37.8287893};
+	var uluru = {lat:55.640684, lng:37.8217893};
 	
 	var mark_in_map = new google.maps.LatLng({lat:55.640584, lng:37.8289993});
 	var map = new google.maps.Map(document.getElementById('map'), {

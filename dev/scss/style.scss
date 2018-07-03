@@ -1001,6 +1001,11 @@ img{max-width: 100%;}
 	font-size: 52px;
 	font-family: 'Oranienbaum', serif;
 	color: #2a2a2a;
+	&_padding{
+			margin: 0;
+			padding-top: 50px;
+			margin-bottom: 40px;
+		}
 	&_modal{
 		padding: 0;
 		margin: 40px 0;
@@ -1156,6 +1161,11 @@ img{max-width: 100%;}
 		&_catalog{
 			top: 10px;
 			right: 10px;
+		}
+	}
+	&_prod-card{
+		@include breakpoint(phablet){
+			margin-bottom: 70px;
 		}
 	}
 }
@@ -2496,6 +2506,11 @@ ul.text-info{
 					left: 0;
 				}
 			}
+			@media (min-width:1200px){
+				&.configuration_page:before{
+					height: 63px;
+				}
+			}
 			@media (min-width:1400px){
 				flex-basis: 22.5%;
 				&:after{
@@ -2508,7 +2523,7 @@ ul.text-info{
 					width: 92px;
 					right: -92px;
 				}
-				&:before{
+				&.configuration_page:before{
 					width: 362px;
 				}
 				&.product_card:after{
@@ -3160,6 +3175,9 @@ ul.text-info{
 .color-types{
 	padding-top: 60px;
 	padding-bottom: 80px;
+	&_bottom{
+		padding-top: 0px;
+	}
 	h2{
 		text-align: center;
 		margin-bottom: 35px;
@@ -3342,6 +3360,7 @@ ul.text-info{
 		margin-bottom: 20px;
 		span{
 			&:first-child{
+				font-family: 'Open Sans bold', sans-serif;
 				font-weight: bold;
 				display: inline-block;
 				margin-right: 30px;
@@ -3352,15 +3371,15 @@ ul.text-info{
 		}
 	}
 	&__text{
-		margin-bottom: 30px;
-		line-height: 1.5;
+		margin-bottom: 40px;
+		line-height: 1.7;
 		max-width: 418px;
 		
 	}
 	&__price{
 		font-size: 30px;
 		margin-bottom: 30px;
-		margin-top: 50px;
+		margin-top: 55px;
 		
 		span:first-child{
 			font-family: 'Open Sans bold', sans-serif;
@@ -3380,6 +3399,7 @@ ul.text-info{
 		margin-top: 0;
 	}
 	&__more-info{
+		max-width: 390px;
 		margin-bottom: 30px;
 		font-size: 13px;
 	}
@@ -3398,6 +3418,7 @@ ul.text-info{
 		font-size: 14px;
 		font-family: 'Open Sans bold', sans-serif;
 		font-weight: bold;
+		color: #2a2a2a;
 		text-transform: uppercase;
 		margin-top: 30px;
 		text-align: center;
@@ -3466,8 +3487,12 @@ ul.text-info{
 	padding-top: 40px;
 	margin-bottom: 30px;
 }
+.lSSlideOuter .lSPager.lSGallery {
+	max-height: 154px;
+}
 .lSSlideOuter .lSPager.lSGallery img{
 	opacity: 0.5;
+	width: 100%;
 }
 .lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
 	border-radius: 0 !important;

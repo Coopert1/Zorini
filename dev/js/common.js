@@ -397,7 +397,7 @@ $(function(){
 		$(".main-menu").toggleClass("more");
 	});
 	//Search-form on mobile device
-	$('#search-icon').click(function(event){
+	$('.search').click(function(event){
 		event.preventDefault();
 		$(".search-form").animate(
 			{height: 'toggle'},

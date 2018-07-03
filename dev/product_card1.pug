@@ -63,93 +63,96 @@ html
 		include ./parts/configuration1.pug
 		.wrapper
 			.card-navivation
-				.card-navivation__item
+				a(href="#fasad-info").card-navivation__item
 					.card-navivation__icon
-						include ./images/write-tag.svg
+						img(src="images/fasad_icon.png", alt="icon")
 					.card-navivation__text ФАСАДЫ
-				.card-navivation__item
+				a(href="#production").card-navivation__item
 					.card-navivation__icon
-						include ./images/write-tag.svg
+						include ./images/production_icon.svg
 					.card-navivation__text ПРОИЗВОДСТВО
-				.card-navivation__item
+				a(href="#colors").card-navivation__item
 					.card-navivation__icon
-						include ./images/write-tag.svg
+						img(src="images/color_icon.png", alt="icon")
 					.card-navivation__text ЦВЕТА
-				.card-navivation__item
+				a(href="#rewiews").card-navivation__item
 					.card-navivation__icon
 						include ./images/write-tag.svg
 					.card-navivation__text ОТЗЫВЫ
-		.wrapper
 			.content-wrapper
 				.about-kitchen.clearfix
-					img(src="images/product_10.png")
+					img(src="images/about_kitchen_01.png")
 					p Кухня Albano коричневого цвета в стиле современной классики на две секции на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях. Предлагаем индивидуальный подход, высокое качество исходных материалов и готовых изделий, предоставляем гарантию на продукцию. Сотрудничаем с заказчиками из Москвы и Московской области
 				.about-kitchen.about-kitchen_rigth.clearfix
-					img(src="images/product_11.png")
+					img(src="images/about_kitchen_02.png")
 					p Кухня Albano коричневого цвета в стиле современной классики на две секции на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях. Предлагаем индивидуальный подход, высокое качество исходных материалов и готовых изделий, предоставляем гарантию на продукцию. Сотрудничаем с заказчиками из Москвы и Московской области
-		.content-wrapper
-			.fasad-types
-				h2
-					| Фасады для кухни Albano
-				.row.clearfix
-					.col-tablet-1-2.fasadslide
-						ul#fasadslider
-								li
-									.fasad
-										img(src="images/fasad_01.png")
-										.fasad__name
-											|ALBANO с прямой филенкой
-					.col-tablet-1-2
-						p Фасады для модели Альбано выполнены в неоклассическом стиле и мы их изготаливаем из древесины бука, которая проходит специальную термальную обработку что делает ее лучшим вариантом для кухонных гарнитуров.
-						ul
-							li
-								span ЭКОЛОГИЧНОСТЬ 
-								span наша древесина и клей самый экологичный
-							li
-								span ДОЛГОВЕЧНОСТЬ 
-								span мы делаем исключительно по высочайшим стандартам итальянских фабрик на немецком оборудовани.
-							li
-								span ЦВЕТ 
-								span вы можете выбрать любой оттенок исходя исключительно из своих пожеланий
-						.btn.btn_get
-							|Получить
-
-		.wrapper
 			.content-wrapper
-				.color-types
+				.fasad-types#fasad-info
+					h2
+						| Фасады для кухни Albano
+					.row.clearfix
+						.col-tablet-1-2.fasadslide
+							ul#fasadslider
+									li
+										.fasad
+											img(src="images/fasad_01.png")
+											.fasad__name
+												|ALBANO с прямой филенкой
+						.col-tablet-1-2
+							p Фасады для модели Альбано выполнены в неоклассическом стиле и мы их изготаливаем из древесины бука, которая проходит специальную термальную обработку что делает ее лучшим вариантом для кухонных гарнитуров.
+							ul
+								li
+									span ЭКОЛОГИЧНОСТЬ 
+									span наша древесина и клей самый экологичный
+								li
+									span ДОЛГОВЕЧНОСТЬ 
+									span мы делаем исключительно по высочайшим стандартам итальянских фабрик на немецком оборудовани.
+								li
+									span ЦВЕТ 
+									span вы можете выбрать любой оттенок исходя исключительно из своих пожеланий
+							a(href="#").btn.btn_get
+								|Получить
+				.color-types#colors
 					h2
 						|Примеры цветовых решений
 					.row.clearfix
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_01.png")
+								a(href="#")
+									img(src="images/color-type_01.png")
 								.color-type__name
 									|ALBANO
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_02.png")
+								a(href="#")
+									img(src="images/color-type_02.png")
 								.color-type__name
 									|ALBANO
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_04.png")
+								a(href="#")
+									img(src="images/color-type_04.png")
 								.color-type__name
 									|ALBANO
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_03.png")
+								a(href="#")
+									img(src="images/color-type_03.png")
 								.color-type__name
 									|ALBANO
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_04.png")
+								a(href="#")
+									img(src="images/color-type_04.png")
 								.color-type__name
 									|ALBANO
 						.col-laptop-1-6.col-tablet-1-6.col-mobileonly-1-3.col-phablet-1-3.padding-5
 							.color-type
-								img(src="images/color-type_04.png")
+								a(href="#")
+									img(src="images/color-type_04.png")
 								.color-type__name
 									|ALBANO
+				.color-types.color-types_bottom
 					.row.clearfix
 						.col-tablet-1-2
 							.about-color
@@ -162,35 +165,40 @@ html
 							img(src="images/color_factory.png", alt="photo")
 		.wrapper.wrapper_section-bg
 			.content-wrapper
-				.reviews-box
-					.row.clearfix
+				.reviews-box#production
+					.row.clearfix#rewiews
 						.col-phablet-1-2.padding-right
 							.title Производство ZORINI
 							.reviews-box__img
-								img(src="images/review_05.png")
+								a(href="#")
+									img(src="images/review_05.png")
 						.col-phablet-1-2.padding-left
 							.title.title_margin-top Отзывы о ZORINI
 							.row.clearfix
 								.col-mobileonly-1-2.col-phablet-1-2
 									.reviews-box__img
-										img(src="images/review_01.png")
+										a(href="#")
+											img(src="images/review_01.png")
 								.col-mobileonly-1-2.col-phablet-1-2
 									.reviews-box__img
-										img(src="images/review_02.png")
+										a(href="#")
+											img(src="images/review_02.png")
 								.col-mobileonly-1-2.col-phablet-1-2
 									.reviews-box__img.reviews-box__img_margin-top
-										img(src="images/review_03.png")
+										a(href="#")
+											img(src="images/review_03.png")
 								.col-mobileonly-1-2.col-phablet-1-2
 									.reviews-box__img.reviews-box__img_margin-top
-										img(src="images/review_04.png")
+										a(href="#")
+											img(src="images/review_04.png")
 		include ./parts/form-line.pug
 		.wrapper
-			.title
+			.title.title_padding
 				|Похожие модели
 			.content-wrapper
 				.clearfix
 					.col-phablet-1-3
-						.product-item
+						.product-item.product-item_prod-card
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image
@@ -206,7 +214,7 @@ html
 									span
 										|р./м.пог. 
 					.col-phablet-1-3
-						.product-item
+						.product-item.product-item_prod-card
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image
@@ -222,7 +230,7 @@ html
 									span
 										|р./м.пог.
 					.col-phablet-1-3
-						.product-item
+						.product-item.product-item_prod-card
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image

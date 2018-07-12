@@ -126,7 +126,7 @@ $(function(){
 	});
 
 	// input-mask
-	$('input[type="tel"]').inputmask('+7(999)999-99-99');
+	$('input[type="tel"]').inputmask('+7(999) 999 - 99 - 99');
 	// end input-mask
 		///add to fav
 		$('.product-item__add-to-fav').click(function(e){
@@ -381,8 +381,27 @@ $(function(){
 		}
 	$(window).scroll(function(){
 		fixMenuBar();
-		
+		fixcardNav()
 	});
+	//
+
+	//set card-navigation postion fix//
+		function fixcardNav(){
+		var width = $(window).width();
+		var scrollTop = $(window).scrollTop();
+		var pos_top = $('.configuration').offset().top - $('.card-navivation').height()-46;
+		console.log($('.card-navivation').height());
+			if(width>600){
+					if(scrollTop>=pos_top){
+					$(".card-navivation").addClass("fixed");
+					$('body').addClass("scroll_padding-top-nav")
+				} else {
+					$(".card-navivation").removeClass("fixed");
+					$('body').removeClass("scroll_padding-top-nav")
+					}
+				}
+			}
+			
 	//
 	$(".card-navivation").on("click","a", function (event) {
 		event.preventDefault();
@@ -425,7 +444,7 @@ function initMap() {
 		map: map,
 		animation: google.maps.Animation.DROP,
 		icon:{
-			url: "../images/map_pin.png",
+			url: "images/map_pin.png",
 			
 		}
 	});

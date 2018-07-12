@@ -101,10 +101,13 @@ p.text{
 }
 .scroll{
 	&_padding-top{
-		padding-top: 127px;
-		@include breakpoint(phablet){
-			padding-top: 76px;
+		padding-top: 76px;
+		@include breakpoint(laptop){
+			padding-top: 100px;
 		}
+	}
+	&_padding-top-nav{
+		padding-top: 360px;
 	}
 }
 .search-form{
@@ -1957,6 +1960,10 @@ img{max-width: 100%;}
 			border: 1px solid #4fa4b6;
 			background-color: #2a2a2a;
 			max-width: 235px;
+			&:hover{
+				background: #4fa4b6;
+				color: #fff;
+			}
 		}
 	}
 	.title{
@@ -3071,6 +3078,7 @@ ul.text-info{
 		}
 	}
 	input{
+		padding: 0 10px;
 		height: 40px;
 		max-width: 315px;
 		width: 100%;
@@ -3373,9 +3381,6 @@ ul.text-info{
 				display: inline-block;
 				margin-right: 30px;
 			}
-			&:last-child{
-				color: #74b6d2;
-			}
 		}
 	}
 	&__text{
@@ -3413,14 +3418,19 @@ ul.text-info{
 	}
 }
 .card-navivation{
-	display: flex;
-	justify-content: space-around;
+	// display: flex;
+	// position: static;
+	// justify-content: space-around;
 	padding: 50px 10px 25px 10px;
 	border-bottom: 1px solid #dadada;
 	border-top: 1px solid #dadada;
-	margin-bottom: 80px;
+	margin-top: 60px;
 	&__item{
-		
+		display: block;
+		margin-bottom: 40px;
+		@include breakpoint(phablet){
+			margin: 0;
+		}
 	}
 	&__text{
 		font-size: 14px;
@@ -3436,9 +3446,20 @@ ul.text-info{
 		text-align: center;
 	}
 	svg{
-		// width: 65px;
+		height: 65px;
 		.write-tag{
 			fill: url(#gradient1);
+		}
+	}
+	&.fixed{
+		position: fixed;
+		top: -120px;
+		width: 100%;
+		z-index: 10;
+		background: #fff;
+		max-width: 1385px;
+		@include breakpoint(laptop){
+			top: -100px;
 		}
 	}
 }

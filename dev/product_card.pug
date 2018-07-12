@@ -20,7 +20,6 @@ html
 						.product-describe
 							.product-describe__name
 								span Описание модели Albano
-								span Характеристика
 							.product-describe__text Кухня Albano коричневого цвета в стиле современной классики на две секции на заказ от студии «Зевс». Мы осуществляем изготовление на выгодных условиях. Предлагаем индивидуальный подход, высокое качество исходных материалов и готовых изделий, предоставляем гарантию на продукцию. Сотрудничаем с заказчиками из Москвы и Московской области.
 							.catalog-item__description
 								table
@@ -29,6 +28,10 @@ html
 											td
 												span Стиль
 											td неокласика
+										tr
+											td
+												span Размер
+											td 154х150х60
 										tr
 											td
 												span Материалы
@@ -59,25 +62,29 @@ html
 								span
 									include images/write-tag.svg
 								|Написать нам
+			.card-navivation.clearfix
+				.col-phablet-1-4.col-mobileonly-1-2
+					a(href="#fasad-info").card-navivation__item
+						.card-navivation__icon
+							img(src="images/fasad_icon.png", alt="icon")
+						.card-navivation__text ФАСАДЫ
+				.col-phablet-1-4.col-mobileonly-1-2
+					a(href="#production").card-navivation__item
+						.card-navivation__icon
+							include ./images/production_icon.svg
+						.card-navivation__text ПРОИЗВОДСТВО
+				.col-phablet-1-4.col-mobileonly-1-2
+					a(href="#colors").card-navivation__item
+						.card-navivation__icon
+							img(src="images/color_icon.png", alt="icon")
+						.card-navivation__text ЦВЕТА
+				.col-phablet-1-4.col-mobileonly-1-2
+					a(href="#rewiews").card-navivation__item
+						.card-navivation__icon
+							include ./images/write-tag.svg
+						.card-navivation__text ОТЗЫВЫ
 		include ./parts/configuration.pug
 		.wrapper
-			.card-navivation
-				a(href="#fasad-info").card-navivation__item
-					.card-navivation__icon
-						img(src="images/fasad_icon.png", alt="icon")
-					.card-navivation__text ФАСАДЫ
-				a(href="#production").card-navivation__item
-					.card-navivation__icon
-						include ./images/production_icon.svg
-					.card-navivation__text ПРОИЗВОДСТВО
-				a(href="#colors").card-navivation__item
-					.card-navivation__icon
-						img(src="images/color_icon.png", alt="icon")
-					.card-navivation__text ЦВЕТА
-				a(href="#rewiews").card-navivation__item
-					.card-navivation__icon
-						include ./images/write-tag.svg
-					.card-navivation__text ОТЗЫВЫ
 			.content-wrapper
 				.about-kitchen.clearfix
 					img(src="images/about_kitchen_01.png")
@@ -201,11 +208,12 @@ html
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image
-								img(src="images/product_01.png" alt="product")
+								a(href="#")
+									img(src="images/product_01.png" alt="product")
 							.product-item__mark
 								|Хит продаж
 							.product-item__text
-								.product-item__name
+								a(href="#").product-item__name
 									|Кухня Модесто
 								.product-item__price
 									span
@@ -217,11 +225,12 @@ html
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image
-								img(src="images/product_02.png" alt="product")
+								a(href="#")
+									img(src="images/product_02.png" alt="product")
 							.product-item__mark
 								|Хит продаж
 							.product-item__text
-								.product-item__name
+								a(href="#").product-item__name
 									|Кухня Модесто
 								.product-item__price
 									span
@@ -233,11 +242,12 @@ html
 							a(href="#").product-item__add-to-fav
 								img(src="images/like.png" alt="like")
 							.product-item__image
-								img(src="images/product_03.png" alt="product")
+								a(href="#")
+									img(src="images/product_03.png" alt="product")
 							.product-item__mark
 								|Хит продаж
 							.product-item__text
-								.product-item__name
+								a(href="#").product-item__name
 									|Кухня Модесто
 								.product-item__price
 									span

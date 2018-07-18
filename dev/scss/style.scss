@@ -3371,9 +3371,16 @@ ul.text-info{
 	}
 }
 .product-describe{
-	padding-left: 20px;
+	@include breakpoint(tablet){
+		padding-left: 20px;
+	}
+
 	&__name{
 		margin-bottom: 20px;
+		margin-top: 25px;
+		@include breakpoint(tablet){
+			margin-top: 0;
+		}
 		span{
 			&:first-child{
 				font-family: 'Open Sans bold', sans-serif;

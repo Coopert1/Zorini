@@ -386,21 +386,24 @@ $(function(){
 	//
 
 	//set card-navigation postion fix//
-		function fixcardNav(){
+	function fixcardNav(){
 		var width = $(window).width();
 		var scrollTop = $(window).scrollTop();
-		var pos_top = $('.configuration').offset().top - $('.card-navivation').height()-46;
-		console.log($('.card-navivation').height());
+		if($(".configuration").length){
+			var pos_top = $('.configuration').offset().top - $('.card-navivation').height()-46;
+			console.log($('.card-navivation').height());
 			if(width>600){
-					if(scrollTop>=pos_top){
-					$(".card-navivation").addClass("fixed");
-					$('body').addClass("scroll_padding-top-nav")
+				if(scrollTop>=pos_top){
+				$(".card-navivation").addClass("fixed");
+				$('body').addClass("scroll_padding-top-nav")
 				} else {
 					$(".card-navivation").removeClass("fixed");
 					$('body').removeClass("scroll_padding-top-nav")
 					}
 				}
-			}
+		}
+		
+	}
 			
 	//
 	$(".card-navivation").on("click","a", function (event) {

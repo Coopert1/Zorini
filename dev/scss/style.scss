@@ -190,6 +190,9 @@ p.text{
 }
 .catalog-title{
 	margin-bottom: 40px;
+	@include breakpoint(mobileonly){
+		margin-bottom: 20px;
+	}
 }
 
 .inner-wrapper{
@@ -399,6 +402,7 @@ img{max-width: 100%;}
 	text-align: center;
 	border-top: 1px solid #dadada;
 }
+
 .btn{
 	display: inline-block;
 	padding: 10px;
@@ -586,6 +590,14 @@ img{max-width: 100%;}
 		font-size: 21px;
 		font-weight: bolder;
 		color: #51a5b4;
+		
+	}
+	&-wrapper{
+		text-align: center;
+		@include breakpoint(tablet){
+			text-align: left;
+			
+		}
 	}
 }
 
@@ -1012,6 +1024,9 @@ img{max-width: 100%;}
 	font-size: 52px;
 	font-family: 'Oranienbaum', serif;
 	color: #2a2a2a;
+	@include breakpoint(mobileonly){
+		margin: 0;
+	}
 	&_padding{
 			margin: 0;
 			padding-top: 50px;
@@ -1072,7 +1087,74 @@ img{max-width: 100%;}
 		}
 	}
 }
-
+.news-product{
+	//background-image: url();
+	padding-top: 50px;
+	padding-bottom: 80px;
+	@include breakpoint(mobileonly){
+		padding-bottom: 40px;
+		padding-top: 25px;
+	}
+	h3{
+		@include breakpoint(mobileonly){
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	.title{
+		margin-top: 0;
+	}
+	&__container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 20px;
+		@include breakpoint(mobileonly){
+			flex-wrap: wrap;
+		}
+		@include breakpoint(laptop){
+			padding: 0 60px;
+		}
+	}
+	&__img{
+		max-width: 480px;
+		width: 50%;
+		margin-right: 20px;
+		text-align: center;
+		@include breakpoint(mobileonly){
+			width: 100%;
+			margin-bottom: 30px;
+			margin-right: 0;
+		}
+		@include breakpoint(laptop){
+			margin-right: 85px;
+		}
+		
+	}
+	&__content{
+		width: 50%;
+		@include breakpoint(mobileonly){
+			width: 100%;
+		}
+		
+	}
+	&__text{
+		margin-bottom: 25px;
+		font-family: 'Open Sans Regular', sans-serif;
+		font-size: 17px;
+		color: #2a2a2a;
+		line-height: 1.7;
+		@include breakpoint(laptop){
+			margin-bottom: 50px;
+		}
+	}
+	&__price{
+		span:first-child{
+			font-family: 'Open Sans bold', sans-serif;
+			font-weight: bold;
+		}
+	}
+}
 .product-item{
 	a{
 		color: #fff;
@@ -1985,6 +2067,11 @@ img{max-width: 100%;}
 	padding: 0 10px 40px 10px;
 	margin-top: 90px;
 	margin-bottom: 100px;
+	@include breakpoint(mobileonly){
+		margin-top: 40px;
+		margin-bottom: 10px;
+		
+	}
 	
 	.title{
 		font-size: 60px;
@@ -2319,6 +2406,9 @@ img{max-width: 100%;}
 		}
 		&_lk{
 			margin-bottom: 35px;
+			@include breakpoint(mobileonly){
+				margin-bottom: 0px;
+			}
 		}
 	}
 	&__price{
@@ -2338,6 +2428,8 @@ img{max-width: 100%;}
 			position: static;
 			font-size: 30px;
 			margin-bottom: 35px;
+			
+			
 		}
 	}
 }
@@ -2581,6 +2673,9 @@ ul.text-info{
 }
 .package-config{
 	text-align: center;
+	@include breakpoint(mobileonly){
+		margin-bottom: 20px;
+	}
 	&__img{
 		border: 6px solid white;
 		text-align: center;
@@ -2592,6 +2687,9 @@ ul.text-info{
 	&__name{
 		text-align: center;
 		margin-top: 15px;
+		@include breakpoint(mobileonly){
+			margin: 0;
+		}
 		input{
 			display: none;
 			&:checked + label{
@@ -3145,6 +3243,9 @@ ul.text-info{
 		text-align: left;
 		margin: 0 0 25px 0;
 		font-size: 30px;
+		@include breakpoint(mobileonly){
+			margin-bottom: 5px;
+		}
 		@include breakpoint(laptop){
 			margin: 0 0 45px 0;
 		}
@@ -3157,7 +3258,10 @@ ul.text-info{
 }
 .personal-cabinet{
 	border-right: 1px solid #dadada;
-	padding-bottom: 90px;
+	padding-bottom: 30px;
+//	@include breakpoint(mobileonly){
+//		padding-bottom: 30px;
+//	}
 	@include breakpoint(laptop){
 		margin-bottom:90px;
 	}
@@ -3168,6 +3272,9 @@ ul.text-info{
 .order-title{
 	margin-bottom: 35px;
 	// display: inline-block;
+	@include breakpoint(mobileonly){
+		margin-top: 15px;
+	}
 	@include breakpoint(laptop){
 		margin-top: 175px;
 	}
@@ -3187,6 +3294,9 @@ ul.text-info{
 }
 .progress-text{
 	margin-bottom: 43px;
+	@include breakpoint(mobileonly){
+		margin-bottom: 15px;
+	}
 }
 .color-types{
 	padding-top: 60px;
@@ -3371,9 +3481,16 @@ ul.text-info{
 	}
 }
 .product-describe{
-	padding-left: 20px;
+	@include breakpoint(tablet){
+		padding-left: 20px;
+	}
+
 	&__name{
 		margin-bottom: 20px;
+		margin-top: 25px;
+		@include breakpoint(tablet){
+			margin-top: 0;
+		}
 		span{
 			&:first-child{
 				font-family: 'Open Sans bold', sans-serif;
@@ -3393,7 +3510,9 @@ ul.text-info{
 		font-size: 30px;
 		margin-bottom: 30px;
 		margin-top: 55px;
-		
+		@include breakpoint(mobileonly){
+			margin-bottom: 15px;
+		}
 		span:first-child{
 			font-family: 'Open Sans bold', sans-serif;
 			font-weight: bold;
@@ -3486,6 +3605,9 @@ ul.text-info{
 	.title{
 		margin: 0;
 		margin-bottom: 30px;
+		@include breakpoint(mobileonly){
+				margin-bottom: 0;
+			}
 		&_margin-top{
 			@include breakpoint(mobileonly){
 				margin-top: 40px;

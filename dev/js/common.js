@@ -321,6 +321,55 @@ $(function(){
 			}
 		} else return;
 	});
+	$(".step label").click(function(){
+		// ||  || 'decor'
+		var el= $(this).prop('for').slice(0,-1);
+		if( el == "facade" ){
+			$("#step_3 .next-config").addClass('active');
+			
+		} else if( el == "frame"){
+			$("#step_4 .next-config").addClass('active');
+		} else if( el == 'furniture'){
+			$("#step_5 .next-config").addClass('active');
+		} else if( el == 'complectation'){
+			$("#step_6 .next-config").addClass('active');
+		}
+		else if( el ==  'decor'){
+			$("#step_7 .next-config").addClass('active');
+		}
+		console.log(el);
+	});
+	$(".step-bar>li").click(function(){
+		if($(this).hasClass("active")){
+			$(".step").removeClass('active');
+			var el= $(this).prop('id').slice(-1);
+			var next_el = "#step_" + el;
+			$(next_el).addClass('active');
+		}
+		
+		console.log(next_el);
+	});
+	$(".step .next-config").click(function(){
+		if($(this).hasClass("active")){
+			var el= $(this).parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el++;
+			$(this).parent().removeClass('active');
+			
+			if( next_el < 7){
+				var stepBar = '#step-bar_' + next_el;
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+				
+				//$(next_el).children('.next-config').addClass('active');
+				$(stepBar).addClass('active');
+				
+				
+			}
+			console.log(next_el);
+			console.log(typeof(next_el));
+		}
+	});
 	//end configuration page
 	//close modal window
 	$(".fixed-overlay__modal .icon_remove-item").click(function(){

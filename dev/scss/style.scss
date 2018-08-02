@@ -2668,6 +2668,58 @@ ul.text-info{
 		fill:  #4fa4b6;
 	}
 }
+.step{
+	&-bar{
+		list-style: none;
+		display: flex;
+		align-items: center;
+
+		li{
+			//display: inline-block;
+			//height: 50px;
+			padding: 25px 0;
+			border: 1px solid grey;
+			flex-grow: 1;
+			text-align: center;
+			cursor: pointer;
+			&.active{
+				background-color: aqua;
+				color: white;
+			}
+
+
+		}
+	}
+	
+	
+	
+}
+#step{
+	&_1, &_2, &_3, &_4, &_5, &_6, &_7{
+		display: none;
+		&.active{
+			display: block
+		}
+		
+	}
+
+}
+.next-config{
+	text-align: center;
+	&.active{
+		.btn{
+			background: #6363de;
+			color: #fff;
+		}
+	}
+	.btn{
+		cursor: pointer;
+	}
+	&__choose-size{
+		
+	}
+	
+}
 .write-tag{
 	fill:  #4fa4b6;
 }

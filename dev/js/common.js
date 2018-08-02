@@ -414,7 +414,7 @@ $(function(){
 	});
 
 
-	// show all main menu 
+	// show all main menu
 	$("ul.show-all").click(function(){
 		$(".main-menu").toggleClass("more");
 	});

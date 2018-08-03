@@ -246,8 +246,8 @@ $(function(){
 	
 	//for congiguration page
 	$(".package-config").click(function(){
-		$(".package-config .package-config__img").removeClass("active");
-		$(this).children('.package-config__img').addClass("active");
+		$(".package-config").removeClass("active");
+		$(this).addClass("active");
 		$(this).children('.package-config__name').children("input").prop( "checked", true );
 	});
 	$(".config-shape input").click(function(){
@@ -322,7 +322,7 @@ $(function(){
 		} else return;
 	});
 	$(".step label").click(function(){
-		// ||  || 'decor'
+		
 		var el= $(this).prop('for').slice(0,-1);
 		if( el == "facade" ){
 			$("#step_3 .next-config").addClass('active');
@@ -356,7 +356,7 @@ $(function(){
 			next_el++;
 			$(this).parent().removeClass('active');
 			
-			if( next_el < 7){
+			if( next_el <= 7){
 				var stepBar = '#step-bar_' + next_el;
 				next_el = '#step_' + next_el;
 				$(next_el).addClass('active');

@@ -245,6 +245,9 @@ $(function(){
 	
 	
 	//for congiguration page
+	$(".configuration form").submit(function(e){
+		e.preventDefault();
+	});
 	$(".package-config").click(function(){
 		$(".package-config").removeClass("active");
 		$(this).addClass("active");
@@ -356,7 +359,10 @@ $(function(){
 			next_el++;
 			$(this).parent().removeClass('active');
 			
-			if( next_el <= 7){
+			if( next_el <= 8){
+				if(next_el == 8){
+					$(".configuration .title").text("Конфигурация готова!")
+				}
 				var stepBar = '#step-bar_' + next_el;
 				next_el = '#step_' + next_el;
 				$(next_el).addClass('active');
@@ -369,6 +375,9 @@ $(function(){
 			console.log(next_el);
 			console.log(typeof(next_el));
 		}
+	});
+	$(".step input[type='submit']").click(function(){
+		$(".step").removeClass('active');
 	});
 	//end configuration page
 	//close modal window

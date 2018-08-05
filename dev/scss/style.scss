@@ -2657,6 +2657,7 @@ ul.text-info{
 		&_marg-left_5{
 			margin-left: 5px;
 		}
+		
 	}
 	&__price{
 		font-size: 13px;
@@ -2680,6 +2681,10 @@ ul.text-info{
 			}
 			
 		}
+		@include breakpoint(mobileonly){
+			position: static;
+			margin-top: 10px;
+		}
 	}
 	@media(min-width:1200px){
 		padding: 0;
@@ -2698,6 +2703,9 @@ ul.text-info{
 		margin: 25px 0 35px 0;
 		display: block;
 		padding: 0;
+		@include breakpoint(mobileonly){
+			margin-bottom: 10px;
+		}
 	}
 	max-width: 1200px;
 	margin: 0 auto;
@@ -2714,6 +2722,9 @@ ul.text-info{
 		display: flex;
 		align-items: center;
 		margin-bottom: 35px;
+		@include breakpoint(mobileonly){
+			margin-bottom: 15px;
+		}
 		li{
 			font-size: 19px;
 			color: #828282;
@@ -2721,9 +2732,13 @@ ul.text-info{
 			border: 1px solid #d1d1d1;
 			flex-grow: 1;
 			text-align: center;
-			cursor: pointer;
+			@include breakpoint(mobileonly){
+				font-size: 14px;
+				padding: 10px 0;
+			}
 			&.active{
 				color: white;
+				cursor: pointer;
 			}
 		}
 	}
@@ -2774,6 +2789,9 @@ ul.text-info{
 .next-config{
 	text-align: center;
 	margin-top: 50px;
+	@include breakpoint(mobileonly){
+		margin-top: 10px;
+	}
 	&.active{
 		.btn{
 			background: #6363de;
@@ -2805,6 +2823,9 @@ ul.text-info{
 		
 		text-align: center;
 		display: inline-block;
+		@include breakpoint(mobileonly){
+			margin-bottom: 10px;
+		}
 		
 	}
 	&__name{
@@ -3088,6 +3109,16 @@ ul.text-info{
 		}
 		.btn{
 			height: 40px;
+			&_call-us{
+				@include breakpoint(mobileonly){
+					padding-left: 30px;
+					width: 65%;
+					span{
+						left: 10px;
+					}
+				}
+				
+			}
 		}
 	}
 	input[type="submit"]{
@@ -3100,6 +3131,7 @@ ul.text-info{
 		width: 180px;
 		border: none;
 		cursor: pointer;
+		padding: 0;
 		
 	}
 }

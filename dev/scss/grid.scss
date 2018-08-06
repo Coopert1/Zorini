@@ -124,6 +124,13 @@
 
 .row{
 	margin: 0 -10px;
+	&_package-config{
+		margin: 0 -5px;
+		[class*='col-']{
+			padding: 0 5px 10px 5px;
+		}
+		
+	}
 }
 
 [class*='col-']{

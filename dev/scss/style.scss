@@ -116,7 +116,7 @@ p.text{
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	padding: 10px;
 	background: #fff;
 	border-bottom: 1px solid #dadada;
@@ -191,7 +191,7 @@ p.text{
 .catalog-title{
 	margin-bottom: 40px;
 	@include breakpoint(mobileonly){
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -715,7 +715,7 @@ img{max-width: 100%;}
 }
 .main-menu-mobile{
 	padding: 10px;
-	width: 285px;
+	width: 295px;
 	box-shadow: 0px 1px 3px 1px rgba(182,183,184,1);
 	height: 100%;
     background: #fff;
@@ -1088,7 +1088,7 @@ img{max-width: 100%;}
 	}
 }
 .news-product{
-	//background-image: url();
+	background-image: url(../images/news_promo.png);
 	padding-top: 50px;
 	padding-bottom: 80px;
 	@include breakpoint(mobileonly){
@@ -1349,6 +1349,7 @@ img{max-width: 100%;}
 			position: absolute;
 		}
 		&_off-line{
+			padding-bottom:0;
 			&:before{
 				visibility: hidden;
 			}
@@ -2165,11 +2166,14 @@ img{max-width: 100%;}
 	margin: 0 auto;
 	text-align: center;
 	padding: 0 10px 40px 10px;
-	margin-bottom: 100px;
+	margin-bottom: 60px;
 	margin-top: 50px;
 	border-bottom: none;
 	border-right: none;
 	position: relative;
+	@include breakpoint(tablet){
+		margin-bottom: 100px;
+	}
 	&:after {
 		content:"";
 		background: -webkit-linear-gradient(left, #65afca, #dbecf3);
@@ -2190,8 +2194,6 @@ img{max-width: 100%;}
 		bottom: 0;
 		top: 0;
 	}
-
-	
 
 	.social-item{
 		margin-top: 0;
@@ -2360,7 +2362,10 @@ img{max-width: 100%;}
 		font-size: 21px;
 		font-weight: bold;
 		color: #2a2a2a;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
+		@include breakpoint(phablet){
+			margin-bottom: 30px;
+		}
 		&_lk{
 			margin-bottom: 5px;
 		}
@@ -2412,13 +2417,17 @@ img{max-width: 100%;}
 		}
 	}
 	&__price{
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		display: inline-block;
+		margin-top: 10px;
 		span:first-child{
 			font-family: 'Open Sans bold', sans-serif;
 			font-weight: bold;
+		}
+		@include breakpoint(phablet){
+			position: absolute;
+			bottom: 10px;
+			margin: 0;
+			right: 10px;
+			display: inline-block;
 		}
 		@include breakpoint(laptop){
 			bottom: auto;
@@ -3635,8 +3644,12 @@ ul.text-info{
 }
 
 .product-card-title{
+	padding: 0 10px;
 	padding-top: 40px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	@include breakpoint(phablet){
+		margin-bottom: 30px;
+	}
 }
 .lSSlideOuter .lSPager.lSGallery {
 	max-height: 154px;

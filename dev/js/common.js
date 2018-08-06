@@ -77,7 +77,7 @@ $(function(){
 		pause: 10000,
 	});
 
-//products Slider  setting 404 page
+	//products Slider  setting 404 page
 		var productslider=$('#productslider').lightSlider({
 		galleryMargin: 25,
 		item: 2,
@@ -395,7 +395,8 @@ $(function(){
 	$("a.btn_write-us").click(function(){
 		$(".fixed-overlay.write-us").addClass('active');
 	});
-	$("a.btn_call-us").click(function(){
+	$("a.btn_call-us").click(function(e){
+		e.preventDefault();
 		$(".fixed-overlay.callback").addClass('active');
 	});
 	$("a.btn_calc").click(function(){

@@ -324,23 +324,39 @@ $(function(){
 			}
 		} else return;
 	});
-	$(".step label").click(function(){
-		
+	$(".configuration .step label").click(function(){
 		var el= $(this).prop('for').slice(0,-1);
+		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
 		if( el == "facade" ){
 			$("#step_3 .next-config").addClass('active');
 			
-		} else if( el == "frame"){
+		} else if( el_step_id == "4"){
 			$("#step_4 .next-config").addClass('active');
-		} else if( el == 'furniture'){
+		} else if(el_step_id == '5'){
 			$("#step_5 .next-config").addClass('active');
-		} else if( el == 'complectation'){
+		} else if( el_step_id == '6'){
 			$("#step_6 .next-config").addClass('active');
 		}
-		else if( el ==  'decor'){
+		else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '7'){
 			$("#step_7 .next-config").addClass('active');
 		}
-		console.log(el);
+		console.log(el_step_id);
+	});
+	$(".configuration.page-kitchen .step label").click(function(){
+		var el= $(this).prop('for').slice(0,-1);
+		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
+		if( el == "facade" ){
+			$("#step_3 .next-config").addClass('active');
+			
+		} else if( el_step_id == "4"){
+			$("#step_4 .next-config").addClass('active');
+		} else if(el_step_id == '5'){
+			$("#step_5 .next-config").addClass('active');
+		} else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '6'){
+			$("#step_6 .next-config").addClass('active');
+		}
+		
+		console.log(el_step_id);
 	});
 	$(".step-bar>li").click(function(){
 		if($(this).hasClass("active")){
@@ -352,7 +368,7 @@ $(function(){
 		
 		console.log(next_el);
 	});
-	$(".step .next-config").click(function(){
+	$(".configuration .step .next-config").click(function(){
 		if($(this).hasClass("active")){
 			var el= $(this).parent().prop('id');
 			var next_el = +el.slice(-1);
@@ -366,14 +382,26 @@ $(function(){
 				var stepBar = '#step-bar_' + next_el;
 				next_el = '#step_' + next_el;
 				$(next_el).addClass('active');
-				
-				//$(next_el).children('.next-config').addClass('active');
 				$(stepBar).addClass('active');
-				
-				
 			}
-			console.log(next_el);
-			console.log(typeof(next_el));
+		}
+	});
+	$(" .configuration.page-kitchen .step .next-config").click(function(){
+		if($(this).hasClass("active")){
+			var el= $(this).parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el++;
+			$(this).parent().removeClass('active');
+			
+			if( next_el <= 7){
+				if(next_el == 7){
+					$(".configuration .title").text("Конфигурация готова!")
+				}
+				var stepBar = '#step-bar_' + next_el;
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+				$(stepBar).addClass('active');
+			}
 		}
 	});
 	$(".step input[type='submit']").click(function(){

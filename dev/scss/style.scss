@@ -2756,7 +2756,9 @@ ul.text-info{
 			}
 		}
 	}
-	
+	&.active.decore{
+		min-height: 450px;
+	}
 }
 #step-bar{
 	&_1.active{
@@ -2796,6 +2798,10 @@ ul.text-info{
 			transform: rotateX(0deg);
 			
 		}
+		
+	}
+	&_7{
+		
 		
 	}
 
@@ -3231,7 +3237,7 @@ ul.text-info{
 		display: inline-block;
 	}
 	&_left{
-		left: 0;
+		left: 5px;
 		.remember__container:before{
 			left: 0;
 		}

@@ -77,7 +77,7 @@ $(function(){
 		pause: 10000,
 	});
 
-//products Slider  setting 404 page
+	//products Slider  setting 404 page
 		var productslider=$('#productslider').lightSlider({
 		galleryMargin: 25,
 		item: 2,
@@ -245,9 +245,12 @@ $(function(){
 	
 	
 	//for congiguration page
+	$(".configuration form").submit(function(e){
+		e.preventDefault();
+	});
 	$(".package-config").click(function(){
-		$(".package-config .package-config__img").removeClass("active");
-		$(this).children('.package-config__img').addClass("active");
+		$(".package-config").removeClass("active");
+		$(this).addClass("active");
 		$(this).children('.package-config__name').children("input").prop( "checked", true );
 	});
 	$(".config-shape input").click(function(){
@@ -321,6 +324,89 @@ $(function(){
 			}
 		} else return;
 	});
+	$(".configuration .step label").click(function(){
+		var el= $(this).prop('for').slice(0,-1);
+		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
+		if( el == "facade" ){
+			$("#step_3 .next-config").addClass('active');
+			
+		} else if( el_step_id == "4"){
+			$("#step_4 .next-config").addClass('active');
+		} else if(el_step_id == '5'){
+			$("#step_5 .next-config").addClass('active');
+		} else if( el_step_id == '6'){
+			$("#step_6 .next-config").addClass('active');
+		}
+		else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '7'){
+			$("#step_7 .next-config").addClass('active');
+		}
+		console.log(el_step_id);
+	});
+	$(".configuration.page-kitchen .step label").click(function(){
+		var el= $(this).prop('for').slice(0,-1);
+		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
+		if( el == "facade" ){
+			$("#step_3 .next-config").addClass('active');
+			
+		} else if( el_step_id == "4"){
+			$("#step_4 .next-config").addClass('active');
+		} else if(el_step_id == '5'){
+			$("#step_5 .next-config").addClass('active');
+		} else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '6'){
+			$("#step_6 .next-config").addClass('active');
+		}
+		
+		console.log(el_step_id);
+	});
+	$(".step-bar>li").click(function(){
+		if($(this).hasClass("active")){
+			$(".step").removeClass('active');
+			var el= $(this).prop('id').slice(-1);
+			var next_el = "#step_" + el;
+			$(next_el).addClass('active');
+		}
+		
+		console.log(next_el);
+	});
+	$(".configuration .step .next-config").click(function(){
+		if($(this).hasClass("active")){
+			var el= $(this).parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el++;
+			$(this).parent().removeClass('active');
+			
+			if( next_el <= 8){
+				if(next_el == 8){
+					$(".configuration .title").text("Конфигурация готова!")
+				}
+				var stepBar = '#step-bar_' + next_el;
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+				$(stepBar).addClass('active');
+			}
+		}
+	});
+	$(" .configuration.page-kitchen .step .next-config").click(function(){
+		if($(this).hasClass("active")){
+			var el= $(this).parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el++;
+			$(this).parent().removeClass('active');
+			
+			if( next_el <= 7){
+				if(next_el == 7){
+					$(".configuration .title").text("Конфигурация готова!")
+				}
+				var stepBar = '#step-bar_' + next_el;
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+				$(stepBar).addClass('active');
+			}
+		}
+	});
+	$(".step input[type='submit']").click(function(){
+		$(".step").removeClass('active');
+	});
 	//end configuration page
 	//close modal window
 	$(".fixed-overlay__modal .icon_remove-item").click(function(){
@@ -337,7 +423,8 @@ $(function(){
 	$("a.btn_write-us").click(function(){
 		$(".fixed-overlay.write-us").addClass('active');
 	});
-	$("a.btn_call-us").click(function(){
+	$("a.btn_call-us").click(function(e){
+		e.preventDefault();
 		$(".fixed-overlay.callback").addClass('active');
 	});
 	$("a.btn_calc").click(function(){
@@ -414,7 +501,7 @@ $(function(){
 	});
 
 
-	// show all main menu 
+	// show all main menu
 	$("ul.show-all").click(function(){
 		$(".main-menu").toggleClass("more");
 	});

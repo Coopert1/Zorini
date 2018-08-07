@@ -2707,9 +2707,10 @@ ul.text-info{
 		span{
 			font-size: 30px;
 			font-family: 'Open Sans bold', sans-serif;
+			margin-right: 10px;
 			&:last-child{
 				font-family: 'Open Sans regular', sans-serif;
-				margin-left: 10px;
+				margin-right: 0;
 			}
 			&:before, &:after{
 				display: none;
@@ -2853,7 +2854,7 @@ ul.text-info{
 		margin-top: 10px;
 	}
 	&.active{
-		.btn__next{
+		.btn_next{
 			background-color: #6363de;
 			color: #fff;
 			border: 1px solid #6363de;
@@ -3147,7 +3148,7 @@ ul.text-info{
 }
 .done-config{
 	text-align: center;
-	max-width: 510px;
+	max-width: 780px;
 	margin: 0 auto;
 	.configuration__title{
 		margin-bottom: 15px;
@@ -3198,6 +3199,18 @@ ul.text-info{
 		cursor: pointer;
 		padding: 0;
 		
+	}
+	&__text{
+		font-size: 14px;
+		font-family: 'Open Sans bold', sans-serif;
+		margin-bottom: 15px;
+		text-align: left;
+		font-weight: bold;
+	}
+	&__flex{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 }
 .chosen-shape{
@@ -3942,6 +3955,10 @@ ul.text-info{
 			color: #323232;
 		}
 		td.price{
+			
+			@include breakpoint(mobileonly){
+				padding-right: 0;
+			}
 			span{
 				font-size: 14px;
 				color: #2a2a2a;
@@ -3951,9 +3968,12 @@ ul.text-info{
 					font-family: 'Open Sans regular', sans-serif;
 					margin-left: 3px;
 					font-weight: normal;
-				}	
+				}
 			}
 		}
+	}
+	.configuration__price{
+		text-align: left;
 	}
 }
 .page-kitchen{

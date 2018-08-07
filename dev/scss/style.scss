@@ -606,6 +606,14 @@ img{max-width: 100%;}
 		padding: 8px 40px;
 		
 	}
+	&_back-step{
+		font-size: 13px;
+		background: #6363de;
+		color: #fff;
+		border: 1px solid #6363de;
+		padding: 8px 40px;
+		float: left;
+	}
 }
 
 .contact-info{
@@ -2795,16 +2803,17 @@ ul.text-info{
 
 #step{
 	&_1, &_2, &_3, &_4, &_5, &_6, &_7, &_8{
-		opacity: 0;
-		height: 0;
-		overflow-x: hidden;
-		transform: rotateX(-180deg);
-		transition: all .7s ease-out;
+		display: none;
+//		opacity: 0;
+//		height: 0;
+//		overflow-x: hidden;
+//		transform: rotateX(-180deg);
+//		transition: all .7s ease-out;
 		&.active{
 			display: block;
-			opacity:1;
-			height: auto;
-			transform: rotateX(0deg);
+//			opacity:1;
+//			height: auto;
+//			transform: rotateX(0deg);
 			
 		}
 		
@@ -2841,6 +2850,7 @@ ul.text-info{
 	text-align: center;
 	padding: 6px;
 	border: 1px solid #d1d1d1;
+	cursor: pointer;s
 	&.active{
 			border: 2px solid #74bb8f;
 			padding: 5px;

@@ -368,12 +368,24 @@ $(function(){
 		
 		console.log(next_el);
 	});
-	$(".configuration .step .next-config").click(function(){
-		if($(this).hasClass("active")){
-			var el= $(this).parent().prop('id');
+	$(".configuration .step .btn_back-step").click(function(){
+		var el= $(this).parent().parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el--;
+			if( next_el > 0){
+				$(this).parent().parent().removeClass('active');
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+			}else{
+				return false;
+			}
+	});
+	$(".configuration .step .btn_next").click(function(){
+		if($(this).parent().hasClass("active")){
+			var el= $(this).parent().parent().prop('id');
 			var next_el = +el.slice(-1);
 			next_el++;
-			$(this).parent().removeClass('active');
+			$(this).parent().parent().removeClass('active');
 			
 			if( next_el <= 8){
 				if(next_el == 8){
@@ -386,12 +398,12 @@ $(function(){
 			}
 		}
 	});
-	$(" .configuration.page-kitchen .step .next-config").click(function(){
-		if($(this).hasClass("active")){
-			var el= $(this).parent().prop('id');
+	$(" .configuration.page-kitchen .step .btn_next").click(function(){
+		if($(this).parent().hasClass("active")){
+			var el= $(this).parent().parent().prop('id');
 			var next_el = +el.slice(-1);
 			next_el++;
-			$(this).parent().removeClass('active');
+			$(this).parent().parent().removeClass('active');
 			
 			if( next_el <= 7){
 				if(next_el == 7){

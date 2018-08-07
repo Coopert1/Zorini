@@ -54,7 +54,7 @@ mixin remember
 					.col-phablet-1-2.col-tablet-1-4
 						.package-config
 							.package-config__img
-								img(src="images/product_06.png" alt="foto")
+								img(src="images/individual_product.png" alt="foto")
 							.package-config__name
 								input#individual-config(type="radio" name="package-config")
 								label(for="individual-config") Индивидуальное предложение
@@ -136,12 +136,12 @@ mixin remember
 										input(type="radio" name=name id=name + i)
 										label(for=name + i id=name + i)= item
 									- i++
-				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
+				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика','МДФ Шпон', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 				.next-config
 					span Следующий шаг:
-					.btn.btn_next Выбрать форнитуру
+					.btn.btn_next Выбрать фурнитуру
 			.step#step_4
-				+option-config('Фурнитура','furniture',' Боярд', 'Блюм ', 'Хетим' )
+				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
 				.next-config
 					span Следующий шаг:
 					.btn.btn_next Выбрать наполнения

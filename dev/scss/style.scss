@@ -2737,7 +2737,8 @@ ul.text-info{
 	
 	.title{
 		text-align: left;
-		margin: 25px 0 35px 0;
+		padding-top: 25px;
+		margin: 0px 0 35px 0;
 		display: block;
 		padding: 0;
 		@include breakpoint(mobileonly){
@@ -3956,6 +3957,7 @@ ul.text-info{
 	}
 }
 .page-kitchen{
+	padding-top: 20px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #dbdce3;
 }

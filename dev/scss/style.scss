@@ -3697,6 +3697,9 @@ ul.text-info{
 	}
 }
 .about-kitchen{
+	&_top{
+		padding-top: 50px;
+	}
 	position: relative;
 	text-align: center;
 	// padding: 70px 70px 0 70px;
@@ -3951,4 +3954,8 @@ ul.text-info{
 			}
 		}
 	}
+}
+.page-kitchen{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #dbdce3;
 }

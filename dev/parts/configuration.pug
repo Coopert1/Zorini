@@ -57,9 +57,10 @@ mixin remember
 								img(src="images/individual_product.png" alt="foto")
 							.package-config__name
 								input#individual-config(type="radio" name="package-config")
-								label(for="individual-config") Индивид. предложение
+								label(for="individual-config") Индив. предложение
 				.next-config.active
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать размер
 			.step#step_2
@@ -124,6 +125,7 @@ mixin remember
 									|  См.
 				.next-config.active
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать фасад
 			.step#step_3
@@ -141,20 +143,24 @@ mixin remember
 				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика','МДФ Шпон', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 				.next-config
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать фурнитуру
 			.step#step_4
 				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
 				.next-config
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать наполнения
 			.step#step_5
 				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
 				.next-config
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать декор
+						include ../images/right-arrow-btn.svg
 			.step#step_6.decore
 				.option-config__item.product_card
 					.option-config__list-title Декор
@@ -180,6 +186,7 @@ mixin remember
 							+remember
 				.next-config
 					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Завершить
 			.step#step_7

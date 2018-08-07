@@ -59,6 +59,7 @@ mixin remember
 								input#individual-config(type="radio" name="package-config")
 								label(for="individual-config") Индивидуальное предложение
 				.next-config.active
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Выбрать размер
 			.step#step_2
@@ -122,6 +123,7 @@ mixin remember
 									input(type="number" min="1")
 									|  См.
 				.next-config.active
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Выбрать фасад
 			.step#step_3
@@ -138,16 +140,19 @@ mixin remember
 									- i++
 				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 				.next-config
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Выбрать форнитуру
 			.step#step_4
 				+option-config('Фурнитура','furniture',' Боярд', 'Блюм ', 'Хетим' )
 				.next-config
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Выбрать наполнения
 			.step#step_5
 				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
 				.next-config
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Выбрать декор
 			.step#step_6.decore
@@ -174,6 +179,7 @@ mixin remember
 							label(for="decor6") Витраж
 							+remember
 				.next-config
+					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
 					.btn.btn_next Завершить
 			.step#step_7

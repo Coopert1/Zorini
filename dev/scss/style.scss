@@ -608,11 +608,28 @@ img{max-width: 100%;}
 	}
 	&_back-step{
 		font-size: 13px;
-		background: #6363de;
-		color: #fff;
-		border: 1px solid #6363de;
+		color: #2a2a2a;
+		border: 1px solid #b3b3b3;
 		padding: 8px 40px;
 		float: left;
+		position: relative;
+		@include breakpoint(mobileonly){
+			float: none;
+			display: block;
+			max-width: 180px;
+			margin: 0 auto 20px auto;
+		}
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			background-image: url(../images/left-arrow-btn.png);
+			background-repeat: no-repeat;
+			left: 20px;
+			top: 10px;
+		}
 	}
 }
 
@@ -2822,15 +2839,18 @@ ul.text-info{
 		margin-top: 10px;
 	}
 	&.active{
-		.btn{
-			background: #6363de;
+		.btn__next{
+			background-color: #6363de;
 			color: #fff;
 			border: 1px solid #6363de;
 		}
 	}
+	
 	.btn{
 		cursor: pointer;
-		margin-left: 15px;
+		&__next{
+			margin-left: 15px;
+		}
 	}
 	
 }
@@ -3225,6 +3245,7 @@ ul.text-info{
 			width: 45px;
 			outline: none;
 			border: 1px solid #bdbdd0;
+			padding-left: 5px;
 			
 			
 		}

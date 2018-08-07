@@ -604,6 +604,7 @@ img{max-width: 100%;}
 		border: 1px solid #4fa4b6;
 		color: #2a2a2a;
 		padding: 8px 40px;
+		margin: 10px 0;
 		
 	}
 	&_back-step{
@@ -612,23 +613,28 @@ img{max-width: 100%;}
 		border: 1px solid #b3b3b3;
 		padding: 8px 40px;
 		float: left;
+		width: 180px;
 		position: relative;
+		top: 10px;
+
+		&:hover{
+			border: 1px solid #4fa4b6;
+		}
 		@include breakpoint(mobileonly){
 			float: none;
 			display: block;
-			max-width: 180px;
+			width: 180px;
 			margin: 0 auto 20px auto;
 		}
-		&:before{
-			content: "";
-			display: inline-block;
-			width: 20px;
-			height: 20px;
+		svg{
+			transform: rotate(180deg);
 			position: absolute;
-			background-image: url(../images/left-arrow-btn.png);
-			background-repeat: no-repeat;
 			left: 20px;
-			top: 10px;
+			top: 50%;
+			margin-top: -8px;
+			.right-arrow-btn{
+				fill: #b5babe;
+			}
 		}
 	}
 }
@@ -2153,11 +2159,9 @@ img{max-width: 100%;}
 		position: relative;
 		&_submit{
 			&:hover{
-				span{
-					svg{
-						.right-arrow-btn{
-							fill: #fff;
-						}
+				svg{
+					.right-arrow-btn{
+						fill: #fff;
 					}
 				}
 			}
@@ -2733,7 +2737,8 @@ ul.text-info{
 	
 	.title{
 		text-align: left;
-		margin: 25px 0 35px 0;
+		padding-top: 25px;
+		margin: 0px 0 35px 0;
 		display: block;
 		padding: 0;
 		@include breakpoint(mobileonly){
@@ -3693,6 +3698,9 @@ ul.text-info{
 	}
 }
 .about-kitchen{
+	&_top{
+		padding-top: 50px;
+	}
 	position: relative;
 	text-align: center;
 	// padding: 70px 70px 0 70px;
@@ -3947,4 +3955,9 @@ ul.text-info{
 			}
 		}
 	}
+}
+.page-kitchen{
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #dbdce3;
 }

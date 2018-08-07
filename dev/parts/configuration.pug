@@ -33,21 +33,21 @@ mixin remember
 					.col-phablet-1-2.col-tablet-1-4
 						.package-config.active
 							.package-config__img
-								img(src="images/product_04.png" alt="foto")
+								img(src="images/configurator_01.png" alt="foto")
 							.package-config__name
 								input#base-config(type="radio" name="package-config" checked)
 								label(for="base-config") Базовый
 					.col-phablet-1-2.col-tablet-1-4.clearfix
 						.package-config
 							.package-config__img
-								img(src="images/product_05.png" alt="foto")
+								img(src="images/configurator_02.png" alt="foto")
 							.package-config__name
 								input#standart-config(type="radio" name="package-config")
 								label(for="standart-config") Стандарт
 					.col-phablet-1-2.col-tablet-1-4
 						.package-config
 							.package-config__img
-								img(src="images/product_06.png" alt="foto")
+								img(src="images/configurator_03.png" alt="foto")
 							.package-config__name
 								input#premium-config(type="radio" name="package-config")
 								label(for="premium-config") Премиум
@@ -57,7 +57,7 @@ mixin remember
 								img(src="images/individual_product.png" alt="foto")
 							.package-config__name
 								input#individual-config(type="radio" name="package-config")
-								label(for="individual-config") Индивидуальное предложение
+								label(for="individual-config") Индивид. предложение
 				.next-config.active
 					.btn.btn_back-step Вернуться назад
 					span Следующий шаг:
@@ -184,7 +184,7 @@ mixin remember
 					.btn.btn_next Завершить
 			.step#step_7
 				.done-config
-					.configuration__title Ориентировочная стоимость
+					.configuration__title Ваша конфигурация
 					.configuration__price
 						span 54 900.00
 						span р.
@@ -198,3 +198,47 @@ mixin remember
 								span
 									include ../images/phone.svg
 								|Заказать звонок
+				.configuration-table
+					table
+						tr
+							td.config Конфигурация:
+							td.val Базовая
+							td.price
+								span 54 900.00
+								span р.
+						tr
+							td.config Размер:
+							td.val 50х20
+							td.price
+								span 900.00
+								span р.
+						tr
+							td.config Фасад:
+							td.val Белый
+							td.price
+								span 900.00
+								span р.
+						tr
+							td.config Наполнение:
+							td.val Полное
+							td.price
+								span 2100.00
+								span р.
+						tr
+							td.config Корпус:
+							td.val Дерево
+							td.price
+								span 2100.00
+								span р.
+						tr
+							td.config Фурнитура:
+							td.val Немецкая
+							td.price
+								span 900.00
+								span р.
+						tr
+							td.config Декор:
+							td.val Красивый
+							td.price
+								span 54 900.00
+								span р.

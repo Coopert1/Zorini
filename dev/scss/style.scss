@@ -3897,3 +3897,33 @@ ul.text-info{
 .lSSlideOuter .lSPager.lSGallery li.active img, .lSSlideOuter .lSPager.lSGallery li:hover img{
 	opacity: 1;
 }
+.configuration-table{
+	table{
+		border-collapse: collapse;
+		td{
+			padding: 5px 20px 5px 0px;
+			border-bottom: 1px solid #dbdce3;
+		}
+		td.config{
+			font-size: 13px;
+			color: #707070;
+		}
+		td.val{
+			font-size: 13px;
+			color: #323232;
+		}
+		td.price{
+			span{
+				font-size: 14px;
+				color: #2a2a2a;
+				font-family: 'Open Sans bold', sans-serif;
+				font-weight: bold;
+				&:last-child{
+					font-family: 'Open Sans regular', sans-serif;
+					margin-left: 3px;
+					font-weight: normal;
+				}	
+			}
+		}
+	}
+}

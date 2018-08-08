@@ -418,6 +418,13 @@ img{max-width: 100%;}
 			}
 		}
 	}
+	&_save{
+		width: 100%;
+		margin-bottom: 10px;
+		max-width: 180px;
+		font-size: 13px;
+		text-align: center;
+	}
 	&_calc{
 		vertical-align: top;
 		margin: 0px 5px;
@@ -605,6 +612,7 @@ img{max-width: 100%;}
 		color: #2a2a2a;
 		padding: 8px 40px;
 		margin: 10px 0;
+		margin-left: 10px;
 		
 	}
 	&_back-step{
@@ -615,8 +623,14 @@ img{max-width: 100%;}
 		float: left;
 		width: 180px;
 		position: relative;
-		top: 10px;
-
+		bottom: -10px;
+		&_final{
+			@include breakpoint(desktop){
+				position: absolute;
+			    right: 104%;
+			    bottom: 27px;
+			}
+		}
 		&:hover{
 			border: 1px solid #4fa4b6;
 		}
@@ -2692,6 +2706,22 @@ ul.text-info{
 		font-size: 42px;
 		margin-bottom: 25px;
 		position: relative;
+		text-align: center;
+		span{
+			position: relative;
+			&:before{
+				@include breakpoint(phablet){
+					content:'';
+					position: absolute;
+					display: block;
+					left: 102%;
+					top: 14px;
+					background: url(../images/like_circle.png);
+					height: 38px;
+					width: 38px;
+				}	
+			}
+		}
 		&_marg-left_5{
 			margin-left: 5px;
 		}
@@ -2904,6 +2934,7 @@ ul.text-info{
 			&:checked + label{
 				color: white;
 				background-color: #6363de;
+				border: 1px solid #6363de;
 //				&:after{
 //					content: "\2713";
 //					position: absolute;
@@ -2916,7 +2947,7 @@ ul.text-info{
 		
 		label{
 			display: inline-flex;
-			font-size: 14px;
+			font-size: 13px;
 			color: #2a2a2a;
 			align-items: center;
 			justify-content: center;
@@ -3150,6 +3181,7 @@ ul.text-info{
 	text-align: center;
 	max-width: 780px;
 	margin: 0 auto;
+	position: relative;
 	.configuration__title{
 		margin-bottom: 15px;
 	}
@@ -3210,6 +3242,7 @@ ul.text-info{
 	&__flex{
 		display: flex;
 		flex-wrap: wrap;
+		// align-items: flex-end;
 		justify-content: space-between;
 	}
 }

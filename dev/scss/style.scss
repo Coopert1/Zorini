@@ -620,10 +620,12 @@ img{max-width: 100%;}
 		color: #2a2a2a;
 		border: 1px solid #b3b3b3;
 		padding: 8px 40px;
-		float: left;
 		width: 180px;
 		position: relative;
 		bottom: -10px;
+		@include breakpoint(tablet){
+			float: left;
+		}
 		&_final{
 			@include breakpoint(desktop){
 				position: absolute;
@@ -636,7 +638,7 @@ img{max-width: 100%;}
 		}
 		@include breakpoint(mobileonly){
 			float: none;
-			display: block;
+			display: inline-block;
 			width: 180px;
 			margin: 0 auto 20px auto;
 		}
@@ -2876,6 +2878,14 @@ ul.text-info{
 		
 	}
 
+}
+.prev-config{
+	text-align: center;
+	span{
+		display: inline-block;
+		margin-right:10px;
+		color: transparent;
+	}
 }
 .next-config{
 	text-align: center;

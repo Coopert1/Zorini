@@ -27,6 +27,7 @@ mixin remember
 			li#step-bar_5 Шаг. 5
 			li#step-bar_6 Шаг. 6
 			li#step-bar_7 Шаг. 7
+			li#step-bar_8 Шаг. 8
 		form
 			.step#step_1.active
 				.row.row_package-config.clearfix
@@ -154,6 +155,16 @@ mixin remember
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
 			.step#step_4
+				+option-config('Корпус','frame', 'ДСП Ламинированое', 'МДФ Ламинированое', 'МДФ Эмаль','Массив Березы', 'Массив Бука, Ольхи', 'Массив Дуба, Ясеня')
+				.next-config
+					.btn.btn_back-step Назад
+					span Следующий шаг:
+					.btn.btn_next Выбрать форнитуру
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
+			.step#step_5
 				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
@@ -164,7 +175,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_5
+			.step#step_6
 				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
@@ -175,7 +186,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_6.decore
+			.step#step_7.decore
 				.option-config__item.product_card
 					.option-config__list-title Декор
 					ul.option-config__list.option-config__list_kitchen
@@ -207,7 +218,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_7
+			.step#step_8
 				.done-config.clearfix
 					.configuration__title
 						span Ваша конфигурация

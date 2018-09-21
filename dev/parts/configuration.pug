@@ -186,29 +186,30 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_7.decore
-				.option-config__item.product_card
-					.option-config__list-title Декор
-					ul.option-config__list.option-config__list_kitchen
-						li
-							input#decor1(type="radio" name="decor")
-							label(for="decor1") Карниз
-						li
-							input#decor2(type="radio" name="decor")
-							label(for="decor2") Цоколь массив
-						li
-							input#decor3(type="radio" name="decor")
-							label(for="decor3") Пилястра 
-						li
-							input#decor4(type="radio" name="decor")
-							label(for="decor4") Колонна
-						li
-							input#decor5(type="radio" name="decor")
-							label(for="decor5") Резные ноги
-						li
-							input#decor6(type="radio" name="decor")
-							label(for="decor6") Витраж
-							+remember
+			.step#step_7
+				.option-config
+					.option-config__item.product_card
+						.configuration__title Декор
+						ul.option-config__list.option-config__list_kitchen
+							li
+								input#decor1(type="radio" name="decor")
+								label(for="decor1") Карниз
+							li
+								input#decor2(type="radio" name="decor")
+								label(for="decor2") Цоколь массив
+							li
+								input#decor3(type="radio" name="decor")
+								label(for="decor3") Пилястра 
+							li
+								input#decor4(type="radio" name="decor")
+								label(for="decor4") Колонна
+							li
+								input#decor5(type="radio" name="decor")
+								label(for="decor5") Резные ноги
+							li
+								input#decor6(type="radio" name="decor")
+								label(for="decor6") Витраж
+								+remember
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg

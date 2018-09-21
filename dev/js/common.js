@@ -45,7 +45,7 @@ $(function(){
 		item: 1,
 		slideMove:1,
 		pager: true,
-		controls: false,
+		controls: true,
 		addClass: '',
 		mode: "slide",
 		useCSS: true,
@@ -464,7 +464,7 @@ $(function(){
 	function fixMenuBar(){
 		var scrolTop = $(window).scrollTop();
 		var width = $(window).width();
-
+		if (window.location.pathname!== '/product_card.html'){
 			if(scrolTop>=41){
 				$(".header-bottom").addClass("fixed");
 				$('body').addClass("scroll_padding-top")
@@ -475,6 +475,7 @@ $(function(){
 			}
 			
 		}
+	}
 	$(window).scroll(function(){
 		fixMenuBar();
 		fixcardNav()

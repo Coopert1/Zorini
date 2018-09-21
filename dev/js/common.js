@@ -384,8 +384,8 @@ $(function(){
 			next_el++;
 			$(this).parent().parent().removeClass('active');
 			
-			if( next_el <= 9){
-				if(next_el == 9){
+			if( next_el <= 8){
+				if(next_el == 8){
 					$(".configuration .title").text("Конфигурация готова!")
 				}
 				var stepBar = '#step-bar_' + next_el;
@@ -402,8 +402,8 @@ $(function(){
 			next_el++;
 			$(this).parent().parent().removeClass('active');
 			
-			if( next_el <= 7){
-				if(next_el == 7){
+			if( next_el <= 8){
+				if(next_el == 8){
 					$(".configuration .title").text("Конфигурация готова!")
 				}
 				var stepBar = '#step-bar_' + next_el;

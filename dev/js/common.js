@@ -377,24 +377,24 @@ $(function(){
 				return false;
 			}
 	});
-//	$(".configuration .step .btn_next").click(function(){
-//		if($(this).parent().hasClass("active")){
-//			var el= $(this).parent().parent().prop('id');
-//			var next_el = +el.slice(-1);
-//			next_el++;
-//			$(this).parent().parent().removeClass('active');
-//			
-//			if( next_el <= 7){
-//				if(next_el == 7){
-//					$(".configuration .title").text("Конфигурация готова!")
-//				}
-//				var stepBar = '#step-bar_' + next_el;
-//				next_el = '#step_' + next_el;
-//				$(next_el).addClass('active');
-//				$(stepBar).addClass('active');
-//			}
-//		}
-//	});
+	$(".configuration .step .btn_next").click(function(){
+		if($(this).parent().hasClass("active")){
+			var el= $(this).parent().parent().prop('id');
+			var next_el = +el.slice(-1);
+			next_el++;
+			$(this).parent().parent().removeClass('active');
+			
+			if( next_el <= 8){
+				if(next_el == 8){
+					$(".configuration .title").text("Конфигурация готова!")
+				}
+				var stepBar = '#step-bar_' + next_el;
+				next_el = '#step_' + next_el;
+				$(next_el).addClass('active');
+				$(stepBar).addClass('active');
+			}
+		}
+	});
 	$(" .configuration.page-kitchen .step .btn_next").click(function(){
 		if($(this).parent().hasClass("active")){
 			var el= $(this).parent().parent().prop('id');

@@ -5,7 +5,7 @@ $(function(){
 		pager: false
 	});
 	$('#lightSlider_product_card').lightSlider({
-			controls: false,
+			controls: true,
 			gallery: true,
 			item: 1,
 			loop:true,
@@ -516,6 +516,7 @@ $(function(){
 	// show all main menu
 	$("ul.show-all").click(function(){
 		$(".main-menu").toggleClass("more");
+		$(".icon_more").toggleClass("active");
 	});
 	//Search-form on mobile device
 	$('.search').click(function(event){

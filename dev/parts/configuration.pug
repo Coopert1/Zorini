@@ -60,8 +60,6 @@ mixin remember
 								input#individual-config(type="radio" name="package-config")
 								label(for="individual-config") Инд. предложение
 				.next-config.active
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать размер
 			.step#step_2
@@ -125,10 +123,14 @@ mixin remember
 									input(type="number" min="1")
 									|  См.
 				.next-config.active
-					.btn.btn_back-step Назад
+					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать фасад
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 			.step#step_3
 				mixin option-config(title, name, ...items)
 					.option-config
@@ -143,24 +145,36 @@ mixin remember
 									- i++
 				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика','МДФ Шпон', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
 				.next-config
-					.btn.btn_back-step Назад
+					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать фурнитуру
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 			.step#step_4
 				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
 				.next-config
-					.btn.btn_back-step Назад
+					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать наполнения
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 			.step#step_5
 				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
 				.next-config
-					.btn.btn_back-step Назад
+					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Выбрать декор
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 			.step#step_6.decore
 				.option-config__item.product_card
 					.option-config__list-title Декор
@@ -185,13 +199,18 @@ mixin remember
 							label(for="decor6") Витраж
 							+remember
 				.next-config
-					.btn.btn_back-step Назад
+					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
 					span Следующий шаг:
 					.btn.btn_next Завершить
+				.prev-config.clearfix.hide-tablet
+					span Следующий шаг:
+					.btn.btn_back-step Назад
+						include ../images/right-arrow-btn.svg
 			.step#step_7
-				.done-config
-					.configuration__title Ваша конфигурация
+				.done-config.clearfix
+					.configuration__title
+						span Ваша конфигурация
 					.done-config__flex
 						.input-wrap
 							.done-config__text Отправить запрос с данной конфигурацией
@@ -200,10 +219,8 @@ mixin remember
 							input.mail( type="email" placeholder="E-mail")
 							.flex
 								input(type="submit" value="Отправить" )
-								a.btn.btn_call-us(href="#")
-									span
-										include ../images/phone.svg
-									|Заказать звонок
+								a(href="#").btn.btn_save
+									|Сохранить
 						.configuration-table
 							table
 								tbody
@@ -253,3 +270,5 @@ mixin remember
 								span Итого:
 								span 54 900.00
 								span р.
+					.btn.btn_back-step.btn_back-step_final Назад
+						include ../images/right-arrow-btn.svg

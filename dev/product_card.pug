@@ -88,57 +88,8 @@ html
 					a(href="#rewiews").card-navivation__item
 						.card-navivation__icon
 							include ./images/write-tag.svg
-						.card-navivation__text ОТЗЫВЫ
-		.wrapper
-			.configuration.page-kitchen
-				.title.title_left Выберите конфигурацию
-			.clearfix
-				.col-phablet-1-2.col-laptop-1-4
-					.package-config.active#base-config
-						.package-config__img
-							img(src="images/configurator_01.png" alt="foto")
-						.configuration__price.configuration__price_config
-							.text Стоимость
-							span 54 900.00
-							span р.
-						.package-config__name
-							input(type="radio" name="package-config" checked)
-							label(for="base-config") Выбрать базовый
-				.col-phablet-1-2.col-laptop-1-4.clearfix
-					.package-config#standart-config
-						.package-config__img
-							img(src="images/configurator_02.png" alt="foto")
-						.configuration__price.configuration__price_config
-							.text Стоимость
-							span 54 900.00
-							span р.
-						.package-config__name
-							input(type="radio" name="package-config")
-							label(for="standart-config") Выбрать cтандарт
-				.col-phablet-1-2.col-laptop-1-4
-					.package-config#premium-config
-						.package-config__img
-							img(src="images/configurator_03.png" alt="foto")
-						.configuration__price.configuration__price_config
-							.text Стоимость
-							span 54 900.00
-							span р.
-						.package-config__name
-							input(type="radio" name="package-config")
-							label(for="premium-config") Выбрать премиум
-				.col-phablet-1-2.col-laptop-1-4
-					.package-config#individual-config
-						.package-config__img
-							img(src="images/individual_product.png" alt="foto")
-						.configuration__price.configuration__price_config.transparent
-							.text Стоимость
-							span 54 900.00
-							span р.
-						.package-config__name
-							input(type="radio" name="package-config")
-							label(for="individual-config") Инд. предложение
-		.configurator
-			include ./parts/configuration.pug
+						.card-navivation__text ОТЗЫВЫ 
+		include ./parts/configuration.pug
 		.wrapper
 			.content-wrapper
 				.about-kitchen.about-kitchen_top.clearfix
@@ -275,7 +226,7 @@ html
 									span
 										|54 900.00
 									span
-										|р./м.пог. 
+										|р./м.пог.
 					.col-phablet-1-3
 						.product-item.product-item_prod-card
 							a(href="#").product-item__add-to-fav

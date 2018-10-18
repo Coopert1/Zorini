@@ -14,273 +14,298 @@ mixin remember
 				a.btn(href="#") Запомнить
 .wrapper
 	.configuration.page-kitchen
-		.title.title_left Выберите конфигурацию
-			.configuration__price
-				.text Примерная стоимость
-				span 54 900.00
-				span р.
-		ul.step-bar
-			li#step-bar_1.active Шаг. 1
-			li#step-bar_2 Шаг. 2
-			li#step-bar_3 Шаг. 3
-			li#step-bar_4 Шаг. 4
-			li#step-bar_5 Шаг. 5
-			li#step-bar_6 Шаг. 6
-			li#step-bar_7 Шаг. 7
-			li#step-bar_8 Шаг. 8
-		form
-			.step#step_1.active
-				.row.row_package-config.clearfix
-					.configuration__title.configuration__title_marg-left_5 Категория
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config.active
-							.package-config__img
-								img(src="images/configurator_01.png" alt="foto")
-							.package-config__name
-								input#base-config(type="radio" name="package-config" checked)
-								label(for="base-config") Базовый
-					.col-phablet-1-2.col-tablet-1-4.clearfix
-						.package-config
-							.package-config__img
-								img(src="images/configurator_02.png" alt="foto")
-							.package-config__name
-								input#standart-config(type="radio" name="package-config")
-								label(for="standart-config") Стандарт
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config
-							.package-config__img
-								img(src="images/configurator_03.png" alt="foto")
-							.package-config__name
-								input#premium-config(type="radio" name="package-config")
-								label(for="premium-config") Премиум
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config
-							.package-config__img
-								img(src="images/individual_product.png" alt="foto")
-							.package-config__name
-								input#individual-config(type="radio" name="package-config")
-								label(for="individual-config") Инд. предложение
-				.next-config.active
-					span Следующий шаг:
-					.btn.btn_next Выбрать размер
-			.step#step_2
-				.configuration__title Выбрать размер
-				.wrap-shape
-					.config-shape
-						.config-shape__item
-							input#shape_1(type="radio" name="shape" value="line-form")
-							label(for="shape_1") Прямая
-							img(src="images/conf-type_01.png")
-						.config-shape__item
-							input#shape_2(type="radio" name="shape" value="l-revers-form")
-							label(for="shape_2") Г-образная
-							img(src="images/conf-type_02.png")
-						.config-shape__item
-							input#shape_3(type="radio" name="shape" value="l-form")
-							label(for="shape_3") Г-образная
-							img(src="images/conf-type_03.png")
-						.config-shape__item
-							input#shape_4(type="radio" name="shape" value="p-form" checked)
-							label(for="shape_4") П-образная
-							img(src="images/conf-type_04.png")
-					.chosen-shape
-						.chosen-shape__p-form.active
-							.chosen-shape__img
-								img(src="images/conf-type-big_04.png")
-								label.top
-									input(type="number" min="1")
-									|  См.
-								label.right
-									input(type="number" min="1")
-									|  См.
-								label.bottom
-									input(type="number" min="1")
-									|  См.
-						.chosen-shape__line-form
-							.chosen-shape__img
-								img(src="images/conf-type-big_01.png")
-								label.right
-									input(type="number" min="1")
-									|  См.
-								label.top
-									input(type="number" min="1")
-									|  См.
-						.chosen-shape__l-revers-form
-							.chosen-shape__img
-								img(src="images/conf-type-big_02.png")
-								label.top
-									input(type="number" min="1")
-									|  См.
-								label.left
-									input(type="number" min="1")
-									|  См.
-						.chosen-shape__l-form
-							.chosen-shape__img
-								img(src="images/conf-type-big_03.png")
-								label.top
-									input(type="number" min="1")
-									|  См.
-								label.right
-									input(type="number" min="1")
-									|  См.
-				.next-config.active
-					.btn.btn_back-step.show-tablet Назад
-						include ../images/right-arrow-btn.svg
-					span Следующий шаг:
-					.btn.btn_next Выбрать фасад
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_3
-				mixin option-config(title, name, ...items)
+		.configuration__title.title_left Категория 
+		.clearfix
+			.col-phablet-1-2.col-laptop-1-4
+				.package-config.active#base-config
+					.package-config__img
+						img(src="images/configurator_01.png" alt="foto")
+					.configuration__price.configuration__price_config
+						.text Стоимость
+						span 54 900.00
+						span р.
+					.package-config__name
+						input(type="radio" name="package-config" checked)
+						label(for="base-config") Выбрать базовый
+			.col-phablet-1-2.col-laptop-1-4.clearfix
+				.package-config#standart-config
+					.package-config__img
+						img(src="images/configurator_02.png" alt="foto")
+					.configuration__price.configuration__price_config
+						.text Стоимость
+						span 54 900.00
+						span р.
+					.package-config__name
+						input(type="radio" name="package-config")
+						label(for="standart-config") Выбрать cтандарт
+			.col-phablet-1-2.col-laptop-1-4
+				.package-config#premium-config
+					.package-config__img
+						img(src="images/configurator_03.png" alt="foto")
+					.configuration__price.configuration__price_config
+						.text Стоимость
+						span 54 900.00
+						span р.
+					.package-config__name
+						input(type="radio" name="package-config")
+						label(for="premium-config") Выбрать премиум
+			.col-phablet-1-2.col-laptop-1-4
+				.package-config#individual-config
+					.package-config__img
+						img(src="images/individual_product.png" alt="foto")
+					.configuration__price.configuration__price_config.transparent
+						.text Стоимость
+						span 54 900.00
+						span р.
+					.package-config__name
+						input(type="radio" name="package-config")
+						label(for="individual-config") Инд. предложение
+	.configurator
+		.configuration.page-kitchen
+			.title.title_left Выберите конфигурацию
+				.configuration__price
+					.text Примерная стоимость
+					span 54 900.00
+					span р.
+			ul.step-bar
+				li#step-bar_1.active Шаг. 1
+				li#step-bar_2 Шаг. 2
+				li#step-bar_3 Шаг. 3
+				li#step-bar_4 Шаг. 4
+				li#step-bar_5 Шаг. 5
+				li#step-bar_6 Шаг. 6
+				li#step-bar_7 Шаг. 7
+			form
+				.step#step_1.active
+					.configuration__title Выбрать размер
+					.wrap-shape
+						.config-shape
+							.config-shape__item
+								input#shape_1(type="radio" name="shape" value="line-form")
+								label(for="shape_1") Прямая
+								img(src="images/conf-type_01.png")
+							.config-shape__item
+								input#shape_2(type="radio" name="shape" value="l-revers-form")
+								label(for="shape_2") Г-образная
+								img(src="images/conf-type_02.png")
+							.config-shape__item
+								input#shape_3(type="radio" name="shape" value="l-form")
+								label(for="shape_3") Г-образная
+								img(src="images/conf-type_03.png")
+							.config-shape__item
+								input#shape_4(type="radio" name="shape" value="p-form" checked)
+								label(for="shape_4") П-образная
+								img(src="images/conf-type_04.png")
+						.chosen-shape
+							.chosen-shape__p-form.active
+								.chosen-shape__img
+									img(src="images/conf-type-big_04.png")
+									label.top
+										input(type="number" min="1")
+										|  См.
+									label.right
+										input(type="number" min="1")
+										|  См.
+									label.bottom
+										input(type="number" min="1")
+										|  См.
+							.chosen-shape__line-form
+								.chosen-shape__img
+									img(src="images/conf-type-big_01.png")
+									label.right
+										input(type="number" min="1")
+										|  См.
+									label.top
+										input(type="number" min="1")
+										|  См.
+							.chosen-shape__l-revers-form
+								.chosen-shape__img
+									img(src="images/conf-type-big_02.png")
+									label.top
+										input(type="number" min="1")
+										|  См.
+									label.left
+										input(type="number" min="1")
+										|  См.
+							.chosen-shape__l-form
+								.chosen-shape__img
+									img(src="images/conf-type-big_03.png")
+									label.top
+										input(type="number" min="1")
+										|  См.
+									label.right
+										input(type="number" min="1")
+										|  См.
+					.next-config.active
+						.btn.btn_back-step.show-tablet Назад
+							include ../images/right-arrow-btn.svg
+						span Следующий шаг:
+						.btn.btn_next Выбрать фасад
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_2
+					mixin option-config(title, name, ...items)
+						.option-config
+							.option-config__item.product_card
+								.configuration__title= title
+								ul.option-config__list.option-config__list_kitchen
+									- var i=1;
+									each item in items
+										li
+											input(type="radio" name=name id=name + i)
+											label(for=name + i id=name + i)= item
+										- i++
+					+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика','МДФ Шпон', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
+					.next-config
+						.btn.btn_back-step.show-tablet Назад
+							include ../images/right-arrow-btn.svg
+						span Следующий шаг:
+						.btn.btn_next Выбрать корпус
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_3
+					+option-config('Корпус','frame', 'ДСП Ламинированое', 'МДФ Ламинированое', 'МДФ Эмаль','Массив Березы', 'Массив Бука, Ольхи', 'Массив Дуба, Ясеня')
+					.next-config
+						.btn.btn_back-step.show-tablet Назад
+						span Следующий шаг:
+						.btn.btn_next Выбрать форнитуру
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_4
+					+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
+					.next-config
+						.btn.btn_back-step.show-tablet Назад
+							include ../images/right-arrow-btn.svg
+						span Следующий шаг:
+						.btn.btn_next Выбрать наполнения
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_5
 					.option-config
 						.option-config__item.product_card
-							.configuration__title= title
+							.configuration__title Наполнения
 							ul.option-config__list.option-config__list_kitchen
-								- var i=1;
-								each item in items
-									li
-										input(type="radio" name=name id=name + i)
-										label(for=name + i id=name + i)= item
-									- i++
-				+option-config('Фасад','facade', 'Массив Классика', 'МДФ Классика','МДФ Шпон', 'МДФ Эмаль',' МДФ Пластик', 'МДФ Пленка')
-				.next-config
-					.btn.btn_back-step.show-tablet Назад
-						include ../images/right-arrow-btn.svg
-					span Следующий шаг:
-					.btn.btn_next Выбрать корпус
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_4
-				+option-config('Корпус','frame', 'ДСП Ламинированое', 'МДФ Ламинированое', 'МДФ Эмаль','Массив Березы', 'Массив Бука, Ольхи', 'Массив Дуба, Ясеня')
-				.next-config
-					.btn.btn_back-step.show-tablet Назад
-					span Следующий шаг:
-					.btn.btn_next Выбрать форнитуру
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_5
-				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
-				.next-config
-					.btn.btn_back-step.show-tablet Назад
-						include ../images/right-arrow-btn.svg
-					span Следующий шаг:
-					.btn.btn_next Выбрать наполнения
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_6
-				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
-				.next-config
-					.btn.btn_back-step.show-tablet Назад
-						include ../images/right-arrow-btn.svg
-					span Следующий шаг:
-					.btn.btn_next Выбрать декор
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_7
-				.option-config
-					.option-config__item.product_card
-						.configuration__title Декор
-						ul.option-config__list.option-config__list_kitchen
-							li
-								input#decor1(type="radio" name="decor")
-								label(for="decor1") Карниз
-							li
-								input#decor2(type="radio" name="decor")
-								label(for="decor2") Цоколь массив
-							li
-								input#decor3(type="radio" name="decor")
-								label(for="decor3") Пилястра 
-							li
-								input#decor4(type="radio" name="decor")
-								label(for="decor4") Колонна
-							li
-								input#decor5(type="radio" name="decor")
-								label(for="decor5") Резные ноги
-							li
-								input#decor6(type="radio" name="decor")
-								label(for="decor6") Витраж
-								+remember
-				.next-config
-					.btn.btn_back-step.show-tablet Назад
-						include ../images/right-arrow-btn.svg
-					span Следующий шаг:
-					.btn.btn_next Завершить
-				.prev-config.clearfix.hide-tablet
-					span Следующий шаг:
-					.btn.btn_back-step Назад
-						include ../images/right-arrow-btn.svg
-			.step#step_8
-				.done-config.clearfix
-					.configuration__title
-						span Ваша конфигурация
-					.done-config__flex
-						.input-wrap
-							.done-config__text Отправить запрос с данной конфигурацией
-							input(placeholder="Представьтесь")
-							input( type="tel" placeholder="+7(___) ___ - __ - __")
-							input.mail( type="email" placeholder="E-mail")
-							.flex
-								input(type="submit" value="Отправить" )
-								a(href="#").btn.btn_save
-									|Сохранить
-						.configuration-table
-							table
-								tbody
-									tr
-										td.config Конфигурация:
-										td.val Базовая
-										td.price
-											span 54 900.00
-											span р.
-									tr
-										td.config Размер:
-										td.val 50х20
-										td.price
-											span 900.00
-											span р.
-									tr
-										td.config Фасад:
-										td.val Белый
-										td.price
-											span 900.00
-											span р.
-									tr
-										td.config Наполнение:
-										td.val Полное
-										td.price
-											span 2100.00
-											span р.
-									tr
-										td.config Корпус:
-										td.val Дерево
-										td.price
-											span 2100.00
-											span р.
-									tr
-										td.config Фурнитура:
-										td.val Немецкая
-										td.price
-											span 900.00
-											span р.
-									tr
-										td.config Декор:
-										td.val Красивый
-										td.price
-											span 54 900.00
-											span р.
-							.configuration__price
-								span Итого:
-								span 54 900.00
-								span р.
-					.btn.btn_back-step.btn_back-step_final Назад
-						include ../images/right-arrow-btn.svg
+								li 
+									input#complectation_1(type="checkbox")
+									label(for="complectation_1") Сушка
+								li 
+									input#complectation_2(type="checkbox")
+									label(for="complectation_2") Выдвижные ящики
+								li 
+									input#complectation_3(type="checkbox")
+									label(for="complectation_3") Бутылочница
+					.next-config
+						.btn.btn_back-step.show-tablet Назад
+							include ../images/right-arrow-btn.svg
+						span Следующий шаг:
+						.btn.btn_next Выбрать декор
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_6
+					.option-config
+						.option-config__item.product_card
+							.configuration__title Декор
+							ul.option-config__list.option-config__list_kitchen
+								li
+									input#decor1(type="checkbox" name="decor")
+									label(for="decor1") Карниз
+								li
+									input#decor2(type="checkbox" name="decor")
+									label(for="decor2") Цоколь массив
+								li
+									input#decor3(type="checkbox" name="decor")
+									label(for="decor3") Пилястра 
+								li
+									input#decor4(type="checkbox" name="decor")
+									label(for="decor4") Колонна
+								li
+									input#decor5(type="checkbox" name="decor")
+									label(for="decor5") Резные ноги
+								li
+									input#decor6(type="checkbox" name="decor")
+									label(for="decor6") Витраж
+									+remember
+					.next-config
+						.btn.btn_back-step.show-tablet Назад
+							include ../images/right-arrow-btn.svg
+						span Следующий шаг:
+						.btn.btn_next Завершить
+					.prev-config.clearfix.hide-tablet
+						span Следующий шаг:
+						.btn.btn_back-step Назад
+							include ../images/right-arrow-btn.svg
+				.step#step_7
+					.done-config.clearfix
+						.configuration__title
+							span Ваша конфигурация
+						.done-config__flex
+							.input-wrap
+								.done-config__text Отправить запрос с данной конфигурацией
+								input(placeholder="Представьтесь")
+								input( type="tel" placeholder="+7(___) ___ - __ - __")
+								input.mail( type="email" placeholder="E-mail")
+								.flex
+									input(type="submit" value="Отправить" )
+									a(href="#").btn.btn_save
+										|Сохранить
+							.configuration-table
+								table
+									tbody
+										tr
+											td.config Конфигурация:
+											td.val Базовая
+											td.price
+												span 54 900.00
+												span р.
+										tr
+											td.config Размер:
+											td.val 50х20
+											td.price
+												span 900.00
+												span р.
+										tr
+											td.config Фасад:
+											td.val Белый
+											td.price
+												span 900.00
+												span р.
+										tr
+											td.config Наполнение:
+											td.val Полное
+											td.price
+												span 2100.00
+												span р.
+										tr
+											td.config Корпус:
+											td.val Дерево
+											td.price
+												span 2100.00
+												span р.
+										tr
+											td.config Фурнитура:
+											td.val Немецкая
+											td.price
+												span 900.00
+												span р.
+										tr
+											td.config Декор:
+											td.val Красивый
+											td.price
+												span 54 900.00
+												span р.
+								.configuration__price
+									span Итого:
+									span 54 900.00
+									span р.
+						.btn.btn_back-step.btn_back-step_final Назад
+							include ../images/right-arrow-btn.svg

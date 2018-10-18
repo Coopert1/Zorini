@@ -27,43 +27,8 @@ mixin remember
 			li#step-bar_5 Шаг. 5
 			li#step-bar_6 Шаг. 6
 			li#step-bar_7 Шаг. 7
-			li#step-bar_8 Шаг. 8
 		form
 			.step#step_1.active
-				.row.row_package-config.clearfix
-					.configuration__title.configuration__title_marg-left_5 Категория
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config.active
-							.package-config__img
-								img(src="images/configurator_01.png" alt="foto")
-							.package-config__name
-								input#base-config(type="radio" name="package-config" checked)
-								label(for="base-config") Базовый
-					.col-phablet-1-2.col-tablet-1-4.clearfix
-						.package-config
-							.package-config__img
-								img(src="images/configurator_02.png" alt="foto")
-							.package-config__name
-								input#standart-config(type="radio" name="package-config")
-								label(for="standart-config") Стандарт
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config
-							.package-config__img
-								img(src="images/configurator_03.png" alt="foto")
-							.package-config__name
-								input#premium-config(type="radio" name="package-config")
-								label(for="premium-config") Премиум
-					.col-phablet-1-2.col-tablet-1-4
-						.package-config
-							.package-config__img
-								img(src="images/individual_product.png" alt="foto")
-							.package-config__name
-								input#individual-config(type="radio" name="package-config")
-								label(for="individual-config") Инд. предложение
-				.next-config.active
-					span Следующий шаг:
-					.btn.btn_next Выбрать размер
-			.step#step_2
 				.configuration__title Выбрать размер
 				.wrap-shape
 					.config-shape
@@ -132,7 +97,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_3
+			.step#step_2
 				mixin option-config(title, name, ...items)
 					.option-config
 						.option-config__item.product_card
@@ -154,7 +119,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_4
+			.step#step_3
 				+option-config('Корпус','frame', 'ДСП Ламинированое', 'МДФ Ламинированое', 'МДФ Эмаль','Массив Березы', 'Массив Бука, Ольхи', 'Массив Дуба, Ясеня')
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
@@ -164,7 +129,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_5
+			.step#step_4
 				+option-config('Фурнитура','furniture',' Боярд (Россия)', 'Блюм (Австрия) ', 'Хеттих(Германия)' )
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
@@ -175,8 +140,21 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_6
-				+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
+			.step#step_5
+				//+option-config('Наполнения','complectation', 'Сушка', 'Выдвижные ящики', 'Бутылочница', 'Волшебный уголок')
+				.option-config
+					.option-config__item.product_card
+						.configuration__title Наполнения
+						ul.option-config__list.option-config__list_kitchen
+							li 
+								input#complectation_1(type="checkbox")
+								label(for="complectation_1") Сушка
+							li 
+								input#complectation_2(type="checkbox")
+								label(for="complectation_2") Выдвижные ящики
+							li 
+								input#complectation_3(type="checkbox")
+								label(for="complectation_3") Бутылочница
 				.next-config
 					.btn.btn_back-step.show-tablet Назад
 						include ../images/right-arrow-btn.svg
@@ -186,7 +164,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_7
+			.step#step_6
 				.option-config
 					.option-config__item.product_card
 						.configuration__title Декор
@@ -219,7 +197,7 @@ mixin remember
 					span Следующий шаг:
 					.btn.btn_back-step Назад
 						include ../images/right-arrow-btn.svg
-			.step#step_8
+			.step#step_7
 				.done-config.clearfix
 					.configuration__title
 						span Ваша конфигурация

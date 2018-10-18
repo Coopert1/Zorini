@@ -330,40 +330,40 @@ $(function(){
 			}
 		} else return;
 	});
-	$(".configuration .step label").click(function(){
-		var el= $(this).prop('for').slice(0,-1);
-		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
-		if( el == "facade" ){
-			$("#step_3 .next-config").addClass('active');
-
-		} else if( el_step_id == "4"){
-			$("#step_4 .next-config").addClass('active');
-		} else if(el_step_id == '5'){
-			$("#step_5 .next-config").addClass('active');
-		} else if( el_step_id == '6'){
-			$("#step_6 .next-config").addClass('active');
-		}
-		else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '7'){
-			$("#step_7 .next-config").addClass('active');
-		}
-	});
+//	$(".configuration .step label").click(function(){
+//		var el= $(this).prop('for').slice(0,-1);
+//		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
+//		if( el == "facade" ){
+//			$("#step_3 .next-config").addClass('active');
+//
+//		} else if( el_step_id == "4"){
+//			$("#step_4 .next-config").addClass('active');
+//		} else if(el_step_id == '5'){
+//			$("#step_5 .next-config").addClass('active');
+//		} else if( el_step_id == '6'){
+//			$("#step_6 .next-config").addClass('active');
+//		}
+//		else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '7'){
+//			$("#step_7 .next-config").addClass('active');
+//		}
+//	});
 	$(".configuration.page-kitchen .step label").click(function(){
 		var el= $(this).prop('for').slice(0,-1);
 		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
 		if( el == "facade" ){
+			$("#step_2 .next-config").addClass('active');
+		} else if( el_step_id == "3"){
 			$("#step_3 .next-config").addClass('active');
-		} else if( el_step_id == "4"){
+		} else if(el_step_id == '4'){
 			$("#step_4 .next-config").addClass('active');
-		} else if(el_step_id == '5'){
+		}else if(el_step_id == '5'){
 			$("#step_5 .next-config").addClass('active');
-		}else if(el_step_id == '6'){
+		}
+		else if(el_step_id == '6'){
 			$("#step_6 .next-config").addClass('active');
 		}
-		else if(el_step_id == '7'){
-			$("#step_7 .next-config").addClass('active');
-		}
 		else if(el_step_id = $(this).parent().parent().parent().parent().prop('id').slice(-1) ==  '8'){
-			$("#step_8 .next-config").addClass('active');
+			$("#step_7 .next-config").addClass('active');
 		}
 	});
 	$(".step-bar>li").click(function(){
@@ -386,24 +386,24 @@ $(function(){
 				return false;
 			}
 	});
-	$(".configuration .step .btn_next").click(function(){
-		if($(this).parent().hasClass("active")){
-			var el= $(this).parent().parent().prop('id');
-			var next_el = +el.slice(-1);
-			next_el++;
-			$(this).parent().parent().removeClass('active');
-
-			if( next_el <= 8){
-				if(next_el == 8){
-					$(".configuration .title").text("Конфигурация готова!")
-				}
-				var stepBar = '#step-bar_' + next_el;
-				next_el = '#step_' + next_el;
-				$(next_el).addClass('active');
-				$(stepBar).addClass('active');
-			}
-		}
-	});
+//	$(".configuration .step .btn_next").click(function(){
+//		if($(this).parent().hasClass("active")){
+//			var el= $(this).parent().parent().prop('id');
+//			var next_el = +el.slice(-1);
+//			next_el++;
+//			$(this).parent().parent().removeClass('active');
+//
+//			if( next_el <= 8){
+//				if(next_el == 8){
+//					$(".configuration .title").text("Конфигурация готова!")
+//				}
+//				var stepBar = '#step-bar_' + next_el;
+//				next_el = '#step_' + next_el;
+//				$(next_el).addClass('active');
+//				$(stepBar).addClass('active');
+//			}
+//		}
+//	});
 	$(" .configuration.page-kitchen .step .btn_next").click(function(){
 		if($(this).parent().hasClass("active")){
 			var el= $(this).parent().parent().prop('id');
@@ -411,8 +411,8 @@ $(function(){
 			next_el++;
 			$(this).parent().parent().removeClass('active');
 
-			if( next_el <= 8){
-				if(next_el == 8){
+			if( next_el <= 7){
+				if(next_el == 7){
 					$(".configuration .title").text("Конфигурация готова!")
 				}
 				var stepBar = '#step-bar_' + next_el;

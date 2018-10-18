@@ -94,7 +94,7 @@ html
 				.title.title_left Выберите конфигурацию
 			.clearfix
 				.col-phablet-1-2.col-laptop-1-4
-					.package-config.active
+					.package-config.active#base-config
 						.package-config__img
 							img(src="images/configurator_01.png" alt="foto")
 						.configuration__price.configuration__price_config
@@ -102,10 +102,10 @@ html
 							span 54 900.00
 							span р.
 						.package-config__name
-							input#base-config(type="radio" name="package-config" checked)
+							input(type="radio" name="package-config" checked)
 							label(for="base-config") Выбрать базовый
 				.col-phablet-1-2.col-laptop-1-4.clearfix
-					.package-config
+					.package-config#standart-config
 						.package-config__img
 							img(src="images/configurator_02.png" alt="foto")
 						.configuration__price.configuration__price_config
@@ -113,10 +113,10 @@ html
 							span 54 900.00
 							span р.
 						.package-config__name
-							input#standart-config(type="radio" name="package-config")
+							input(type="radio" name="package-config")
 							label(for="standart-config") Выбрать cтандарт
 				.col-phablet-1-2.col-laptop-1-4
-					.package-config
+					.package-config#premium-config
 						.package-config__img
 							img(src="images/configurator_03.png" alt="foto")
 						.configuration__price.configuration__price_config
@@ -124,10 +124,10 @@ html
 							span 54 900.00
 							span р.
 						.package-config__name
-							input#premium-config(type="radio" name="package-config")
+							input(type="radio" name="package-config")
 							label(for="premium-config") Выбрать премиум
 				.col-phablet-1-2.col-laptop-1-4
-					.package-config
+					.package-config#individual-config
 						.package-config__img
 							img(src="images/individual_product.png" alt="foto")
 						.configuration__price.configuration__price_config.transparent
@@ -135,7 +135,7 @@ html
 							span 54 900.00
 							span р.
 						.package-config__name
-							input#individual-config(type="radio" name="package-config")
+							input(type="radio" name="package-config")
 							label(for="individual-config") Инд. предложение
 		.configurator
 			include ./parts/configuration.pug

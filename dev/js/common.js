@@ -245,14 +245,12 @@ $(function(){
 
 	//show-hide config
 	$(".package-config").click(function(e){
-		var elem = $("#individual-config");
-		if(elem.is(e.target || elem.has(e.target).length === 0 elem.parent()){
+		if($(this).is('#individual-config')){
 			$('.configurator').addClass('active')
 		}
-		else{
+		else {
 			$('.configurator').removeClass('active')
 		}
-		// (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
 	});
 
 	//for congiguration page

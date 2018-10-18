@@ -20,14 +20,14 @@ $(function(){
 			},
 		]
 		});
-	
+
 	function review_slider_pager(){
 		var allNumber = $('#review-slider>li').length;
 		var index = $("#review-slider>.active");
 		var curentIndex =  $('#review-slider>li').index(index) +1;
 		$(".review-slider__pager span:first-child").text(curentIndex);
 		$(".review-slider__pager span:last-child").text(allNumber);
-		
+
 	}
 	review_slider_pager();
 	$(".icon_review_slider_prev").click(function(){
@@ -162,7 +162,7 @@ $(function(){
 			$('body').toggleClass('no-scroll');
 		})
 	// end show-hide menu
-	
+
 	//show-hide filters
 		$('#show-filter-mobile').click(function(){
 			$(".filters").addClass('filters_active');
@@ -191,7 +191,7 @@ $(function(){
     if(val01<100){
     	$('.progressbar-label_01').text(val01+'%')
     }
-  
+
 
    $( ".progressbar_02" ).progressbar({
       value: 75,
@@ -242,8 +242,19 @@ $(function(){
 
 //
 
-	
-	
+
+	//show-hide config
+	$(".package-config").click(function(e){
+		var elem = $("#individual-config");
+		if(elem.is(e.target || elem.has(e.target).length === 0 elem.parent()){
+			$('.configurator').addClass('active')
+		}
+		else{
+			$('.configurator').removeClass('active')
+		}
+		// (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
+	});
+
 	//for congiguration page
 	$(".configuration form").submit(function(e){
 		e.preventDefault();
@@ -265,14 +276,14 @@ $(function(){
 	$(".wrap-shape").click(function(){
 		var position = $(this)[0].getBoundingClientRect().top;
 	});
-	
+
 	$('.remember a.btn').click(function(e){
-		
+
 		var val_1 = $(this).parent().siblings('.remember__param').children('input').val();
 		var val_2 = $(this).parent().siblings('.remember__param').children('input')[1].value;
 		$(this).parent().parent().parent().removeClass('active');
 		e.preventDefault();
-		
+
 	})
 	$(".option-config__list label").click(function(e){
 		var elem = $(this)[0].getBoundingClientRect();
@@ -284,10 +295,10 @@ $(function(){
 			obj.addClass("remember_right");
 		} else{ }
 		$(this).next().addClass('active');
-		
-		
+
+
 	})
-	
+
 	$(window).scroll(function(){
 		if ($(".configuration").length){
 			var delta_top = 150;
@@ -326,7 +337,7 @@ $(function(){
 		var el_step_id = $(this).parent().parent().parent().parent().parent().prop('id').slice(-1);
 		if( el == "facade" ){
 			$("#step_3 .next-config").addClass('active');
-			
+
 		} else if( el_step_id == "4"){
 			$("#step_4 .next-config").addClass('active');
 		} else if(el_step_id == '5'){
@@ -383,7 +394,7 @@ $(function(){
 			var next_el = +el.slice(-1);
 			next_el++;
 			$(this).parent().parent().removeClass('active');
-			
+
 			if( next_el <= 8){
 				if(next_el == 8){
 					$(".configuration .title").text("Конфигурация готова!")
@@ -401,7 +412,7 @@ $(function(){
 			var next_el = +el.slice(-1);
 			next_el++;
 			$(this).parent().parent().removeClass('active');
-			
+
 			if( next_el <= 8){
 				if(next_el == 8){
 					$(".configuration .title").text("Конфигурация готова!")
@@ -427,7 +438,7 @@ $(function(){
 	$(".fixed-overlay__modal .icon-remove-item").click(function(){
 		$(".fixed-overlay").removeClass('active');
 	});
-	
+
 	//open modal window
 	$("a.btn_write-us").click(function(){
 		$(".fixed-overlay.write-us").addClass('active');
@@ -439,13 +450,13 @@ $(function(){
 	$("a.btn_calc").click(function(){
 		$(".fixed-overlay.call-measure").addClass('active');
 	});
-	
+
 	// hide modal window when click another place
 	$(".fixed-overlay").click(function(e){
 		var elem = $(".modal");
 			if (!elem.is(e.target) && elem.has(e.target).length === 0) elem.parent().removeClass('active');
 	});
-	
+
 	//for show-more menu items on mobile
 	$(".readmore").click(function(){
 		var self = this;
@@ -473,7 +484,7 @@ $(function(){
 				$('body').removeClass("scroll_padding-top")
 
 			}
-			
+
 		}
 	}
 	$(window).scroll(function(){
@@ -498,9 +509,9 @@ $(function(){
 					}
 				}
 		}
-		
+
 	}
-			
+
 	//
 	$(".card-navivation").on("click","a", function (event) {
 		event.preventDefault();
@@ -528,7 +539,7 @@ $(function(){
 function initMap() {
 
 	var uluru = {lat:55.640684, lng:37.8217893};
-	
+
 	var mark_in_map = new google.maps.LatLng({lat:55.640584, lng:37.8289993});
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom:16,
@@ -545,7 +556,7 @@ function initMap() {
 		animation: google.maps.Animation.DROP,
 		icon:{
 			url: "images/map_pin.png",
-			
+
 		}
 	});
 }

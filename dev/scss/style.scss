@@ -2997,6 +2997,16 @@ ul.text-info{
 					background-image: url(../images/conf-checkbox_checked.png);
 				}
 			}
+			&[type="checkbox"] + label:before{
+				background-image: url(../images/checkbox_unchecked.png);
+			}
+			&[type="checkbox"]:checked + label{
+				color: #2a2a2a;
+				&:before{
+					background-image: url(../images/checkbox_checked.png);
+					background-repeat: no-repeat;
+				}
+			}
 		}
 
 		label{

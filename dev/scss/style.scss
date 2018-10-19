@@ -2933,6 +2933,10 @@ ul.text-info{
 		}
 			input{
 				display: none;
+				&+label.color_active{
+					background-color: #6363de;
+					color: white;
+				}
 				&:checked + label{
 					color: white;
 					background-color: #6363de;

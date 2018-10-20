@@ -3383,6 +3383,7 @@ ul.text-info{
 	background-color: rgba(70,70,70,0.7);
 	z-index: 100;
 	display: none;
+	&.calculation.active{display: block;}
 	&.callback.active{display: block;}
 	&.write-us.active{display: block;}
 	&.call-measure.active{display: block;}
@@ -3991,4 +3992,7 @@ ul.text-info{
 	&.active{
 		display: block;
 	}
+}
+a.package-config{
+	display: block;
 }

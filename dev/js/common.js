@@ -240,9 +240,6 @@ $(function(){
     });
     $('.progressbar-label_08').text(progressbar08.progressbar('value')+'%')
 
-//
-
-
 	//show-hide config
 	$(".package-config").click(function(e){
 		if($(this).is('#individual-config')){
@@ -251,6 +248,15 @@ $(function(){
 		else {
 			$('.configurator').removeClass('active')
 		}
+	});
+
+	//scrolling to config
+
+	$("a.package-config").click(function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top-160}, 1500);
 	});
 
 	//for congiguration page
@@ -413,6 +419,9 @@ $(function(){
 	});
 	$("a.btn_calc").click(function(){
 		$(".fixed-overlay.call-measure").addClass('active');
+	});
+	$("#base-config,#standart-config,#premium-config").click(function(){
+		$(".fixed-overlay.calculation").addClass('active');
 	});
 
 	// hide modal window when click another place

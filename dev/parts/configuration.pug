@@ -50,7 +50,7 @@ mixin remember
 						input(type="radio" name="package-config")
 						label(for="premium-config") Выбрать премиум
 			.col-phablet-1-2.col-laptop-1-4
-				.package-config#individual-config
+				a(href="#step_1").package-config#individual-config
 					.package-config__img
 						img(src="images/individual_product.png" alt="foto")
 					.configuration__price.configuration__price_config.transparent
@@ -137,14 +137,14 @@ mixin remember
 										input(type="number" min="1")
 										|  См.
 					.next-config.active
-						.btn.btn_back-step.show-tablet Назад
-							include ../images/right-arrow-btn.svg
+						//- .btn.btn_back-step.show-tablet Назад
+						//- 	include ../images/right-arrow-btn.svg
 						span Следующий шаг:
 						.btn.btn_next Выбрать фасад
-					.prev-config.clearfix.hide-tablet
-						span Следующий шаг:
-						.btn.btn_back-step Назад
-							include ../images/right-arrow-btn.svg
+					//- .prev-config.clearfix.hide-tablet
+					//- 	span Следующий шаг:
+					//- 	.btn.btn_back-step Назад
+					//- 		include ../images/right-arrow-btn.svg
 				.step#step_2
 					mixin option-config(title, name, ...items)
 						.option-config

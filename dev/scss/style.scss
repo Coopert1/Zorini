@@ -2933,6 +2933,10 @@ ul.text-info{
 		}
 			input{
 				display: none;
+				&+label.color_active{
+					background-color: #6363de;
+					color: white;
+				}
 				&:checked + label{
 					color: white;
 					background-color: #6363de;
@@ -2995,6 +2999,16 @@ ul.text-info{
 				color: #2a2a2a;
 				&:before{
 					background-image: url(../images/conf-checkbox_checked.png);
+				}
+			}
+			&[type="checkbox"] + label:before{
+				background-image: url(../images/checkbox_unchecked.png);
+			}
+			&[type="checkbox"]:checked + label{
+				color: #2a2a2a;
+				&:before{
+					background-image: url(../images/checkbox_checked.png);
+					background-repeat: no-repeat;
 				}
 			}
 		}

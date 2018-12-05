@@ -1,0 +1,138 @@
+doctype html
+html(lang="ru")
+	head
+		include ./parts/head.pug
+	body
+		include ./parts/header.pug
+		include ./parts/modal-windows.pug
+		.wrapper
+			.content-wrapper
+				ul.breadcrumbs.show-laptop.breadcrumbs_no-margin
+							li
+								a(href="index.html") Главная
+							li
+								a(href="#") Каталог
+				.collections
+					h1 Коллекции фасадов от Zorini
+				.fasad-filters
+					h3 Фильтр
+					.mobile
+						.filter-item
+							input(type="checkbox", name="s44", id="chkbox44")
+							label(for="chkbox44")
+								span Классические
+						.filter-item
+							input(type="checkbox", name="s46", id="chkbox46")
+							label(for="chkbox46")
+								span Современные
+						.filter-item
+							input(type="checkbox", name="s43", id="chkbox43")
+							label(for="chkbox43")
+								span Темные
+						.filter-item
+							input(type="checkbox", name="s47", id="chkbox47")
+							label(for="chkbox47")
+								span Светлые
+						.filter-item
+							input(type="checkbox", name="s45", id="chkbox45")
+							label(for="chkbox45")
+								span Массив дерева
+						.filter-item
+							input(type="checkbox", name="s48", id="chkbox48")
+							label(for="chkbox48")
+								span МДФ
+						.filter-item
+							input(type="checkbox", name="s49", id="chkbox49")
+							label(for="chkbox49")
+								span Все фассады
+					table
+						tbody
+							tr
+								td
+									.filter-item
+										input(type="checkbox", name="s50" id="chkbox50")
+										label(for="chkbox50")
+											span Классические
+								td
+									.filter-item
+										input(type="checkbox", name="s51", id="chkbox51")
+										label(for="chkbox51")
+											span Темные
+								td
+									.filter-item
+										input(type="checkbox", name="s52", id="chkbox52")
+										label(for="chkbox52")
+											span Массив дерева
+								td
+							tr
+								td
+									.filter-item
+										input(type="checkbox", name="s53", id="chkbox53")
+										label(for="chkbox53")
+											span Современные
+								td
+									.filter-item
+										input(type="checkbox", name="s54", id="chkbox54")
+										label(for="chkbox54")
+											span Светлые
+								td
+									.filter-item
+										input(type="checkbox", name="s55", id="chkbox55")
+										label(for="chkbox55")
+											span МДФ
+								td
+									.filter-item
+										input(type="checkbox", name="s56", id="chkbox56")
+										label(for="chkbox56")
+											span Все фассады
+								td
+									.btn.btn_show-all
+										|Посмотреть
+					.btn.btn_show-all.hide-tablet
+						|Посмотреть
+				.collection-item.collection-item_padding-top
+					.row.clearfix
+						.col-tablet-1-2.photo.padding-20
+							h2 Стили
+							.row.clearfix
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 Класические
+									img(src="images/collections/01.png",alt="")
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 Современные
+									img(src="images/collections/02.png",alt="")
+						.col-tablet-1-2.text.padding-20
+							h3 Текст о Zorini
+							p Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum.
+				.collection-item.collection-item_right
+					.row.clearfix
+						.col-tablet-1-2.photo.padding-20
+							h2 Цвета
+							.row.clearfix
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 Темные
+									img(src="images/collections/03.png",alt="")
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 Светлые
+									img(src="images/collections/04.png",alt="")
+						.col-tablet-1-2.text.padding-20
+							h3 Текст о Zorini
+							p Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum.
+				.collection-item.collection-item_no-border
+					.row.clearfix
+						.col-tablet-1-2.photo.padding-20
+							h2 Материал
+							.row.clearfix
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 Массив дерева
+									img(src="images/collections/05.png",alt="")
+								.col-mobileonly-1-2.col-phablet-1-2
+									h4 МДФ
+									img(src="images/collections/06.png",alt="")
+						.col-tablet-1-2.text.padding-20
+							h3 Текст о Zorini
+							p Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum.
+															
+					
+				
+		include ./parts/footer.pug

@@ -498,7 +498,18 @@ img{max-width: 100%;}
 		border: none;
 		padding: 10px 50px;
 		margin: 10px 0;
-
+	}
+	&_fasad-left, &_fasad-right{
+		font-size: 16px;
+		color: #fff;
+		background: #6363de;
+		border: none;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	&_fasad-right{
+		background: #51a5b4;
 	}
 	&_sort{
 		font-size: 12px;
@@ -4112,5 +4123,58 @@ a.package-config{
 		td{
 			width: 150px;
 		}
+	}
+}
+.fasad-item{
+	margin-bottom: 50px;
+	@include breakpoint(tablet){
+		margin-bottom: 100px;
+	}
+	img{
+		width: 100%;
+	}
+	h3{
+		color: #2a2a2a;
+		font-family: 'Open Sans bold', sans-serif;
+		font-weight: bold;
+		font-size: 21px;
+		margin-bottom: 40px;
+	}
+	p{
+		color: #60616e;
+		font-size: 14px;
+		line-height: 23px;
+		max-width: 490px;
+		text-align: left;
+		margin-bottom: 50px
+	}
+	.text{
+		img{
+			margin-bottom: 30px;
+		}
+	}
+	.photo{
+		img{
+			margin-bottom: 50px;
+			@include breakpoint(tablet){
+				margin-bottom: 0px;
+			}
+		}
+	}
+	&_right{
+		.photo{
+			@include breakpoint(tablet){
+				float: right;
+			}
+		}
+	}
+}
+.fasad-page{
+	h1{
+		text-align: left;
+		font-family: 'Oranienbaum', serif;
+		font-weight: lighter;
+		font-size: 52px;
+		margin-bottom: 55px;
 	}
 }

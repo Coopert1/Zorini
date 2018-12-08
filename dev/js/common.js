@@ -493,7 +493,13 @@ $(function(){
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 
-
+	//show-hide fasad colors
+	$(".btn_fasad-right").click(function(){
+		$(this).siblings(".fasad-popup").toggleClass("active");
+	});
+	$(".fasad-colors .icon-remove-item").click(function(){
+		$(".fasad-popup").removeClass("active");
+	});
 	// show all main menu
 	$("ul.show-all").click(function(){
 		$(".main-menu").toggleClass("more");
@@ -507,6 +513,66 @@ $(function(){
 			{duration:300},
 		);
 	})
+	//slick slider
+		//verona
+			$('.verona').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: false,
+				centerMode: false,
+				infinite: false,
+				asNavFor: '.verona-nav',
+				arrows: false,
+
+			});
+			$('.verona-nav').slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				asNavFor: '.verona',
+				dots: false,
+				centerMode: false,
+				focusOnSelect: true,
+				vertical: true,
+				verticalSwiping: true,
+				infinite: false,
+				arrows: false
+			});
+			$('.slider-btn_next').click(function(){
+				$(this).siblings('.verona').slick('slickNext')
+			});
+			$('.slider-btn_prev').click(function(){
+				$(this).siblings('.verona').slick('slickPrev')
+			});
+		//venezia
+
+			$('.venezia').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: false,
+				centerMode: false,
+				infinite: false,
+				asNavFor: '.venezia-nav',
+				arrows: false,
+
+			});
+			$('.venezia-nav').slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				asNavFor: '.venezia',
+				dots: false,
+				centerMode: false,
+				focusOnSelect: true,
+				vertical: true,
+				verticalSwiping: true,
+				infinite: false,
+				arrows: false
+			});
+			$('.slider-btn_next').click(function(){
+				$(this).siblings('.venezia').slick('slickNext')
+			});
+			$('.slider-btn_prev').click(function(){
+				$(this).siblings('.venezia').slick('slickPrev')
+			});
 
 });
 function initMap() {

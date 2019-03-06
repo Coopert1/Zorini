@@ -1,3 +1,4 @@
+doctype html
 html
 	head
 		include ./parts/head.pug
@@ -62,11 +63,11 @@ html
 							.product-describe__more-info Уточните интересующую вас информацию написав нам или заказав звонок
 							a.btn.btn_call-us(href="#")
 								span
-									include images/phone.svg
+									//include images/phone.svg
 								|Заказать звонок
 							a.btn.btn_write-us(href="#")
 								span
-									include images/write-tag.svg
+									//include images/write-tag.svg
 								|Написать нам
 			.card-navivation.clearfix
 				.col-phablet-1-4.col-mobileonly-1-2
@@ -77,7 +78,7 @@ html
 				.col-phablet-1-4.col-mobileonly-1-2
 					a(href="#production").card-navivation__item
 						.card-navivation__icon
-							include ./images/production_icon.svg
+							//include ./images/production_icon.svg
 						.card-navivation__text ПРОИЗВОДСТВО
 				.col-phablet-1-4.col-mobileonly-1-2
 					a(href="#colors").card-navivation__item
@@ -87,8 +88,8 @@ html
 				.col-phablet-1-4.col-mobileonly-1-2
 					a(href="#rewiews").card-navivation__item
 						.card-navivation__icon
-							include ./images/write-tag.svg
-						.card-navivation__text ОТЗЫВЫ 
+							//include ./images/write-tag.svg
+						.card-navivation__text ОТЗЫВЫ
 		include ./parts/configuration.pug
 		.wrapper
 			.content-wrapper
@@ -234,7 +235,6 @@ html
 									| Склад красок на нашем производстве
 								p
 									| Наше производство использует краски интальянских брендов saerlack и  это дает нам уверенностьв том что фасады прослужат долго и неизменят своего цвета даже при постоянном нахождении под солнцем.
-
 						.col-tablet-1-2
 							img(src="images/color_factory.png", alt="photo")
 		.wrapper.wrapper_section-bg
@@ -319,7 +319,7 @@ html
 									|Кухня Модесто
 								.product-item__price
 									span
-										|54 900.00 
+										|54 900.00
 									span
 										|р./м.пог.
 		include ./parts/footer.pug

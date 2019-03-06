@@ -8,7 +8,6 @@ var gulp 			= require('gulp'),
  	watch 			= require('gulp-watch');
  	cleancss 		= require('gulp-cleancss');
   plumber     = require('gulp-plumber');
-var livereloadPort 	= 37729;
 
 
 gulp.task('webserver', function() {
@@ -17,12 +16,11 @@ gulp.task('webserver', function() {
       directoryListing: false,
       open: true,
       livereload: {
-      enable: true,
-      port: livereloadPort
+      enable: true
       }
     }))
     .pipe(plumber())
-    
+
 });
 
 gulp.task('html', function(){
@@ -45,7 +43,7 @@ gulp.task('scss', function() {
 	.pipe(scss())
 	.pipe(autoprefixer({
 		browsers: ['last 20 versions']
-		
+
 	}))
 	.pipe(gulp.dest('./app/css/'))
 });

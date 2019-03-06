@@ -509,8 +509,8 @@ $(function(){
 	$('.search').click(function(event){
 		event.preventDefault();
 		$(".search-form").animate(
-			{height: 'toggle'},
-			{duration:300},
+			// {height: 'toggle'},
+			// {duration:300},
 		);
 	})
 	//slick slider

@@ -508,7 +508,7 @@ $(function(){
 	//Search-form on mobile device
 	$('.search').click(function(event){
 		event.preventDefault();
-		$(".search-form").animate(
+		$(".search-form").animate("{height: 'toggle'}"
 			// {height: 'toggle'},
 			// {duration:300},
 		);

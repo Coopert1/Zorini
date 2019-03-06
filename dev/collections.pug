@@ -17,79 +17,82 @@ html(lang="ru")
 				.fasad-filters
 					h3 Фильтр
 					.mobile
-						.filter-item
-							input(type="checkbox", name="s44", id="chkbox44")
-							label(for="chkbox44")
-								span Классические
-						.filter-item
-							input(type="checkbox", name="s46", id="chkbox46")
-							label(for="chkbox46")
-								span Современные
-						.filter-item
-							input(type="checkbox", name="s43", id="chkbox43")
-							label(for="chkbox43")
-								span Темные
-						.filter-item
-							input(type="checkbox", name="s47", id="chkbox47")
-							label(for="chkbox47")
-								span Светлые
-						.filter-item
-							input(type="checkbox", name="s45", id="chkbox45")
-							label(for="chkbox45")
-								span Массив дерева
-						.filter-item
-							input(type="checkbox", name="s48", id="chkbox48")
-							label(for="chkbox48")
-								span МДФ
-						.filter-item
-							input(type="checkbox", name="s49", id="chkbox49")
-							label(for="chkbox49")
-								span Все фассады
-					table
-						tbody
-							tr
-								td
-									.filter-item
-										input(type="checkbox", name="s50" id="chkbox50")
-										label(for="chkbox50")
-											span Классические
-								td
-									.filter-item
-										input(type="checkbox", name="s51", id="chkbox51")
-										label(for="chkbox51")
-											span Темные
-								td
-									.filter-item
-										input(type="checkbox", name="s52", id="chkbox52")
-										label(for="chkbox52")
-											span Массив дерева
-								td
-							tr
-								td
-									.filter-item
-										input(type="checkbox", name="s53", id="chkbox53")
-										label(for="chkbox53")
-											span Современные
-								td
-									.filter-item
-										input(type="checkbox", name="s54", id="chkbox54")
-										label(for="chkbox54")
-											span Светлые
-								td
-									.filter-item
-										input(type="checkbox", name="s55", id="chkbox55")
-										label(for="chkbox55")
-											span МДФ
-								td
-									.filter-item
-										input(type="checkbox", name="s56", id="chkbox56")
-										label(for="chkbox56")
-											span Все фассады
-								td
-									.btn.btn_show-all
-										|Посмотреть
-					.btn.btn_show-all.hide-tablet
-						|Посмотреть
+						form
+							.filter-item
+								input(type="checkbox", name="s44", id="chkbox44")
+								label(for="chkbox44")
+									span Классические
+							.filter-item
+								input(type="checkbox", name="s46", id="chkbox46")
+								label(for="chkbox46")
+									span Современные
+							.filter-item
+								input(type="checkbox", name="s43", id="chkbox43")
+								label(for="chkbox43")
+									span Темные
+							.filter-item
+								input(type="checkbox", name="s47", id="chkbox47")
+								label(for="chkbox47")
+									span Светлые
+							.filter-item
+								input(type="checkbox", name="s45", id="chkbox45")
+								label(for="chkbox45")
+									span Массив дерева
+							.filter-item
+								input(type="checkbox", name="s48", id="chkbox48")
+								label(for="chkbox48")
+									span МДФ
+							.filter-item
+								input(type="checkbox", name="s49", id="chkbox49")
+								label(for="chkbox49")
+									span Все фассады
+							button(type="submit").btn.btn_show-all.hide-tablet
+								|Посмотреть
+					form
+						table
+							tbody
+								tr
+									td
+										.filter-item
+											input(type="checkbox", name="s50" id="chkbox50")
+											label(for="chkbox50")
+												span Классические
+									td
+										.filter-item
+											input(type="checkbox", name="s51", id="chkbox51")
+											label(for="chkbox51")
+												span Темные
+									td
+										.filter-item
+											input(type="checkbox", name="s52", id="chkbox52")
+											label(for="chkbox52")
+												span Массив дерева
+									td
+								tr
+									td
+										.filter-item
+											input(type="checkbox", name="s53", id="chkbox53")
+											label(for="chkbox53")
+												span Современные
+									td
+										.filter-item
+											input(type="checkbox", name="s54", id="chkbox54")
+											label(for="chkbox54")
+												span Светлые
+									td
+										.filter-item
+											input(type="checkbox", name="s55", id="chkbox55")
+											label(for="chkbox55")
+												span МДФ
+									td
+										.filter-item
+											input(type="checkbox", name="s56", id="chkbox56")
+											label(for="chkbox56")
+												span Все фасады
+									td
+										button(type="submit").btn.btn_show-all
+											|Посмотреть
+					
 				.collection-item.collection-item_padding-top
 					.row.clearfix
 						.col-tablet-1-2.photo.padding-20

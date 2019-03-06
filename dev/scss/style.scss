@@ -391,6 +391,7 @@ img{max-width: 100%;}
 .btn{
 	display: inline-block;
 	padding: 10px;
+	cursor: pointer;
 	border: 1px solid #4fa4b6;
 	border-radius: 30px;
 	color: #000;
@@ -4208,6 +4209,10 @@ a.package-config{
 		}
 	}
 	.photo{
+		margin-bottom: 50px;
+		@include breakpoint(tablet){
+			margin: 0;
+		}
 	}
 	&_right{
 		.photo{

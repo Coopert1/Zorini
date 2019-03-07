@@ -246,6 +246,18 @@ img{max-width: 100%;}
 
 	}
 }
+.icon{
+	display: inline-block;
+	&_search{
+		vertical-align: middle;
+   		background: url(../images/search.svg);
+		background-position: 0 0;
+		width: 21px;
+		height: 18px;
+		margin-right: 30px;
+
+	}
+}
 
 .enter{
 	color: #fff;

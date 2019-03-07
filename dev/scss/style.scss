@@ -207,9 +207,11 @@ img{max-width: 100%;}
 	a{
 		text-decoration-style: dotted;
 		color: #fff;
+		vertical-align: middle;
 	}
 	span{
-		padding-left: 20px;
+		vertical-align: middle;
+		margin-right: 3px;
 	}
 }
 
@@ -249,14 +251,54 @@ img{max-width: 100%;}
 .icon{
 	display: inline-block;
 	&_search{
-		vertical-align: middle;
    		background: url(../images/search.svg);
 		background-position: 0 0;
-		width: 21px;
-		height: 18px;
-		margin-right: 30px;
-
+		width: 30px;
+		height: 30px;
 	}
+	&_favorites{
+   		background: url(../images/favorite.svg);
+		background-position: 0 0;
+		width: 30px;
+		height: 30px;
+	}
+	&_calc{
+		background: url(../images/calc.svg);
+		background-position: 0 0;
+		width: 25px;
+		height: 25px;
+	}
+	&_person{
+		background: url(../images/person.svg);
+		background-position: 0 0;
+		width: 17px;
+		height: 25px;
+	}
+	&_arrow-right{
+		background: url(../images/right_arrow.svg);
+		background-position: 0 0;
+		width: 6px;
+		height: 10px;
+	}
+	&_pin{
+		background: url(../images/pin.svg);
+		background-position: 0 0;
+		width: 20px;
+		height: 20px;
+	}
+	&_phone{
+		background: url(../images/phone.svg);
+		background-position: 0 0;
+		width: 14.5px;
+		height: 22px;
+	}
+	&_more{
+		background: url(../images/menu/show-more.svg);
+		background-position: 0 0;
+		width: 40px;
+		height: 40px !important;
+	}
+
 }
 
 .enter{
@@ -410,12 +452,20 @@ img{max-width: 100%;}
 	&:hover{
 		background: #4fa4b6;
 		color: #fff;
-		svg{
-			.right-arrow-btn, .calc-1, .person-1, .clg-1, .cls-2, .cls-3, .write-tag{
-				fill: #fff;
-			}
+		.icon_calc{
+			background: url(../images/calc_hover.svg);
+			background-position: 0 0;
+			width: 25px;
+			height: 25px;
 		}
-	}
+		.icon_person{
+			background: url(../images/person_hover.svg);
+			background-position: 0 0;
+			width: 17px;
+			height: 25px;
+		}
+	}	
+	
 	&_save{
 		width: 100%;
 		margin-bottom: 10px;
@@ -428,13 +478,6 @@ img{max-width: 100%;}
 		margin: 0px 5px;
 		font-size: 13px;
 		position: relative;
-		&:hover{
-			svg{
-				#person-icon{
-					fill: #fff !important;
-				}
-			}
-		}
 		@include breakpoint(phablet){
 			margin-top: 5px;
 		}
@@ -452,11 +495,11 @@ img{max-width: 100%;}
 		.icon{
 			display: none;
 			position: absolute;
-			left: 15px;
-			top: 7px;
+			left: 6px;
+			top: 4px;
 			@include breakpoint(tablet){
-			display: inline-block;
-		}
+				display: inline-block;
+			}
 		}
 	}
 	&__product{
@@ -479,13 +522,6 @@ img{max-width: 100%;}
 		padding: 20px 64px 20px 77px;
 		margin-bottom: 25px;
 		position: relative;
-		svg{
-			transform: rotate(180deg);
-			position: absolute;
-			left: 35px;
-			top: 50%;
-			margin-top: -8px;
-		}
 	}
 	&_filter{
 		text-align: center;
@@ -558,12 +594,6 @@ img{max-width: 100%;}
 		padding:20px 65px;
 		margin: 50px 0;
 		position: relative;
-		svg{
-			position: absolute;
-			right: 30px;
-			top: 50%;
-			margin-top: -8px;
-		}
 		@include breakpoint(tablet){
 			padding:20px 75px;
 			margin-top: 30px;
@@ -669,16 +699,6 @@ img{max-width: 100%;}
 			width: 180px;
 			margin: 0 auto 20px auto;
 		}
-		svg{
-			transform: rotate(180deg);
-			position: absolute;
-			left: 20px;
-			top: 50%;
-			margin-top: -8px;
-			.right-arrow-btn{
-				fill: #b5babe;
-			}
-		}
 	}
 }
 
@@ -740,9 +760,6 @@ img{max-width: 100%;}
 .online-calc{
 	display: inline-block;
 }
-#person-icon{
-	fill:url(#gradient1)
-}
 .header-icons{
 	display: inline-block;
 	float: right;
@@ -784,11 +801,11 @@ img{max-width: 100%;}
 	line-height: 16px;
 }
 #dot{
-	max-height: 350px;
+	max-height: 375px;
 	overflow: hidden;
 	transition: all 0.7s ease;
 	&.more{
-		max-height:999px;
+		max-height:1027px;
 		transition: all 0.7s ease;
 
 	}
@@ -842,27 +859,7 @@ img{max-width: 100%;}
 			display: inline-block;
 			text-align: center;
 			vertical-align: middle;
-			height: 30px;
-			width: 30px;
 			margin-right: 20px;
-			svg{
-				position: static;
-				display: inline-block;
-				height: 30px;
-				vertical-align: bottom;
-				.cls-1{
-					fill: #6363de;
-				}
-			}
-			&_bedroom{
-				svg{
-					height: 20px;
-					vertical-align: bottom;
-					.cls-1{
-						fill: #6363de;
-					}
-				}
-			}
 		}
 		.text{
 			vertical-align: middle;
@@ -957,57 +954,11 @@ img{max-width: 100%;}
 		.icon{
 			margin-bottom: 15px;
 			height: 41px;
-			svg{
-				height: 40px;
-				vertical-align: bottom;
-				.cls-1{
-					fill: #6363de;
-				}
-			}
-			&_bedroom{
-				svg{
-					height: 30px;
-					vertical-align: bottom;
-					.cls-1{
-						fill: #6363de;
-					}
-				}
-			}
-			&_childrens{
-				svg{
-					vertical-align: bottom;
-					.cls-1{
-						fill: url(#gradient);
-					}
-				}
-			}
-			&_hallways{
-				svg{
-					vertical-align: bottom;
-					.cls-1{
-						fill: url(#gradient);
-					}
-				}
-			}
-			&_office{
-				svg{
-					vertical-align: bottom;
-					.cls-1{
-						fill: url(#gradient);
-					}
-				}
-			}
 			&_more{
 				transition: all 1s ease;
 				&.active{
 					transition: all 1s ease;
 					transform: rotate(180deg);
-				}
-				svg{
-					vertical-align: bottom;
-					.cls-1{
-						fill: none;
-					}
 				}
 			}
 		}
@@ -1327,7 +1278,7 @@ img{max-width: 100%;}
 		top: 15px;
 		right: 15px;
 		background-color: rgba(0, 0, 0, 0.4);
-		padding: 10px;
+		padding: 10px 12px;
 		z-index: 3;
 		border-radius: 100%;
 		&:hover{
@@ -1745,6 +1696,8 @@ img{max-width: 100%;}
 					border-bottom-right-radius: 5px;
 					margin-left: -4px;
 					background-color: #020202;
+					position: relative;
+					top: 2px;
 					@include breakpoint(laptop){
 						max-width: 126px;
 
@@ -1940,12 +1893,6 @@ img{max-width: 100%;}
 		&_params{
 			top: 31px;
 		}
-		svg{
-			transition: transform 0.5s ease;
-			.arrow-r{
-				fill: #2a2a2a;
-			}
-		}
 		&.open{
 			svg{
 				transform: rotate(90deg);
@@ -2069,7 +2016,6 @@ img{max-width: 100%;}
 			border: 1px solid #6363de;
 		}
 		li.prev, li.next{
-			padding-top: 10px;
 			background: #f0f0f0;
 			&:hover{
 				background: #d9d9d9;
@@ -3912,11 +3858,8 @@ ul.text-info{
 		height: 80px;
 		text-align: center;
 	}
-	svg{
+	img{
 		height: 65px;
-		.write-tag{
-			fill: url(#gradient1);
-		}
 	}
 	&.fixed{
 		position: fixed;

@@ -508,9 +508,9 @@ $(function(){
 	//Search-form on mobile device
 	$('.search').click(function(event){
 		event.preventDefault();
-		$(".search-form").animate("{height: 'toggle'}"
-			// {height: 'toggle'},
-			// {duration:300},
+		$(".search-form").animate(
+			{height: 'toggle'},
+			{duration:300},
 		);
 	})
 	//slick slider

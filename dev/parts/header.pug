@@ -1,7 +1,7 @@
 .header-top
 	.content-wrapper
 		.location
-			//include ../images/pin.svg
+			span.icon.icon_pin
 			span
 				|Город:
 			a(href="#") Москва
@@ -29,61 +29,61 @@
 			.check-order
 				span
 					|Проверить состояние заказа
-				//include ../images/right_arrow.svg
-	.header-bottom
-		.content-wrapper
-			.bars.hide-laptop
-				.bar
-				.bar
-				.bar
-			a(href="index.html").logo
-				span
-					|Zorini
-				span
-					|Индивидуальное производство мебели из массива
-			.header-icons
-				.search.hide-laptop
-					span.icon.icon_search
-				.favorite.hide-laptop
-					//include ../images/favorite.svg
-					span.fav-item-count 4
-			a(href="#").btn.btn_calc.show-phablet-inline
-				.icon
-					//include ../images/calc.svg
-				|Onine расчет
-			a(href="#").btn.btn_calc.show-phablet-inline
-				.icon
-					//include ../images/person.svg
-				|Вызывать замерщика
-			.contact-info.show-laptop-inline
-				span.time
-					|Время работы с 8:00 до 20:00
-				.telephone
-					a(href="tel:88000000121")
-						//include ../images/phone.svg
-						span
-							|+8 800
-						span
-							|000 01 21
-				a(href="#")
-					span.callback
-						|перезвонить мне
-			.search.show-laptop-inline
+				span.icon.icon_arrow-right
+.header-bottom
+	.content-wrapper
+		.bars.hide-laptop
+			.bar
+			.bar
+			.bar
+		a(href="index.html").logo
+			span
+				|Zorini
+			span
+				|Индивидуальное производство мебели из массива
+		.header-icons
+			.search.hide-laptop
 				span.icon.icon_search
-			.favorite.show-laptop-inline
-				//include ../images/favorite.svg
+			.favorite.hide-laptop
+				span.icon.icon_favorites
 				span.fav-item-count 4
-			.search-form
-				form
-					input(type="text", placeholder="", name="search")
-					button(type="submit")
-						i.fa.fa-search
-		.hide-phablet.header-buttons
-			.content-wrapper
-				a(href="#").btn.btn_calc
-					|Onine расчет
-				a(href="#").btn.btn_calc
-					|Вызывать замерщика
+		a(href="#").btn.btn_calc.show-phablet-inline
+			.icon
+				span.icon.icon_calc
+			|Onine расчет
+		a(href="#").btn.btn_calc.show-phablet-inline
+			.icon
+				span.icon.icon_person
+			|Вызывать замерщика
+		.contact-info.show-laptop-inline
+			span.time
+				|Время работы с 8:00 до 20:00
+			.telephone
+				a(href="tel:88000000121")
+					span.icon.icon_phone
+					span
+						|+8 800
+					span
+						|000 01 21
+			a(href="#")
+				span.callback
+					|перезвонить мне
+		.search.show-laptop-inline
+			span.icon.icon_search
+		.favorite.show-laptop-inline
+			span.icon.icon_favorites
+			span.fav-item-count 4
+		.search-form
+			form
+				input(type="text", placeholder="", name="search")
+				button(type="submit")
+					i.fa.fa-search
+	.hide-phablet.header-buttons
+		.content-wrapper
+			a(href="#").btn.btn_calc
+				|Onine расчет
+			a(href="#").btn.btn_calc
+				|Вызывать замерщика
 .wrapper.show-laptop.main-menu-border
 	.main-menu.content-wrapper
 		ul
@@ -211,7 +211,7 @@
 				li
 					a(href="#").menu-item
 						.icon.icon_more
-							//include ../images/menu/show-more.svg
+							span.icon.icon_more
 						.text
 							span Показать все
 .wrapper
@@ -221,10 +221,10 @@
 		a(href="#").enter.enter_mobile
 			span
 				|Войти
-			//check a(href="#").check-order.check-order_mobile
-				span
-					|Проверить состояние заказа
-				//include ../images/right_arrow.svg
+		a(href="#").check-order.check-order_mobile
+			span
+				|Проверить состояние заказа
+			span.icon.icon_arrow-right
 		.contact-info.contact-info_mobile
 				span.time
 					|Время работы с 8:00 до 20:00
@@ -246,7 +246,7 @@
 						.text
 							span Шкафы
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -254,7 +254,7 @@
 						.text
 							span Кухни
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -262,7 +262,7 @@
 						.text
 							span Библиотеки
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -270,7 +270,7 @@
 						.text
 							span Шкафы
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_bedroom
@@ -278,7 +278,7 @@
 						.text
 							span Спальни
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_childrens
@@ -286,7 +286,7 @@
 						.text
 							span Детские
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -294,7 +294,7 @@
 						.text
 							span Гостинные
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -302,7 +302,7 @@
 						.text
 							span Двери
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -310,7 +310,7 @@
 						.text
 							span Ванная
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon
@@ -318,7 +318,7 @@
 						.text
 							span Гардеробные
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -326,7 +326,7 @@
 						.text
 							span Офис
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -334,7 +334,7 @@
 						.text
 							span Прихожая
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -342,7 +342,7 @@
 						.text
 							span Лестницы
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -350,7 +350,7 @@
 						.text
 							span Паркет
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -358,7 +358,7 @@
 						.text
 							span Торговое оборудование
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -366,7 +366,7 @@
 						.text
 							span Стеновые панели
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -374,7 +374,7 @@
 						.text
 							span Кесонные потолки
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -382,15 +382,14 @@
 						.text
 							span Мебель
 						.arrow
-							//include ../images/right_arrow.svg
-				li
+							span.icon.icon_arrow-right
 					a(href="#").mobile-menu-item
 						.icon.icon_office
 							img(src="images/menu_icons/menu-item_15.png")
 						.text
 							span Фассады
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 				li
 					a(href="#").mobile-menu-item
 						.icon.icon_office
@@ -398,7 +397,7 @@
 						.text
 							span Кабинет
 						.arrow
-							//include ../images/right_arrow.svg
+							span.icon.icon_arrow-right
 		.readmore
 			span Показать все
 			img(src="images/show-more.png", alt="icon")

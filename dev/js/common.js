@@ -1,4 +1,9 @@
 $(function(){
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+	if(isIE){
+		$('.footer-list__subscribe input[type="submit"]').css('top', '-1px')
+	}
+	console.log(isIE);
 	var review_slider=$('#review-slider').lightSlider({
 		item: 1,
 		controls: false,
@@ -508,10 +513,7 @@ $(function(){
 	//Search-form on mobile device
 	$('.search').click(function(event){
 		event.preventDefault();
-		$(".search-form").animate(
-			{height: 'toggle'},
-			{duration:300},
-		);
+		$(".search-form").slideToggle(200)
 	})
 	//slick slider
 		//verona

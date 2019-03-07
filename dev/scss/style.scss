@@ -464,8 +464,8 @@ img{max-width: 100%;}
 			width: 17px;
 			height: 25px;
 		}
-	}	
-	
+	}
+
 	&_save{
 		width: 100%;
 		margin-bottom: 10px;
@@ -772,6 +772,7 @@ img{max-width: 100%;}
 	position:relative;
 	margin-right:10px;
 	display:inline-block;
+	cursor: pointer;
 	@include breakpoint(laptop){
 		margin-right:20px;
 		top: -5px;
@@ -1697,7 +1698,7 @@ img{max-width: 100%;}
 					margin-left: -4px;
 					background-color: #020202;
 					position: relative;
-					top: 2px;
+					top: 1px;
 					@include breakpoint(laptop){
 						max-width: 126px;
 
